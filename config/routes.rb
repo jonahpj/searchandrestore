@@ -1,5 +1,7 @@
 Searchandrestore::Application.routes.draw do
 
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
   resources :artists, :only => [:index, :show]
   resources :shows,   :only => [:index, :show]
   resources :venues,  :only => [:index, :show]
@@ -9,7 +11,7 @@ Searchandrestore::Application.routes.draw do
   get 'about' => 'about#index', :as => :about
   get 'donate' => 'donate#index', :as => :donate
 
-  root :to => "home#index"
+  root :to => "home#index2"
 
   namespace :admin do
     namespace :shows do

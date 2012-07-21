@@ -1,0 +1,20 @@
+- posted_ago = time_ago_in_words(Time.at(blog_post['unix_timestamp'].to_i)) + ' ago'
+
+.blog-post
+  - case blog_post['type']
+    - when 'photo'
+      .post-body#photo
+        = image_tag(blog_post['photo_url'][0]['__content__'])
+        %span.photo-caption= blog_post['photo_caption'].html_safe
+        %p.time-ago= posted_ago
+    - when 'quote'
+      .post-body#quote
+        %p.quote-text
+          :textile
+            #{blog_post['quote_text']}
+        %p.time-ago= posted_ago
+    - when 'video'
+      .post-body#video
+        .video-player
+          = blog_post['video_player'][0].html_safe
+        %p.video-caption= blog_post['video_caption'].html_safe

@@ -1,0 +1,46 @@
+- masthead_bgs = ['videos','venues','resources','donate','artists','about', 'shows']
+- @masthead_bg = masthead_bgs[rand(masthead_bgs.length)] 
+- @page_class = "layout-2 page-home masthead-bg-#{@masthead_bg}"
+
+
+#main-content-secondary
+  .col-1-2{ :class => @banners.any? && 'with-banner' }
+    - if @banners.any?
+      .banners{ :class => @banners.size > 1 && 'slides' }
+        .slides_container
+          - @banners.each do |banner|
+            .banner.slide
+              = display_banner(banner)
+  
+    .slides.homepage-features
+      .slides_container
+  
+        .active.section#blog
+          %h3.body
+            BLOG
+          - if @blog_post.present?
+            = render :partial => 'home/blog', :locals => { :blog_post => @blog_post }
+
+        .section#exciting-news
+          .container.skin-dark.darker
+            .body
+              %h3
+                = image_tag('/images/home/exciting_news.png', :alt => 'Exciting News')
+              %div
+                :textile
+                  #{@homepage.exciting_news}
+      
+        .section#featured-video
+          .container.skin-dark.darker
+            .body
+              = image_tag('/images/home/featured_video.png', :alt => 'Featured Video')
+          - if @featured_video.present?
+            = render :partial => 'videos/video_thumb', :locals => { :thumbnail => nil, :video => @featured_video }
+
+  .col-3
+    %p
+      %a{:href => "#", :onclick => "toggle_feature('blog');"} BLOG
+    %p
+      %a{:href => "#", :onclick => "toggle_feature('exciting-news');"} NEWS
+    %p
+      %a{:href => "#", :onclick => "toggle_feature('featured-video');"} VIDEO

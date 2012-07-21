@@ -17,6 +17,8 @@ gem 'geocoder'
 gem 'state_machine'
 gem 'ruby-oembed'
 gem 'RedCloth'
+gem 'rdoc'
+gem 'tumblr', :git => 'http://github.com/jeffkreeftmeijer/tumblr'
 
 # Use unicorn as the web server
 # gem 'unicorn'

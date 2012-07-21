@@ -30,6 +30,12 @@ class HomeController < ApplicationController
     @banners = HomepageBanner.order('RAND()').all
 
     @featured_video_description = @homepage.video_description
+    
+    @blog_post = blog
+  end
+  
+  def index2
+    index
   end
 
   def shows
@@ -56,6 +62,11 @@ class HomeController < ApplicationController
       order('date DESC').
       includes(:link).
       limit(5)
+  end
+
+  def blog
+    Tumblr.blog = 'searchandrestore'
+    Tumblr::Post.first({:start => 1})
   end
 
   protected
