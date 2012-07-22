@@ -26,8 +26,8 @@ class HomeController < ApplicationController
       order_by_show_date.
       includes(:show, { :performances => [:artist, :instrument] }).
       first
-
-    @banners = HomepageBanner.order('RANDOM()').all
+    
+    @banners = HomepageBanner.order(random_function).all
 
     @featured_video_description = @homepage.video_description
     
@@ -67,6 +67,16 @@ class HomeController < ApplicationController
   def blog
     Tumblr.blog = 'searchandrestore'
     Tumblr::Post.first({:start => 1})
+  end
+  
+  def random_function
+    adapter = Rails.configuration.database_configuration[Rails.env]['adapter']
+    if adapter == 'postgresql'
+      rand_func = 'RANDOM()'
+    else
+      rand_func = 'RAND()'
+    end
+    rand_func
   end
 
   protected

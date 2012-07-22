@@ -1,4 +1,6 @@
 - posted_ago = time_ago_in_words(Time.at(blog_post['unix_timestamp'].to_i)) + ' ago'
+- tagged_url = 'http://' + Tumblr::blog + '/tagged/' + blog_post['tag'].gsub(/ /, '-')
+- tagged_txt = '#' + blog_post['tag']
 
 .blog-post
   - case blog_post['type']
@@ -12,6 +14,8 @@
         %p.quote-text
           :textile
             #{blog_post['quote_text']}
+        aslkdgjaslkdgjalksjdglksjg
+        %p.tagged= link_to(tagged_txt, tagged_url)
         %p.time-ago= posted_ago
     - when 'video'
       .post-body#video
