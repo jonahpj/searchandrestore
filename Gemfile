@@ -20,6 +20,8 @@ gem 'ruby-oembed'
 gem 'RedCloth'
 gem 'rdoc'
 gem 'tumblr', :git => 'http://github.com/jeffkreeftmeijer/tumblr'
+gem 'thin'
+gem 'heroku'
 
 # Use unicorn as the web server
 # gem 'unicorn'
