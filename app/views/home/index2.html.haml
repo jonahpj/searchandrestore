@@ -15,7 +15,7 @@
     .slides.homepage-features
       .slides_container
   
-        .active.section#blog
+        .section#blog
           %h3.body
             BLOG
           - if @blog_post.present?
@@ -39,8 +39,8 @@
 
   .col-3
     %p
-      %a{:href => "#", :onclick => "toggle_feature('blog');"} BLOG
+      %a{:href => "#", :onclick => "toggle_feature('blog'); return false;"} BLOG
     %p
-      %a{:href => "#", :onclick => "toggle_feature('exciting-news');"} NEWS
+      %a{:href => "#", :onclick => "toggle_feature('exciting-news'); return false;"} NEWS
     %p
-      %a{:href => "#", :onclick => "toggle_feature('featured-video');"} VIDEO
+      %a{:href => "#", :onclick => "toggle_feature('featured-video'); return false;"} VIDEO
