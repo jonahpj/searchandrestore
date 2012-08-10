@@ -1,7 +1,5 @@
 Searchandrestore::Application.routes.draw do
 
-  devise_for :admin_users, ActiveAdmin::Devise.config
-
   resources :artists, :only => [:index, :show]
   resources :shows,   :only => [:index, :show]
   resources :venues,  :only => [:index, :show]
