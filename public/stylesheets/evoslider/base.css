@@ -1,0 +1,935 @@
+.jazz fieldset {
+  border: none;
+  padding: 0;
+  margin: 0; }
+.jazz .field {
+  margin-bottom: 20px;
+  overflow: hidden; }
+  .jazz .field input[type='text'],
+  .jazz .field input[type='password'],
+  .jazz .field textarea {
+    border: 2px solid #d7d7d7;
+    width: 300px; }
+  .jazz .field input[type='text'],
+  .jazz .field input[type='password'] {
+    line-height: 16px;
+    font-size: 12px;
+    color: #000; }
+  .jazz .field label,
+  .jazz .field .control {
+    float: left; }
+  .jazz .field label {
+    font-weight: bold;
+    clear: both;
+    margin-right: 20px;
+    color: #ff9900;
+    font-size: 14px;
+    cursor: pointer; }
+  .jazz .field.inline {
+    float: left;
+    margin-right: 10px; }
+    .jazz .field.inline label {
+      clear: none; }
+    .jazz .field.inline .wrapper {
+      float: left; }
+  .jazz .field.textarea textarea {
+    height: 150px; }
+  .jazz .field.radio label {
+    padding-top: 2px;
+    margin-right: 8px; }
+  .jazz .field.check label {
+    padding-top: 1px;
+    margin-right: 8px; }
+  .jazz .field.select label {
+    padding-top: 1px; }
+.jazz fieldset.searchy {
+  margin-bottom: 5px; }
+  .jazz fieldset.searchy .field {
+    margin-bottom: 3px; }
+    .jazz fieldset.searchy .field label {
+      display: block;
+      float: none;
+      font-weight: normal;
+      padding-left: 5px;
+      padding-top: 5px; }
+    .jazz fieldset.searchy .field.text .input,
+    .jazz fieldset.searchy .field.text .submit {
+      float: left; }
+    .jazz fieldset.searchy .field.text .input {
+      width: 242px;
+      margin-right: 10px; }
+      .jazz fieldset.searchy .field.text .input input {
+        width: 242px;
+        height: 15px; }
+    .jazz fieldset.searchy .field.select .input,
+    .jazz fieldset.searchy .field.select .submit {
+      float: left; }
+    .jazz fieldset.searchy .field.select .input {
+      margin-right: 3px;
+      width: 249px; }
+      .jazz fieldset.searchy .field.select .input select {
+        width: 249px; }
+    .jazz fieldset.searchy .field.calendar {
+      width: 253px;
+      margin: 0;
+      padding: 0; }
+  .jazz fieldset.searchy .calendar-wrapper {
+    position: relative;
+    padding-bottom: 0px;
+    background-color: transparent; }
+  .jazz fieldset.searchy .calendar-submit {
+    width: 66px;
+    margin: 217px 0 0 10px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px; }
+    .jazz fieldset.searchy .calendar-submit input {
+      float: right; }
+.jazz .searchy-inline #search-by-name {
+  width: 485px; }
+.jazz .searchy-inline #search-by-instrument {
+  width: 375px; }
+.jazz .searchy-inline select {
+  width: 200px; }
+.jazz .searchy-inline .field.text input {
+  height: 15px; }
+.jazz .searchy-inline label {
+  margin-right: 3px; }
+
+.jazz a, .jazz button.link {
+  cursor: pointer;
+  text-decoration: none; }
+.jazz button.link {
+  background: transparent;
+  border: none;
+  margin: 0px;
+  padding: 0px; }
+.jazz .box {
+  color: #fff;
+  background-color: #ff9900;
+  line-height: 14px;
+  padding: 2px 5px 2px 5px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  white-space: nowrap; }
+  .jazz .box.dark {
+    background-color: #000;
+    text-transform: uppercase; }
+  .jazz .box.large {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 25px;
+    width: 100%;
+    text-align: center;
+    padding: 0px; }
+  .jazz .box.wrap {
+    white-space: normal; }
+.jazz span.box.block span {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 130px;
+  display: block; }
+
+.jazz .container {
+  overflow: hidden;
+  background-color: #fff; }
+  .jazz .container .body {
+    padding: 10px; }
+  .jazz .container.skin-dark {
+    background: url(/images/black_container_bg.png); }
+    .jazz .container.skin-dark .body {
+      padding-bottom: 20px; }
+  .jazz .container.with-tip {
+    overflow: visible;
+    position: relative; }
+  .jazz .container .tip {
+    width: 41px;
+    height: 37px;
+    position: absolute;
+    bottom: -31px;
+    right: 100px;
+    background: url(/images/tip.png) no-repeat top left; }
+
+.jazz ul.containers li {
+  margin-bottom: 6px; }
+.jazz ul.with-gaps li {
+  margin-bottom: 8px; }
+.jazz ul.inline-list {
+  overflow: hidden; }
+  .jazz ul.inline-list li {
+    float: left;
+    margin-right: 3px;
+    padding-bottom: 4px; }
+    .jazz ul.inline-list li.last {
+      margin-right: 0px; }
+.jazz ul li.last {
+  margin-bottom: 0px !important; }
+.jazz ul.grid-view li {
+  margin-right: 10px; }
+  .jazz ul.grid-view li.container {
+    background: none; }
+  .jazz ul.grid-view li.last {
+    margin-right: 0px; }
+  .jazz ul.grid-view li.first {
+    clear: both; }
+  .jazz ul.grid-view li .body {
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 5px 5px 5px 5px; }
+    .jazz ul.grid-view li .body img {
+      margin: 0;
+      padding: 0;
+      display: block; }
+    .jazz ul.grid-view li .body .name {
+      margin-bottom: 2px;
+      margin-top: 3px; }
+    .jazz ul.grid-view li .body .byline {
+      margin-bottom: 0px;
+      padding-left: 5px;
+      white-space: nowrap; }
+.jazz ul.header-meta-list .byline {
+  margin-bottom: 2px; }
+  .jazz ul.header-meta-list .byline .date {
+    color: #666; }
+  .jazz ul.header-meta-list .byline .author,
+  .jazz ul.header-meta-list .byline .location {
+    color: #ccc; }
+.jazz ul.header-meta-list li {
+  margin-bottom: 10px; }
+.jazz dl {
+  overflow: hidden;
+  margin: 0 0 5px 0; }
+  .jazz dl dd, .jazz dl dt {
+    float: left; }
+  .jazz dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ff9900;
+    padding-right: 5px;
+    clear: both; }
+  .jazz dl dd {
+    color: #ccc;
+    font-size: 12px;
+    margin: 0px;
+    line-height: 18px; }
+
+.jazz h1, .jazz h2, .jazz h3, .jazz h4, .jazz h5, .jazz h6 {
+  margin-top: 0px; }
+.jazz h3 {
+  color: #ff9900;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px; }
+.jazz h3.box-header {
+  background-color: #ff9900; }
+.jazz h3.box-header,
+.jazz h3.box-header a {
+  color: #fff;
+  font-size: 12px;
+  line-height: 13px;
+  padding: 8px;
+  text-transform: uppercase; }
+.jazz h3.box {
+  font-size: 12px; }
+
+.jazz .col-1,
+.jazz .col-2,
+.jazz .col-3,
+.jazz .col-4,
+.jazz .col-5,
+.jazz .col-6 {
+  float: left; }
+.jazz.layout-1 .col-1 {
+  width: 310px;
+  margin-right: 10px; }
+.jazz.layout-1 .col-2 {
+  width: 640px; }
+.jazz.layout-2 .col-1,
+.jazz.layout-2 .col-2,
+.jazz.layout-2 .col-3 {
+  width: 310px; }
+.jazz.layout-2 .col-1,
+.jazz.layout-2 .col-2 {
+  margin-right: 10px; }
+.jazz.layout-2 .col-1-2 {
+  width: 630px;
+  float: left;
+  margin-right: 10px; }
+  .jazz.layout-2 .col-1-2 .col-2 {
+    margin-right: 0px; }
+.jazz.layout-3 .col-1,
+.jazz.layout-3 .col-2,
+.jazz.layout-3 .col-3,
+.jazz.layout-3 .col-4,
+.jazz.layout-3 .col-5,
+.jazz.layout-3 .col-6 {
+  width: 135px;
+  margin-right: 30px; }
+.jazz.layout-3 .col-6 {
+  margin-right: 0px; }
+.jazz.layout-4 .col-1,
+.jazz.layout-4 .col-2 {
+  width: 470px;
+  margin-right: 10px; }
+.jazz.layout-4 .col-2 {
+  margin-right: 0px; }
+.jazz .section {
+  clear: both;
+  margin-bottom: 5px; }
+.jazz .media-with-info {
+  overflow: hidden; }
+  .jazz .media-with-info .media {
+    width: 140px;
+    height: 140px;
+    float: left; }
+  .jazz .media-with-info .info {
+    padding-left: 150px; }
+  .jazz .media-with-info.large .media {
+    width: 160px;
+    height: 160px; }
+  .jazz .media-with-info.large .info {
+    padding-left: 172px; }
+
+.jazz.page-home h3.container {
+  margin-bottom: 5px; }
+  .jazz.page-home h3.container img {
+    display: block; }
+  .jazz.page-home h3.container .body {
+    padding-bottom: 10px;
+    height: 25px; }
+.jazz.page-home .masthead-top {
+  background-image: url(/images/titles/home_title.png);
+  background-position: 10px 5px; }
+.jazz.page-home .masthead {
+  background: url(/images/home/masthead_bg.png) repeat-x;
+  margin-bottom: 0px; }
+.jazz.page-home #main-content {
+  background: url(/images/titles/home_title_bottom.png) no-repeat top left; }
+  .jazz.page-home #main-content #main-content-secondary {
+    padding-top: 5px; }
+.jazz.page-home .col-1-2 {
+  margin-top: 204px; }
+.jazz.page-home .col-1-2.with-banner {
+  margin-top: 0px; }
+.jazz.page-home #featured-video .body {
+  padding: 5px; }
+  .jazz.page-home #featured-video .body img {
+    width: 300px; }
+  .jazz.page-home #featured-video .body .box.name {
+    background-color: #000; }
+    .jazz.page-home #featured-video .body .box.name span {
+      width: 290px; }
+  .jazz.page-home #featured-video .body.additional-content {
+    padding-top: 0px; }
+  .jazz.page-home #featured-video .body p.video_description {
+    margin-bottom: 10px; }
+  .jazz.page-home #featured-video .body p.show {
+    margin-bottom: 0px; }
+.jazz.page-home #intro a.box {
+  width: 210px; }
+.jazz.page-home #mailing-list .body {
+  padding-top: 5px; }
+
+.jazz.section-artists .masthead-top {
+  background-image: url(/images/titles/artists_title.png);
+  background-position: 64px 5px; }
+.jazz.section-artists .masthead {
+  background: url(/images/masthead_bg/artists.png) repeat-x; }
+.jazz.section-artists.page-index p.byline {
+  width: 130px;
+  overflow: hidden;
+  white-space: nowrap; }
+.jazz.section-artists.page-show #info .body {
+  position: relative;
+  padding-bottom: 26px;
+  zoom: 1; }
+.jazz.section-artists.page-show #info h3.name {
+  margin-bottom: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 12px; }
+.jazz.section-artists.page-show #info p.instrument {
+  margin-bottom: 5px;
+  color: #666; }
+.jazz.section-artists.page-show #info a.box {
+  width: 130px;
+  position: absolute;
+  bottom: 10px;
+  left: 155px; }
+  .jazz.section-artists.page-show #info a.box.visit-website {
+    left: 10px; }
+.jazz.section-artists.page-show #info .media-with-info .media {
+  padding-right: 10px;
+  padding-bottom: 8px; }
+.jazz.section-artists.page-show #info .media-with-info .info {
+  padding-left: 0px; }
+.jazz.section-artists.page-show #info #bio_clone,
+.jazz.section-artists.page-show #info #bio p {
+  color: #ccc; }
+.jazz.section-artists.page-show #info #bio_clone {
+  width: 140px;
+  float: right; }
+.jazz.section-artists.page-show #info #bio p {
+  margin-bottom: 0; }
+.jazz.section-artists.page-show #info #bio {
+  display: none; }
+.jazz.section-artists.page-show #known_associates .body,
+.jazz.section-artists.page-show #shop .body,
+.jazz.section-artists.page-show #shows .body {
+  padding: 5px 10px 10px 10px; }
+.jazz.section-artists.page-show #shop ul.inline-list li {
+  margin-right: 10px; }
+
+.jazz.page-about .masthead-top {
+  background-image: url(/images/titles/about_title.png); }
+.jazz.page-about .masthead {
+  background: url(/images/masthead_bg/about.png) repeat-x; }
+.jazz.page-about #recent-press .byline {
+  margin-bottom: 2px; }
+  .jazz.page-about #recent-press .byline .date {
+    color: #666; }
+  .jazz.page-about #recent-press .byline .author {
+    color: #ccc; }
+.jazz.page-about #recent-press li {
+  margin-bottom: 6px; }
+
+.jazz.page-shows h3#featured-musicians-title {
+  margin-top: 5px; }
+.jazz.page-shows .show-listing .band,
+.jazz.page-shows .show-listing .venue,
+.jazz.page-shows .show-listing p.date {
+  float: left;
+  margin-bottom: 0px; }
+.jazz.page-shows .show-listing .band {
+  margin-right: 3px; }
+.jazz.page-shows .show-listing .venue {
+  margin-right: 4px; }
+.jazz.page-shows .show-listing p.date {
+  margin-bottom: 0px;
+  margin-top: 3px; }
+.jazz.page-shows .show-listing h3 {
+  margin-bottom: 3px; }
+.jazz.page-shows .show-listing > .container .body {
+  padding: 5px 10px 10px 10px; }
+.jazz.page-shows .show-listing ul li {
+  padding-bottom: 0px;
+  margin-bottom: 5px; }
+  .jazz.page-shows .show-listing ul li.featured-musician {
+    color: #666;
+    margin-bottom: 0;
+    line-height: 14px; }
+    .jazz.page-shows .show-listing ul li.featured-musician a.box {
+      font-weight: normal; }
+
+.jazz.page-donate .masthead-top {
+  background-image: url(/images/titles/donate_title.png); }
+.jazz.page-donate .masthead {
+  background: url(/images/masthead_bg/donate.png) repeat-x; }
+.jazz.page-donate #main-content {
+  height: 543px;
+  background: url(/images/rats.png) no-repeat top left; }
+.jazz.page-donate .container.with-tip .body {
+  padding-top: 5px;
+  padding-bottom: 20px; }
+
+.jazz.page-resources .masthead-top {
+  background-image: url(/images/titles/resources_title.png); }
+.jazz.page-resources .masthead {
+  background: url(/images/masthead_bg/resources.png) repeat-x; }
+
+.jazz.section-video .masthead-top {
+  background-image: url(/images/titles/video_title.png); }
+.jazz.section-video .masthead {
+  background: url(/images/masthead_bg/videos.png) repeat-x; }
+
+.jazz.section-venues .masthead-top {
+  background-image: url(/images/titles/venues_title.png); }
+.jazz.section-venues .masthead {
+  background: url(/images/masthead_bg/venues.png) repeat-x; }
+.jazz.section-venues.page-index .searchy-inline select {
+  width: 223px; }
+.jazz.section-venues.page-index .searchy-inline * {
+  margin-bottom: 2px; }
+.jazz.section-venues.page-show #their-words .container .body,
+.jazz.section-venues.page-show #our-words .container .body {
+  padding-top: 5px; }
+.jazz.section-venues.page-show fieldset.searchy .field.select .input {
+  float: left; }
+.jazz.section-venues.page-show fieldset.searchy .field.select .submit {
+  float: right; }
+  .jazz.section-venues.page-show fieldset.searchy .field.select .submit input {
+    padding-right: 0px !important;
+    margin-right: 0px !important; }
+
+.jazz .mt1 {
+  margin-top: 1px !important; }
+.jazz .mt5 {
+  margin-top: 5px !important; }
+.jazz .mt10 {
+  margin-top: 10px !important; }
+.jazz .mt15 {
+  margin-top: 15px !important; }
+.jazz .mt20 {
+  margin-top: 20px !important; }
+.jazz .mt25 {
+  margin-top: 25px !important; }
+.jazz .mt30 {
+  margin-top: 30px !important; }
+.jazz .mt35 {
+  margin-top: 35px !important; }
+.jazz .mt40 {
+  margin-top: 40px !important; }
+.jazz .mt45 {
+  margin-top: 45px !important; }
+.jazz .mr1 {
+  margin-right: 1px !important; }
+.jazz .mr5 {
+  margin-right: 5px !important; }
+.jazz .mr10 {
+  margin-right: 10px !important; }
+.jazz .mr15 {
+  margin-right: 15px !important; }
+.jazz .mr20 {
+  margin-right: 20px !important; }
+.jazz .mr25 {
+  margin-right: 25px !important; }
+.jazz .mr30 {
+  margin-right: 30px !important; }
+.jazz .mr35 {
+  margin-right: 35px !important; }
+.jazz .mr40 {
+  margin-right: 40px !important; }
+.jazz .mr45 {
+  margin-right: 45px !important; }
+.jazz .mb1 {
+  margin-bottom: 1px !important; }
+.jazz .mb5 {
+  margin-bottom: 5px !important; }
+.jazz .mb10 {
+  margin-bottom: 10px !important; }
+.jazz .mb15 {
+  margin-bottom: 15px !important; }
+.jazz .mb20 {
+  margin-bottom: 20px !important; }
+.jazz .mb25 {
+  margin-bottom: 25px !important; }
+.jazz .mb30 {
+  margin-bottom: 30px !important; }
+.jazz .mb35 {
+  margin-bottom: 35px !important; }
+.jazz .mb40 {
+  margin-bottom: 40px !important; }
+.jazz .mb45 {
+  margin-bottom: 45px !important; }
+.jazz .ml1 {
+  margin-left: 1px !important; }
+.jazz .ml5 {
+  margin-left: 5px !important; }
+.jazz .ml10 {
+  margin-left: 10px !important; }
+.jazz .ml15 {
+  margin-left: 15px !important; }
+.jazz .ml20 {
+  margin-left: 20px !important; }
+.jazz .ml25 {
+  margin-left: 25px !important; }
+.jazz .ml30 {
+  margin-left: 30px !important; }
+.jazz .ml35 {
+  margin-left: 35px !important; }
+.jazz .ml40 {
+  margin-left: 40px !important; }
+.jazz .ml45 {
+  margin-left: 45px !important; }
+.jazz .m5 {
+  margin: 5px !important; }
+.jazz .m10 {
+  margin: 10px !important; }
+.jazz .m15 {
+  margin: 15px !important; }
+.jazz .m20 {
+  margin: 20px !important; }
+.jazz .m25 {
+  margin: 25px !important; }
+.jazz .m30 {
+  margin: 30px !important; }
+.jazz .m35 {
+  margin: 35px !important; }
+.jazz .m40 {
+  margin: 40px !important; }
+.jazz .m45 {
+  margin: 45px !important; }
+.jazz .pt1 {
+  padding-top: 1px !important; }
+.jazz .pt5 {
+  padding-top: 5px !important; }
+.jazz .pt10 {
+  padding-top: 10px !important; }
+.jazz .pt15 {
+  padding-top: 15px !important; }
+.jazz .pt20 {
+  padding-top: 20px !important; }
+.jazz .pt25 {
+  padding-top: 25px !important; }
+.jazz .pt30 {
+  padding-top: 30px !important; }
+.jazz .pt35 {
+  padding-top: 35px !important; }
+.jazz .pt40 {
+  padding-top: 40px !important; }
+.jazz .pt45 {
+  padding-top: 45px !important; }
+.jazz .pr1 {
+  padding-right: 1px !important; }
+.jazz .pr5 {
+  padding-right: 5px !important; }
+.jazz .pr10 {
+  padding-right: 10px !important; }
+.jazz .pr15 {
+  padding-right: 15px !important; }
+.jazz .pr20 {
+  padding-right: 20px !important; }
+.jazz .pr25 {
+  padding-right: 25px !important; }
+.jazz .pr30 {
+  padding-right: 30px !important; }
+.jazz .pr35 {
+  padding-right: 35px !important; }
+.jazz .pr40 {
+  padding-right: 40px !important; }
+.jazz .pr45 {
+  padding-right: 45px !important; }
+.jazz .pb1 {
+  padding-bottom: 1px !important; }
+.jazz .pb5 {
+  padding-bottom: 5px !important; }
+.jazz .pb10 {
+  padding-bottom: 10px !important; }
+.jazz .pb15 {
+  padding-bottom: 15px !important; }
+.jazz .pb20 {
+  padding-bottom: 20px !important; }
+.jazz .pb25 {
+  padding-bottom: 25px !important; }
+.jazz .pb30 {
+  padding-bottom: 30px !important; }
+.jazz .pb35 {
+  padding-bottom: 35px !important; }
+.jazz .pb40 {
+  padding-bottom: 40px !important; }
+.jazz .pb45 {
+  padding-bottom: 45px !important; }
+.jazz .pl1 {
+  padding-left: 1px !important; }
+.jazz .pl5 {
+  padding-left: 5px !important; }
+.jazz .pl10 {
+  padding-left: 10px !important; }
+.jazz .pl15 {
+  padding-left: 15px !important; }
+.jazz .pl20 {
+  padding-left: 20px !important; }
+.jazz .pl25 {
+  padding-left: 25px !important; }
+.jazz .pl30 {
+  padding-left: 30px !important; }
+.jazz .pl35 {
+  padding-left: 35px !important; }
+.jazz .pl40 {
+  padding-left: 40px !important; }
+.jazz .pl45 {
+  padding-left: 45px !important; }
+.jazz .p5 {
+  padding: 5px !important; }
+.jazz .p10 {
+  padding: 10px !important; }
+.jazz .p15 {
+  padding: 15px !important; }
+.jazz .p20 {
+  padding: 20px !important; }
+.jazz .p25 {
+  padding: 25px !important; }
+.jazz .p30 {
+  padding: 30px !important; }
+.jazz .p35 {
+  padding: 35px !important; }
+.jazz .p40 {
+  padding: 40px !important; }
+.jazz .p45 {
+  padding: 45px !important; }
+.jazz .h1 {
+  height: 1px !important; }
+.jazz .h2 {
+  height: 2px !important; }
+.jazz .h3 {
+  height: 3px !important; }
+.jazz .h4 {
+  height: 4px !important; }
+.jazz .h5 {
+  height: 5px !important; }
+.jazz .h10 {
+  height: 10px !important; }
+.jazz .h15 {
+  height: 15px !important; }
+.jazz .h20 {
+  height: 20px !important; }
+.jazz .h25 {
+  height: 25px !important; }
+.jazz .h30 {
+  height: 30px !important; }
+.jazz .h35 {
+  height: 35px !important; }
+.jazz .h40 {
+  height: 40px !important; }
+.jazz .h45 {
+  height: 45px !important; }
+
+body {
+  line-height: 1.25;
+  font-size: 13px;
+  font-family: Ariel, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url(/images/body_bg.png); }
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+address {
+  color: #666;
+  font-style: normal; }
+
+h4 {
+  margin-bottom: 0;
+  font-weight: normal;
+  font-size: 12px;
+  text-transform: uppercase; }
+
+a {
+  color: #ff9900; }
+
+img {
+  border: none; }
+
+.fixed {
+  position: fixed; }
+
+#logo {
+  position: absolute;
+  top: 35px;
+  left: 0px; }
+
+.masthead {
+  background: url(/images/masthead_bg/shows.png) repeat-x;
+  height: 148px;
+  width: 100%;
+  margin-bottom: 13px; }
+  .masthead .site-container {
+    position: relative; }
+
+.masthead-top {
+  height: 126px;
+  background-image: url(/images/titles/shows_title.png);
+  background-repeat: no-repeat;
+  background-position: 54px 5px; }
+
+.jazz.masthead-bg-shows .masthead {
+  background: url(/images/masthead_bg/shows.png); }
+
+.jazz.masthead-bg-artists .masthead {
+  background: url(/images/masthead_bg/artists.png); }
+
+.jazz.masthead-bg-venues .masthead {
+  background: url(/images/masthead_bg/venues.png); }
+
+.jazz.masthead-bg-videos .masthead {
+  background: url(/images/masthead_bg/videos.png); }
+
+.jazz.masthead-bg-resources .masthead {
+  background: url(/images/masthead_bg/resources.png); }
+
+.jazz.masthead-bg-about .masthead {
+  background: url(/images/masthead_bg/about.png); }
+
+.jazz.masthead-bg-donate .masthead {
+  background: url(/images/masthead_bg/donate.png); }
+
+.site-container {
+  width: 960px;
+  margin: 0px auto; }
+  .site-container#main-content {
+    padding-bottom: 30px; }
+
+.snug-bottom {
+  margin-bottom: 0px !important; }
+
+.snug {
+  margin: 0px !important;
+  padding: 0px !important; }
+
+.block {
+  display: block !important; }
+
+.inline {
+  display: inline !important; }
+
+.inline-block {
+  display: inline-block !important; }
+
+.floatleft {
+  float: left; }
+
+.floatright {
+  float: right; }
+
+.centered {
+  text-align: center; }
+
+p {
+  margin-top: 0px;
+  color: #666;
+  margin-bottom: 15px; }
+
+.skin-dark p {
+  color: #fff; }
+
+.nav li {
+  float: left; }
+  .nav li a {
+    display: block;
+    cursor: pointer;
+    line-height: 16px;
+    padding: 3px 6px 2px 6px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none; }
+  .nav li.selected a, .nav li:hover a {
+    background-color: #ff9900; }
+
+body.page-home .nav li#nav-home a {
+  background-color: #ff9900; }
+body.page-shows .nav li#nav-shows a {
+  background-color: #ff9900; }
+body.section-artists .nav li#nav-artists a {
+  background-color: #ff9900; }
+body.section-venues .nav li#nav-venues a {
+  background-color: #ff9900; }
+body.section-video .nav li#nav-video a {
+  background-color: #ff9900; }
+body.page-about .nav li#nav-about a {
+  background-color: #ff9900; }
+body.page-resources .nav li#nav-resources a {
+  background-color: #ff9900; }
+body.page-donate .nav li#nav-donate a {
+  background-color: #ff9900; }
+
+.clear {
+  clear: both; }
+
+.skin-dark {
+  color: #fff; }
+
+.jazz.section-components #main-content {
+  background-color: #fff; }
+.jazz .mr-5 {
+  margin-right: 5px; }
+.jazz .mr-10 {
+  margin-right: 10px; }
+.jazz .mr-15 {
+  margin-right: 15px; }
+.jazz .mr-20 {
+  margin-right: 25px; }
+.jazz .mr-25 {
+  margin-right: 5px; }
+.jazz .mr-30 {
+  margin-right: 5px; }
+.jazz .mt-5 {
+  margin-top: 5px; }
+.jazz .mt-10 {
+  margin-top: 10px; }
+.jazz .mt-15 {
+  margin-top: 15px; }
+.jazz .mt-20 {
+  margin-top: 25px; }
+.jazz .mt-25 {
+  margin-top: 5px; }
+.jazz .mt-30 {
+  margin-top: 5px; }
+
+#mailing-list .field {
+  margin-bottom: 5px; }
+  #mailing-list .field label {
+    font-size: 12px;
+    color: #ccc;
+    font-weight: normal; }
+  #mailing-list .field.text {
+    clear: both; }
+    #mailing-list .field.text label {
+      float: left;
+      margin-right: 5px;
+      padding-top: 3px;
+      width: 36px; }
+    #mailing-list .field.text .wrapper {
+      width: 245px;
+      float: left; }
+      #mailing-list .field.text .wrapper input {
+        border: 1px solid #ccc;
+        height: 18px;
+        width: 245px; }
+  #mailing-list .field.radio {
+    overflow: hidden;
+    margin-right: 15px; }
+    #mailing-list .field.radio input,
+    #mailing-list .field.radio .wrapper {
+      float: left; }
+    #mailing-list .field.radio .wrapper {
+      margin-left: 5px; }
+    #mailing-list .field.radio.subscribe {
+      margin-left: 38px; }
+
+#video_player_container p {
+  margin-bottom: 6px; }
+#video_player_container h3 {
+  margin-bottom: 4px; }
+#video_player_container a.venue-link {
+  text-decoration: none; }
+
+#video_player_container .video-thumb,
+#more_videos .video-thumb,
+.section-video .video-thumb {
+  background-color: #fff; }
+  #video_player_container .video-thumb:hover .box, #video_player_container .video-thumb.active .box,
+  #more_videos .video-thumb:hover .box,
+  #more_videos .video-thumb.active .box,
+  .section-video .video-thumb:hover .box,
+  .section-video .video-thumb.active .box {
+    background-color: #000; }
+  #video_player_container .video-thumb p,
+  #more_videos .video-thumb p,
+  .section-video .video-thumb p {
+    margin-bottom: 0px; }
+  #video_player_container .video-thumb .body,
+  #more_videos .video-thumb .body,
+  .section-video .video-thumb .body {
+    padding: 5px 5px 8px 5px !important; }
+  #video_player_container .video-thumb p.show,
+  #more_videos .video-thumb p.show,
+  .section-video .video-thumb p.show {
+    width: 140px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 0px; }
+  #video_player_container .video-thumb .name,
+  #more_videos .video-thumb .name,
+  .section-video .video-thumb .name {
+    margin-top: 3px; }
+#video_player_container li.last .video-thumb,
+#more_videos li.last .video-thumb,
+.section-video li.last .video-thumb {
+  margin-right: 0px; }
