@@ -24,7 +24,7 @@
           FEATURED VIDEO
         %dd.section#featured-video
           - if @featured_video.present?
-            = render :partial => 'videos/video_embed_thumb', :locals => { :thumbnail => nil, :video => @featured_video }
+            = render :partial => 'videos/video_thumb', :locals => { :thumbnail => nil, :video => @featured_video, :embed => true }
             
         %dt
           TONIGHT'S SHOWS
