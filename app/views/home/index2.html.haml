@@ -2,7 +2,6 @@
 - @masthead_bg = masthead_bgs[rand(masthead_bgs.length)] 
 - @page_class = "layout-2 page-home masthead-bg-#{@masthead_bg}"
 
-
 #main-content-secondary
   .col-1-2{ :class => @banners.any? && 'with-banner' }
     - if @banners.any?
@@ -25,4 +24,29 @@
           FEATURED VIDEO
         %dd.section#featured-video
           - if @featured_video.present?
-            = render :partial => 'videos/video_thumb', :locals => { :thumbnail => nil, :video => @featured_video }
+            = render :partial => 'videos/video_embed_thumb', :locals => { :thumbnail => nil, :video => @featured_video }
+            
+        %dt
+          TONIGHT'S SHOWS
+        %dd.section#tonights_shows
+          %ul.header-meta-list
+            - @top_picks.each do |show|
+              %li
+                %h4.box.dark.wrap= show.group_name
+                %p.byline
+                  %span.date= show.when.strftime("%m/%d/%Y")
+                  %span.location= link_to(show.venue.name, show.venue)
+            = link_to('See more shows...', shows_path, :class => 'box')
+
+        - if @homepage.blurbs[0].present?
+          %dt= @homepage.blurbs[0].title
+          %dd.section#homepage-blur
+            :textile
+              #{@homepage.blurbs[0].text}
+
+        - if @homepage.blurbs[1].present?
+          %dt= @homepage.blurbs[1].title
+          %dd.section#homepage-blur
+            :textile
+              #{@homepage.blurbs[1].text}
+      
