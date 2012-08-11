@@ -22,11 +22,29 @@
         padding-top: 5px;
       }
     }
-    .col-1-2 {
+    /*.col-1-2 {
       margin-top:204px;
-    }
+    }*/
     .col-1-2.with-banner {
       margin-top: 0px;
+    }
+    .col-1, .col-2 {
+      width: 470px;
+      h1 {
+        color: #ffffff;
+        font-size: 35px;
+        margin-top: 10px;
+        margin-bottom: 0px;
+      }
+      h2 {
+        color: Gray;
+      }
+    }
+    #graphic {
+      margin-top: 10px;
+      img {
+        width: 460px;
+      }
     }
     #exciting-news {
       //float: right;

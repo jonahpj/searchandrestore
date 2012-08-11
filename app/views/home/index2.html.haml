@@ -51,3 +51,16 @@
             :textile
               #{@homepage.blurbs[1].text}
       
+  .clear
+  
+  .col1-2
+  
+    .col-1#blog
+      %h1
+        FROM THE BLOG
+      %h2
+        News, interviews, and more...
+        
+    .col-2#graphic
+      - if @homepage.graphic.present?
+        = @homepage.graphic.html_safe
