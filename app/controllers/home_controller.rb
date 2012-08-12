@@ -31,7 +31,11 @@ class HomeController < ApplicationController
 
     @featured_video_description = @homepage.video_description
     
-    @blog_post = blog
+    @blog_posts = blog
+    @blog_tags = []
+    @blog_posts.each do |post|
+      @blog_tags << blog_tags(post)
+    end
   end
   
   def index2
@@ -65,8 +69,22 @@ class HomeController < ApplicationController
   end
 
   def blog
-    Tumblr.blog = 'searchandrestore'
-    Tumblr::Post.first({:start => 1})
+    uri = URI.parse('http://api.tumblr.com')
+    api_key = 'vYYBosazRckPMQplWCdDEVryLs55FCmxHu3ZRr02C03ubfPI5H'
+    res = Net::HTTP.start(uri.host, uri.port) do |http|
+      # todo: limit
+      http.get('/v2/blog/searchandrestore.tumblr.com/posts?api_key=' + api_key + '&limit=4')
+    end
+    json = JSON(res.body)
+    json['response']['posts']
+  end
+  
+  def blog_tags(post)
+    tags = {}
+    post['tags'].each do |tag|
+      tags[tag] = 'http://searchandrestore.tumblr.com/tagged' + tag.gsub(/ /, '-') 
+    end
+    tags
   end
   
   def random_function

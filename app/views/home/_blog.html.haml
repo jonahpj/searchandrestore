@@ -1,24 +1,27 @@
-- posted_ago = time_ago_in_words(Time.at(blog_post['unix_timestamp'].to_i)) + ' ago'
-- tagged_url = 'http://' + Tumblr::blog + '/tagged/' + blog_post['tag'].gsub(/ /, '-')
-- tagged_txt = '#' + blog_post['tag']
+- posted_ago = time_ago_in_words(Time.at(blog_post['timestamp'].to_i)) + ' ago'
 
 .blog-post
   - case blog_post['type']
     - when 'photo'
+      -# todo: each
       .post-body#photo
-        = image_tag(blog_post['photo_url'][0]['__content__'])
-        %span.photo-caption= blog_post['photo_caption'].html_safe
-        %p.time-ago= posted_ago
+        = image_tag(blog_post['photos'][0]['alt_sizes'][0]['url'])
+        %span.photo-caption= blog_post['caption'].html_safe
     - when 'quote'
       .post-body#quote
         %p.quote-text
           :textile
-            #{blog_post['quote_text']}
-        aslkdgjaslkdgjalksjdglksjg
-        %p.tagged= link_to(tagged_txt, tagged_url)
-        %p.time-ago= posted_ago
+            #{blog_post['text']}
     - when 'video'
+      -# todo: each
       .post-body#video
         .video-player
-          = blog_post['video_player'][0].html_safe
-        %p.video-caption= blog_post['video_caption'].html_safe
+          = blog_post['player'][0]['embed_code'].html_safe
+        %p.video-caption= blog_post['caption'].html_safe
+      
+  %p.time-ago= posted_ago
+  %p.tagged
+    - tags.keys.each do |key|
+      = link_to(key, tags[key])
+
+    

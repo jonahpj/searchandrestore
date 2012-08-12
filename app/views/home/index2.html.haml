@@ -1,6 +1,7 @@
 - masthead_bgs = ['videos','venues','resources','donate','artists','about', 'shows']
 - @masthead_bg = masthead_bgs[rand(masthead_bgs.length)] 
 - @page_class = "layout-2 page-home masthead-bg-#{@masthead_bg}"
+- @blog_post = @blog_posts[2]
 
 #main-content-secondary
   .col-1-2{ :class => @banners.any? && 'with-banner' }
@@ -17,8 +18,8 @@
         %dt
           FROM THE BLOG
         %dd.section#blog
-          - if @blog_post.present?
-            = render :partial => 'home/blog', :locals => { :blog_post => @blog_post }
+          - if @blog_posts[0].present?
+            = render :partial => 'home/blog', :locals => { :blog_post => @blog_post, :tags => @blog_tags[2] }
       
         %dt
           FEATURED VIDEO
@@ -51,7 +52,7 @@
             :textile
               #{@homepage.blurbs[1].text}
       
-  .clear
+  -#.clear
   
   .col1-2
   
@@ -61,6 +62,12 @@
       %h2
         News, interviews, and more...
         
-    .col-2#graphic
-      - if @homepage.graphic.present?
-        = @homepage.graphic.html_safe
+    .col-2
+      #graphic
+        - if @homepage.graphic.present?
+          = @homepage.graphic.html_safe
+      #shows
+        %h1
+          TONIGHT'S SHOWS
+        %h2
+          Top picks selected by Search & Restore
