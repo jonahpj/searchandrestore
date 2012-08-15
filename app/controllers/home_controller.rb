@@ -1,4 +1,7 @@
 class HomeController < ApplicationController
+  # todo: move this???
+  require 'net/http'
+
   module Helpers
     extend ActionView::Helpers::TextHelper
   end
@@ -73,7 +76,7 @@ class HomeController < ApplicationController
     api_key = 'vYYBosazRckPMQplWCdDEVryLs55FCmxHu3ZRr02C03ubfPI5H'
     res = Net::HTTP.start(uri.host, uri.port) do |http|
       # todo: limit
-      http.get('/v2/blog/searchandrestore.tumblr.com/posts?api_key=' + api_key + '&limit=4')
+      http.get('/v2/blog/searchandrestore.tumblr.com/posts?api_key=' + api_key + '&limit=3')
     end
     json = JSON(res.body)
     json['response']['posts']

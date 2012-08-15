@@ -27,6 +27,8 @@
   .jazz.page-home .col-1 h2, .jazz.page-home .col-2 h2 {
     color: Gray; }
 .jazz.page-home #graphic {
+  margin-left: 490px;
+  width: 470px;
   margin-top: 10px; }
   .jazz.page-home #graphic img {
     max-width: 460px; }

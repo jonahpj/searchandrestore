@@ -1,11 +1,11 @@
 - posted_ago = time_ago_in_words(Time.at(blog_post['timestamp'].to_i)) + ' ago'
 
-.blog-post
+.blog-post      
+  -# grab different text based on type of post
   - case blog_post['type']
     - when 'photo'
-      -# todo: each
       .post-body#photo
-        = image_tag(blog_post['photos'][0]['alt_sizes'][0]['url'])
+        -#= image_tag(blog_post['photos'][0]['alt_sizes'][0]['url'])
         %span.photo-caption= blog_post['caption'].html_safe
     - when 'quote'
       .post-body#quote
@@ -13,15 +13,20 @@
           :textile
             #{blog_post['text']}
     - when 'video'
-      -# todo: each
       .post-body#video
         .video-player
           = blog_post['player'][0]['embed_code'].html_safe
-        %p.video-caption= blog_post['caption'].html_safe
-      
+          %p.video-caption= blog_post['caption'].html_safe
+    -# text post: optional title, required body
+    - when 'text'
+      - if blog_post['text'].present?
+        = blog_post['title']
+      - else
+        -# todo: truncate
+        = blog_post['body']
+            
   %p.time-ago= posted_ago
   %p.tagged
-    - tags.keys.each do |key|
-      = link_to(key, tags[key])
-
-    
+    - tags.each do |tag|
+      - tag.keys.each do |key|
+        = link_to(key, tag[key])

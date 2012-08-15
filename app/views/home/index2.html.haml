@@ -1,7 +1,6 @@
 - masthead_bgs = ['videos','venues','resources','donate','artists','about', 'shows']
 - @masthead_bg = masthead_bgs[rand(masthead_bgs.length)] 
 - @page_class = "layout-2 page-home masthead-bg-#{@masthead_bg}"
-- @blog_post = @blog_posts[2]
 
 #main-content-secondary
   .col-1-2{ :class => @banners.any? && 'with-banner' }
@@ -18,8 +17,13 @@
         %dt
           FROM THE BLOG
         %dd.section#blog
-          - if @blog_posts[0].present?
-            = render :partial => 'home/blog', :locals => { :blog_post => @blog_post, :tags => @blog_tags[2] }
+          %h1
+            FROM THE BLOG
+          %h2
+            Artist interviews, news and more...
+          - if @blog_posts.present?
+            - @blog_posts.each do |blog_post|
+              = render :partial => 'home/blog', :locals => { :blog_post => blog_post, :tags => @blog_tags }
       
         %dt
           FEATURED VIDEO
@@ -31,13 +35,23 @@
         %dt
           TONIGHT'S SHOWS
         %dd.section#tonights_shows
-          %ul.header-meta-list
+          %h1
+            TONIGHT'S SHOWS
+          %h2
+            Top picks selected by Search & Restore
+          %ul.containers.show-listing
             - @top_picks.each do |show|
-              %li
-                %h4.box.dark.wrap= show.group_name
-                %p.byline
-                  %span.date= show.when.strftime("%m/%d/%Y")
-                  %span.location= link_to(show.venue.name, show.venue)
+              %li.container[show]
+                .body
+                  %p.box.dark.band= show.group_name
+                  = link_to("#{show.venue.name}", show.venue, :class => 'box venue')
+                  %p.date= show.when.strftime("%-m/%d/%Y %l%P")
+                  .clear
+                  - if show.performances.present?
+                    %h3#featured-musicians-title Featured Musicians:
+                    %ul.inline-list
+                      - show.performances.each do |performance|
+                        %li.featured-musician= performance_link(performance, :class => 'box')
             = link_to('See more shows...', shows_path, :class => 'box')
 
         - if @homepage.blurbs[0].present?
@@ -52,22 +66,11 @@
             :textile
               #{@homepage.blurbs[1].text}
       
-  -#.clear
+  .clear
   
   .col1-2
   
-    .col-1#blog
-      %h1
-        FROM THE BLOG
-      %h2
-        News, interviews, and more...
-        
     .col-2
       #graphic
         - if @homepage.graphic.present?
           = @homepage.graphic.html_safe
-      #shows
-        %h1
-          TONIGHT'S SHOWS
-        %h2
-          Top picks selected by Search & Restore
