@@ -23,13 +23,14 @@
             Artist interviews, news and more...
           - if @blog_posts.present?
             - @blog_posts.each do |blog_post|
-              = render :partial => 'home/blog', :locals => { :blog_post => blog_post, :tags => @blog_tags }
+              = render :partial => 'home/blog', :locals => { :blog_post => blog_post }
+          .more-link
+            = link_to('TAKE ME TO THE BLOG', 'http://searchandrestore.tumblr.com', :class => 'box more')
       
         %dt
           FEATURED VIDEO
         %dd.section#featured-video
           - if @featured_video.present?
-            -#= render :partial => 'videos/video_thumb', :locals => { :thumbnail => nil, :video => @featured_video, :embed => true }
             = render :partial => 'application/player', :locals => { :selected_video => @featured_video, :show => @featured_video.show }
             
         %dt
@@ -52,7 +53,7 @@
                     %ul.inline-list
                       - show.performances.each do |performance|
                         %li.featured-musician= performance_link(performance, :class => 'box')
-            = link_to('See more shows...', shows_path, :class => 'box')
+            = link_to('SEE MORE SHOWS', shows_path, :class => 'box more')
 
         - if @homepage.blurbs[0].present?
           %dt= @homepage.blurbs[0].title
@@ -74,3 +75,38 @@
       #graphic
         - if @homepage.graphic.present?
           = @homepage.graphic.html_safe
+
+  .clear
+  
+  .col1-2
+  
+    .col-1
+      #mailing-list
+        %h1
+          JOIN OUR MAILING LIST
+        %h2
+          To keep yourself entertained and inspired
+        = render :partial => 'mailing_list'
+    .col-2
+      #support
+        .support-us
+          %h1
+            SUPPORT US
+          %h3
+            In exchange for good karma and great jazz
+        .social-media
+          %h3
+            Let's connect on
+            = link_to('FACEBOOK', '', :class => 'box more')
+            = link_to('TWITTER', '', :class => 'box more')
+    
+    .clear
+    
+    .col1-2
+      #footer
+        .site-tagline
+          %span.site-name
+            SEARCH &amp; RESTORE
+          Bringing the artists and audiences of new jazz and improvised music together in new ways, never forgetting its DIY roots.
+        .site-copyright
+          Copyright &copy; Search &amp; Restore 2012. All rights reserved.

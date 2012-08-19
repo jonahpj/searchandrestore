@@ -233,6 +233,9 @@
   text-transform: uppercase; }
 .jazz h3.box {
   font-size: 12px; }
+.jazz input.box {
+  border: none;
+  font-size: 13px; }
 
 .jazz .col-1,
 .jazz .col-2,
@@ -292,6 +295,12 @@
   .jazz .media-with-info.large .info {
     padding-left: 172px; }
 
+.jazz.page-home dd.section {
+  padding-left: 10px;
+  padding-top: 10px; }
+.jazz.page-home .box.more {
+  padding: 5px 8px 5px 8px;
+  font-size: 13px; }
 .jazz.page-home h3.container {
   margin-bottom: 5px; }
   .jazz.page-home h3.container img {
@@ -344,6 +353,36 @@
   width: 210px; }
 .jazz.page-home #mailing-list .body {
   padding-top: 5px; }
+.jazz.page-home #mailing-list .field.text .wrapper input {
+  width: 350px; }
+.jazz.page-home #mailing-list .field.text label {
+  width: 50px;
+  margin-right: 10px;
+  font-size: 14px; }
+.jazz.page-home #support {
+  margin-top: 70px;
+  text-align: center; }
+  .jazz.page-home #support h1, .jazz.page-home #support h2, .jazz.page-home #support h3 {
+    color: white; }
+  .jazz.page-home #support .support-us {
+    background-color: #f90; }
+  .jazz.page-home #support .social-media {
+    margin-top: 10px;
+    background: black; }
+.jazz.page-home #footer {
+  text-align: center;
+  margin-top: 20px;
+  color: white; }
+  .jazz.page-home #footer .site-tagline {
+    background-color: black;
+    color: gray;
+    padding: 10px; }
+    .jazz.page-home #footer .site-tagline .site-name {
+      color: white;
+      font-weight: bold;
+      padding-right: 5px; }
+  .jazz.page-home #footer .site-copyright {
+    margin-top: 10px; }
 
 .jazz.section-artists .masthead-top {
   background-image: url(/images/titles/artists_title.png);

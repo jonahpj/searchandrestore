@@ -1,32 +1,21 @@
-- posted_ago = time_ago_in_words(Time.at(blog_post['timestamp'].to_i)) + ' ago'
+- posted_at = Time.at(blog_post['timestamp'].to_i).strftime('%-m/%-d/%Y')
+- case blog_post['type']
+  - when 'photo'
+    - post_text = strip_tags(blog_post['caption'])
+  - when 'quote'
+    - post_text = strip_tags(blog_post['text'])
+  - when 'video'
+    -# todo
+  -# text post: optional title, required body
+  - when 'text'
+    - if blog_post['text'].present?
+      - post_text = blog_post['title']
+    - else
+      -# todo: truncate
+      - post_text = blog_post['body']
+- if defined? post_text
+  - post_link = link_to(truncate(post_text, :length => 70, :separator => ' '), blog_post['post_url'])
 
-.blog-post      
-  -# grab different text based on type of post
-  - case blog_post['type']
-    - when 'photo'
-      .post-body#photo
-        -#= image_tag(blog_post['photos'][0]['alt_sizes'][0]['url'])
-        %span.photo-caption= blog_post['caption'].html_safe
-    - when 'quote'
-      .post-body#quote
-        %p.quote-text
-          :textile
-            #{blog_post['text']}
-    - when 'video'
-      .post-body#video
-        .video-player
-          = blog_post['player'][0]['embed_code'].html_safe
-          %p.video-caption= blog_post['caption'].html_safe
-    -# text post: optional title, required body
-    - when 'text'
-      - if blog_post['text'].present?
-        = blog_post['title']
-      - else
-        -# todo: truncate
-        = blog_post['body']
-            
-  %p.time-ago= posted_ago
-  %p.tagged
-    - tags.each do |tag|
-      - tag.keys.each do |key|
-        = link_to(key, tag[key])
+.blog-post        
+  %span.post-date= posted_at
+  %span.post-link= post_link unless !defined? post_link

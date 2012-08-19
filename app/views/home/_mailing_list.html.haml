@@ -1,0 +1,28 @@
+.section.snug#mailing-list
+  .container.skin-dark  
+    .body
+      = form_tag 'http://SearchAndRestore.us1.list-manage.com/subscribe/post?u=303dcaaa45addeada91b6a5e3&id=dc362c84a7', :method => 'post', :id => 'mc-embedded-subscribe-form', :name => 'mc-embedded-subscribe-form', :class => 'validate', :target => '_blank' do
+        %fieldset
+          .field.text.mc-field-group
+            = label_tag 'mce-EMAIL', 'Email:'
+            .wrapper
+              = email_field_tag 'EMAIL', nil, :id => 'mce-EMAIL', :class => 'required email'
+
+          .field.text.mc-field-group
+            = label_tag 'mce-FNAME', 'First:'
+            .wrapper
+              = text_field_tag 'FNAME', nil, :id => 'mce-FNAME'
+
+          .field.text.mc-field-group
+            = label_tag 'mce-LNAME', 'Last:'
+            .wrapper
+              = text_field_tag 'LNAME', nil, :id => 'mce-LNAME'
+
+          #mc-responses.clear
+            #mc-error-response.response{ :style => 'display: none;' }
+            #mc-success-response.response{ :style => 'display: none;' }
+
+  .actions.clear.floatleft
+    = submit_tag('SUBSCRIBE', :id => 'mc-embedded-subscribe', :class => 'box more')
+    = link_to 'UNSUBSCRIBE', 'http://SearchAndRestore.us1.list-manage1.com/unsubscribe?u=303dcaaa45addeada91b6a5e3&id=dc362c84a7', :target => '_blank', :class => 'box more'
+  .clear

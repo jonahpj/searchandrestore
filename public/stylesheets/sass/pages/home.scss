@@ -1,5 +1,13 @@
 .jazz {
   &.page-home {
+    dd.section {
+      padding-left: 10px;
+      padding-top: 10px;
+    }
+    .box.more {
+      padding: 5px 8px 5px 8px;
+      font-size: 13px;
+    }
     h3.container {
       img {display:block;}
       .body {
@@ -84,6 +92,18 @@
       .body {
         padding-top:5px;
       }
+      .actions {
+      }
+      .field.text {
+        .wrapper input {
+          width: 350px;
+        }
+        label {
+          width: 50px;
+          margin-right: 10px;
+          font-size: 14px;
+        }
+      }
     }
     #tonights-shows {
       h1 {
@@ -91,6 +111,38 @@
       }
       h2 {
         // todo
+      }
+    }
+    #support {
+      margin-top: 70px;
+      text-align: center;
+      h1, h2, h3 {
+        color: white;
+      }
+      .support-us {
+        background-color: #f90;
+      }
+      .social-media {
+        margin-top: 10px;
+        background: black;
+      }
+    }
+    #footer {
+      text-align: center;
+      margin-top: 20px;
+      color: white;
+      .site-tagline {
+        background-color: black;
+        color: gray;
+        padding: 10px;
+        .site-name {
+          color: white;
+          font-weight: bold;
+          padding-right: 5px;
+        }
+      }
+      .site-copyright {
+        margin-top: 10px;
       }
     }
   }
