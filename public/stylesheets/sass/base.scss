@@ -1,4 +1,7 @@
-$ORANGE: #ff9900;
+// don't need to define this here since imported files bring it in
+// (n.b. NOT the other way around)
+//$ORANGE: #ff9900;
+
 @import "components/spacing";
 @import "components/forms";
 @import "components/links";

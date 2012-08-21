@@ -1,119 +1,62 @@
-/*
-Syntax error: Undefined variable: "$ORANGE".
-        on line 81 of /Users/dillonsavage/Sites/searchandrestore/public/stylesheets/sass/components/lists.scss
-
-76:     margin: 0 0 5px 0;
-77:     dd, dt {float: left;}
-78:     dt {
-79:       font-size: 14px;
-80:       font-weight: bold;
-81:       color: $ORANGE;
-82:       padding-right: 5px;
-83:       clear: both;
-84:     }
-85:     dd {
-86:       color: #ccc;
-
-Backtrace:
-/Users/dillonsavage/Sites/searchandrestore/public/stylesheets/sass/components/lists.scss:81
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/script/variable.rb:50:in `_perform'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/script/node.rb:40:in `perform'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:215:in `visit_prop'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:18:in `visit'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:53:in `map'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:27:in `block in visit_children'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:39:in `with_environment'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:26:in `visit_children'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:235:in `visit_rule'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:18:in `visit'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:53:in `map'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:27:in `block in visit_children'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:39:in `with_environment'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:26:in `visit_children'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:235:in `visit_rule'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:18:in `visit'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:53:in `map'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:27:in `block in visit_children'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:39:in `with_environment'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:26:in `visit_children'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:235:in `visit_rule'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:18:in `visit'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:53:in `map'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:27:in `block in visit_children'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:39:in `with_environment'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:26:in `visit_children'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:47:in `visit_root'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:18:in `visit'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:7:in `visit'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/tree/root_node.rb:20:in `render'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/engine.rb:293:in `_render'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/engine.rb:241:in `block in render'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/util.rb:297:in `silence_sass_warnings'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/engine.rb:241:in `render'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/plugin/compiler.rb:319:in `update_stylesheet'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/plugin/compiler.rb:181:in `block (2 levels) in update_stylesheets'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/plugin/compiler.rb:175:in `each'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/plugin/compiler.rb:175:in `block in update_stylesheets'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/plugin/compiler.rb:173:in `each'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/plugin/compiler.rb:173:in `update_stylesheets'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/plugin.rb:81:in `update_stylesheets'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/plugin.rb:54:in `check_for_updates'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.1.7/lib/sass/plugin/rack.rb:51:in `call'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/warden-1.0.5/lib/warden/manager.rb:35:in `block in call'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/warden-1.0.5/lib/warden/manager.rb:34:in `catch'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/warden-1.0.5/lib/warden/manager.rb:34:in `call'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.4/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.4/lib/action_dispatch/middleware/head.rb:14:in `call'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.2.5/lib/rack/methodoverride.rb:24:in `call'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.4/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.4/lib/action_dispatch/middleware/flash.rb:182:in `call'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.4/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.4/lib/action_dispatch/middleware/cookies.rb:302:in `call'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:32:in `block in call'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.0.4/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:12:in `cache'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:31:in `call'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.4/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.4/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.2.5/lib/rack/sendfile.rb:106:in `call'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.4/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.4/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.0.4/lib/rails/rack/logger.rb:13:in `call'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.2.5/lib/rack/runtime.rb:17:in `call'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.0.4/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.2.5/lib/rack/lock.rb:13:in `block in call'
-<internal:prelude>:10:in `synchronize'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.2.5/lib/rack/lock.rb:13:in `call'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.4/lib/action_dispatch/middleware/static.rb:30:in `call'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.0.4/lib/rails/application.rb:168:in `call'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.0.4/lib/rails/application.rb:77:in `method_missing'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.0.4/lib/rails/rack/log_tailer.rb:14:in `call'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.2.5/lib/rack/content_length.rb:13:in `call'
-/Users/dillonsavage/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.2.5/lib/rack/handler/webrick.rb:52:in `service'
-/Users/dillonsavage/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
-/Users/dillonsavage/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
-/Users/dillonsavage/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$ORANGE\".\A         on line 81 of /Users/dillonsavage/Sites/searchandrestore/public/stylesheets/sass/components/lists.scss\A \A 76:     margin: 0 0 5px 0;\A 77:     dd, dt {float: left;}\A 78:     dt {\A 79:       font-size: 14px;\A 80:       font-weight: bold;\A 81:       color: $ORANGE;\A 82:       padding-right: 5px;\A 83:       clear: both;\A 84:     }\A 85:     dd {\A 86:       color: #ccc;"; }
+.jazz ul.containers li {
+  margin-bottom: 6px; }
+.jazz ul.with-gaps li {
+  margin-bottom: 8px; }
+.jazz ul.inline-list {
+  overflow: hidden; }
+  .jazz ul.inline-list li {
+    float: left;
+    margin-right: 3px;
+    padding-bottom: 4px; }
+    .jazz ul.inline-list li.last {
+      margin-right: 0px; }
+.jazz ul li.last {
+  margin-bottom: 0px !important; }
+.jazz ul.grid-view li {
+  margin-right: 10px; }
+  .jazz ul.grid-view li.container {
+    background: none; }
+  .jazz ul.grid-view li.last {
+    margin-right: 0px; }
+  .jazz ul.grid-view li.first {
+    clear: both; }
+  .jazz ul.grid-view li .body {
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 5px 5px 5px 5px; }
+    .jazz ul.grid-view li .body img {
+      margin: 0;
+      padding: 0;
+      display: block; }
+    .jazz ul.grid-view li .body .name {
+      margin-bottom: 2px;
+      margin-top: 3px; }
+    .jazz ul.grid-view li .body .byline {
+      margin-bottom: 0px;
+      padding-left: 5px;
+      white-space: nowrap; }
+.jazz ul.header-meta-list .byline {
+  margin-bottom: 2px; }
+  .jazz ul.header-meta-list .byline .date {
+    color: #666; }
+  .jazz ul.header-meta-list .byline .author,
+  .jazz ul.header-meta-list .byline .location {
+    color: #ccc; }
+.jazz ul.header-meta-list li {
+  margin-bottom: 10px; }
+.jazz dl {
+  overflow: hidden;
+  margin: 0 0 5px 0; }
+  .jazz dl dd, .jazz dl dt {
+    float: left; }
+  .jazz dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ff9900;
+    padding-right: 5px;
+    clear: both; }
+  .jazz dl dd {
+    color: #ccc;
+    font-size: 12px;
+    margin: 0px;
+    line-height: 18px; }
