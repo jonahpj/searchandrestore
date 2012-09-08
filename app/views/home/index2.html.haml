@@ -82,11 +82,15 @@
   
     .col-1
       #mailing-list
-        %h1
-          JOIN OUR MAILING LIST
-        %h2
-          To keep yourself entertained and inspired
-        = render :partial => 'mailing_list'
+        .container.skin-dark
+          %h1
+            JOIN OUR MAILING LIST
+          %h2
+            To keep yourself entertained and inspired
+          = render :partial => 'mailing_list'
+        .actions.clear.floatleft
+          = submit_tag('SUBSCRIBE', :id => 'mc-embedded-subscribe', :class => 'box more')
+          = link_to 'UNSUBSCRIBE', 'http://SearchAndRestore.us1.list-manage1.com/unsubscribe?u=303dcaaa45addeada91b6a5e3&id=dc362c84a7', :target => '_blank', :class => 'box more'
     .col-2
       #support
         .support-us

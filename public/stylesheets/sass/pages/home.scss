@@ -5,7 +5,7 @@
       padding-top: 10px;
     }
     .box.more {
-      padding: 5px 8px 5px 8px;
+      padding: 10px 13px 10px 13px;
       font-size: 13px;
     }
     h3.container {
@@ -93,13 +93,17 @@
         padding-top:5px;
       }
       .actions {
+        padding-left: 95px;
+      }
+      h1, h2 {
+        padding-left: 10px;
       }
       .field.text {
         .wrapper input {
-          width: 350px;
+          width: 310px;
         }
         label {
-          width: 50px;
+          width: 75px;
           margin-right: 10px;
           font-size: 14px;
         }

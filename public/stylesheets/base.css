@@ -299,7 +299,7 @@
   padding-left: 10px;
   padding-top: 10px; }
 .jazz.page-home .box.more {
-  padding: 5px 8px 5px 8px;
+  padding: 10px 13px 10px 13px;
   font-size: 13px; }
 .jazz.page-home h3.container {
   margin-bottom: 5px; }
@@ -353,10 +353,14 @@
   width: 210px; }
 .jazz.page-home #mailing-list .body {
   padding-top: 5px; }
+.jazz.page-home #mailing-list .actions {
+  padding-left: 95px; }
+.jazz.page-home #mailing-list h1, .jazz.page-home #mailing-list h2 {
+  padding-left: 10px; }
 .jazz.page-home #mailing-list .field.text .wrapper input {
-  width: 350px; }
+  width: 310px; }
 .jazz.page-home #mailing-list .field.text label {
-  width: 50px;
+  width: 75px;
   margin-right: 10px;
   font-size: 14px; }
 .jazz.page-home #support {
