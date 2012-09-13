@@ -62,6 +62,20 @@
       //  padding-bottom: 10px;
       //}
     }
+    #blog {
+      h1 {
+        color: white;
+      }
+      .blog-post {
+        padding-bottom: 30px;
+        .post-date {
+          font-size: 14px;
+        }
+        .post-link {
+          font-size: 24px;
+        }
+      }
+    }
     #featured-video .body {
       padding: 5px;
       img {width:300px}
@@ -81,6 +95,9 @@
         &.show {
           margin-bottom:0px;
         }
+      }
+      ul.inline-list li {
+        color: #666;
       }
     }
     #intro {
@@ -109,9 +126,9 @@
         }
       }
     }
-    #tonights-shows {
+    #tonights_shows {
       h1 {
-        // todo
+        color: white;
       }
       h2 {
         // todo
@@ -147,6 +164,23 @@
       }
       .site-copyright {
         margin-top: 10px;
+      }
+    }
+    .evoslider.default {
+      border: none;
+      dl.slides_container {
+        dt {
+          background: black;
+          text-align: center;
+          text-shadow: none;
+          font-size: 20px;
+        }
+        dt.active {
+          color: white;
+        }
+      }
+      dl dd.section {
+        background: black;
       }
     }
   }

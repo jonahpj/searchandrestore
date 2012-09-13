@@ -38,6 +38,14 @@
   margin-top: 10px; }
   .jazz.page-home #graphic img {
     max-width: 460px; }
+.jazz.page-home #blog h1 {
+  color: white; }
+.jazz.page-home #blog .blog-post {
+  padding-bottom: 30px; }
+  .jazz.page-home #blog .blog-post .post-date {
+    font-size: 14px; }
+  .jazz.page-home #blog .blog-post .post-link {
+    font-size: 24px; }
 .jazz.page-home #featured-video .body {
   padding: 5px; }
   .jazz.page-home #featured-video .body img {
@@ -52,6 +60,8 @@
     margin-bottom: 10px; }
   .jazz.page-home #featured-video .body p.show {
     margin-bottom: 0px; }
+  .jazz.page-home #featured-video .body ul.inline-list li {
+    color: #666; }
 .jazz.page-home #intro a.box {
   width: 210px; }
 .jazz.page-home #mailing-list .body {
@@ -66,6 +76,8 @@
   width: 75px;
   margin-right: 10px;
   font-size: 14px; }
+.jazz.page-home #tonights_shows h1 {
+  color: white; }
 .jazz.page-home #support {
   margin-top: 70px;
   text-align: center; }
@@ -90,3 +102,14 @@
       padding-right: 5px; }
   .jazz.page-home #footer .site-copyright {
     margin-top: 10px; }
+.jazz.page-home .evoslider.default {
+  border: none; }
+  .jazz.page-home .evoslider.default dl.slides_container dt {
+    background: black;
+    text-align: center;
+    text-shadow: none;
+    font-size: 20px; }
+  .jazz.page-home .evoslider.default dl.slides_container dt.active {
+    color: white; }
+  .jazz.page-home .evoslider.default dl dd.section {
+    background: black; }
