@@ -25,7 +25,7 @@
       margin-bottom: 0px;
     }
     #main-content {
-      background: url(/images/titles/home_title_bottom.png) no-repeat top left;
+      /*background: url(/images/titles/home_title_bottom.png) no-repeat top left;*/
       #main-content-secondary {
         padding-top: 5px;
       }
@@ -46,9 +46,9 @@
       }
     }
     #graphic {
-      margin-left: 490px;
+      margin-left: 495px;
       width: 470px;
-      margin-top: 10px;
+      margin-top: 40px;
       img {
         max-width: 460px;
       }
@@ -106,6 +106,10 @@
       }
     }
     #mailing-list {
+      .body-home {
+        margin-top: 35px;
+        margin-bottom: 13px;
+      }
       .body {
         padding-top:5px;
       }
@@ -141,11 +145,9 @@
         color: white;
       }
       .support-us {
-        background-color: #f90;
       }
       .social-media {
-        margin-top: 10px;
-        background: black;
+        margin-top: 25px;
       }
     }
     #footer {
@@ -153,9 +155,8 @@
       margin-top: 20px;
       color: white;
       .site-tagline {
-        background-color: black;
         color: gray;
-        padding: 10px;
+        margin-top: 40px;
         .site-name {
           color: white;
           font-weight: bold;
@@ -168,6 +169,7 @@
     }
     .evoslider.default {
       border: none;
+      background: transparent;
       dl.slides_container {
         dt {
           background: black;

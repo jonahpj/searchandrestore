@@ -315,7 +315,7 @@
   background: url(/images/home/masthead_bg.png) repeat-x;
   margin-bottom: 0px; }
 .jazz.page-home #main-content {
-  background: url(/images/titles/home_title_bottom.png) no-repeat top left; }
+  /*background: url(/images/titles/home_title_bottom.png) no-repeat top left;*/ }
   .jazz.page-home #main-content #main-content-secondary {
     padding-top: 5px; }
 .jazz.page-home .col-1-2.with-banner {
@@ -330,9 +330,9 @@
   .jazz.page-home .col-1 h2, .jazz.page-home .col-2 h2 {
     color: Gray; }
 .jazz.page-home #graphic {
-  margin-left: 490px;
+  margin-left: 495px;
   width: 470px;
-  margin-top: 10px; }
+  margin-top: 40px; }
   .jazz.page-home #graphic img {
     max-width: 460px; }
 .jazz.page-home #blog h1 {
@@ -361,6 +361,9 @@
     color: #666; }
 .jazz.page-home #intro a.box {
   width: 210px; }
+.jazz.page-home #mailing-list .body-home {
+  margin-top: 35px;
+  margin-bottom: 13px; }
 .jazz.page-home #mailing-list .body {
   padding-top: 5px; }
 .jazz.page-home #mailing-list .actions {
@@ -380,19 +383,15 @@
   text-align: center; }
   .jazz.page-home #support h1, .jazz.page-home #support h2, .jazz.page-home #support h3 {
     color: white; }
-  .jazz.page-home #support .support-us {
-    background-color: #f90; }
   .jazz.page-home #support .social-media {
-    margin-top: 10px;
-    background: black; }
+    margin-top: 25px; }
 .jazz.page-home #footer {
   text-align: center;
   margin-top: 20px;
   color: white; }
   .jazz.page-home #footer .site-tagline {
-    background-color: black;
     color: gray;
-    padding: 10px; }
+    margin-top: 40px; }
     .jazz.page-home #footer .site-tagline .site-name {
       color: white;
       font-weight: bold;
@@ -400,7 +399,8 @@
   .jazz.page-home #footer .site-copyright {
     margin-top: 10px; }
 .jazz.page-home .evoslider.default {
-  border: none; }
+  border: none;
+  background: transparent; }
   .jazz.page-home .evoslider.default dl.slides_container dt {
     background: black;
     text-align: center;
@@ -771,7 +771,8 @@ body {
   font-family: Ariel, sans-serif;
   margin: 0;
   padding: 0;
-  background: url(/images/body_bg.png); }
+  /*background: url(/images/body_bg.png);*/
+  background: url(/images/background.png) no-repeat top; }
 
 ul {
   list-style: none;
