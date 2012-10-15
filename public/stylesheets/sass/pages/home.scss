@@ -107,8 +107,11 @@
     }
     #mailing-list {
       .body-home {
-        margin-top: 35px;
-        margin-bottom: 13px;
+        background: url(/images/pipes/ml-bg.png) no-repeat;
+        height: 189px;
+        width: 490px;
+        margin-top: 26px;
+        position: relative;
       }
       .body {
         padding-top:5px;
@@ -139,24 +142,33 @@
       }
     }
     #support {
-      margin-top: 70px;
       text-align: center;
       h1, h2, h3 {
         color: white;
       }
       .support-us {
+        margin-top: 67px;
+        background: url(/images/pipes/support.png) no-repeat;
+        height: 75px;
       }
       .social-media {
-        margin-top: 25px;
+        margin-top: 8px;
+        padding-top: 4px;
+        height: 26px;
+        background: url(/images/pipes/socialmedia.png) no-repeat;
       }
     }
     #footer {
       text-align: center;
-      margin-top: 20px;
       color: white;
       .site-tagline {
+        background: url(/images/pipes/tagline.png) no-repeat;
+        height: 31px;
         color: gray;
-        margin-top: 40px;
+        margin-top: 30px;
+        padding-top: 5px;
+        position: relative;
+        left: -7px;
         .site-name {
           color: white;
           font-weight: bold;
