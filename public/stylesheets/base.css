@@ -330,11 +330,11 @@
   .jazz.page-home .col-1 h2, .jazz.page-home .col-2 h2 {
     color: Gray; }
 .jazz.page-home #graphic {
-  margin-left: 495px;
+  margin-left: 505px;
   width: 470px;
-  margin-top: 40px; }
+  margin-top: 66px; }
   .jazz.page-home #graphic img {
-    max-width: 460px; }
+    max-width: 438px; }
 .jazz.page-home #blog h1 {
   color: white; }
 .jazz.page-home #blog .blog-post {
@@ -365,7 +365,7 @@
   background: url(/images/pipes/ml-bg.png) no-repeat;
   height: 189px;
   width: 490px;
-  margin-top: 26px;
+  margin-top: 27px;
   position: relative; }
 .jazz.page-home #mailing-list .body {
   padding-top: 5px; }
@@ -386,7 +386,7 @@
   .jazz.page-home #support h1, .jazz.page-home #support h2, .jazz.page-home #support h3 {
     color: white; }
   .jazz.page-home #support .support-us {
-    margin-top: 67px;
+    margin-top: 68px;
     background: url(/images/pipes/support.png) no-repeat;
     height: 75px; }
   .jazz.page-home #support .social-media {
@@ -415,14 +415,32 @@
   border: none;
   background: transparent; }
   .jazz.page-home .evoslider.default dl.slides_container dt {
-    background: black;
     text-align: center;
     text-shadow: none;
-    font-size: 20px; }
+    font-size: 20px;
+    background: transparent; }
+  .jazz.page-home .evoslider.default dl.slides_container dt.nav1 {
+    background: url(/images/pipes/nav1.png) no-repeat;
+    height: 49px !important;
+    top: -40px; }
+  .jazz.page-home .evoslider.default dl.slides_container dt.nav2 {
+    background: url(/images/pipes/nav2.png) no-repeat; }
+  .jazz.page-home .evoslider.default dl.slides_container dt.nav3 {
+    background: url(/images/pipes/nav3.png) no-repeat;
+    height: 49px;
+    width: 427px;
+    top: -23px; }
   .jazz.page-home .evoslider.default dl.slides_container dt.active {
     color: white; }
   .jazz.page-home .evoslider.default dl dd.section {
     background: black; }
+    .jazz.page-home .evoslider.default dl dd.section .fromblog {
+      background: url(/images/pipes/fromblog.png) no-repeat;
+      height: 79px;
+      padding: 10px;
+      margin-left: -11px; }
+  .jazz.page-home .evoslider.default dl dd.section#blog {
+    background: transparent; }
 
 .jazz.section-artists .masthead-top {
   background-image: url(/images/titles/artists_title.png);

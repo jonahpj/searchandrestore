@@ -14,27 +14,25 @@
     #homepage-features.evoslider.default
       %dl.slides_container
   
-        %dt
-          FROM THE BLOG
+        %dt.nav1
         %dd.section#blog
-          %h1
-            FROM THE BLOG
-          %h2
-            Artist interviews, news and more...
+          .fromblog
+            %h1
+              FROM THE BLOG
+            %h2
+              Artist interviews, news and more...
           - if @blog_posts.present?
             - @blog_posts.each do |blog_post|
               = render :partial => 'home/blog', :locals => { :blog_post => blog_post }
           .more-link
             = link_to('TAKE ME TO THE BLOG', 'http://searchandrestore.tumblr.com', :class => 'box more')
       
-        %dt
-          FEATURED VIDEO
+        %dt.nav2
         %dd.section#featured-video
           - if @featured_video.present?
             = render :partial => 'application/player', :locals => { :selected_video => @featured_video, :show => @featured_video.show }
             
-        %dt
-          TONIGHT'S SHOWS
+        %dt.nav3
         %dd.section#tonights_shows
           %h1
             TONIGHT'S SHOWS

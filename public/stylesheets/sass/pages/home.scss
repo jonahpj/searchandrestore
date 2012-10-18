@@ -46,11 +46,11 @@
       }
     }
     #graphic {
-      margin-left: 495px;
+      margin-left: 505px;
       width: 470px;
-      margin-top: 40px;
+      margin-top: 66px;
       img {
-        max-width: 460px;
+        max-width: 438px;
       }
     }
     #exciting-news {
@@ -110,7 +110,7 @@
         background: url(/images/pipes/ml-bg.png) no-repeat;
         height: 189px;
         width: 490px;
-        margin-top: 26px;
+        margin-top: 27px;
         position: relative;
       }
       .body {
@@ -147,7 +147,7 @@
         color: white;
       }
       .support-us {
-        margin-top: 67px;
+        margin-top: 68px;
         background: url(/images/pipes/support.png) no-repeat;
         height: 75px;
       }
@@ -184,10 +184,24 @@
       background: transparent;
       dl.slides_container {
         dt {
-          background: black;
           text-align: center;
           text-shadow: none;
           font-size: 20px;
+          background: transparent;
+        }
+        dt.nav1 {
+          background: url(/images/pipes/nav1.png) no-repeat;
+          height: 49px !important;
+          top: -40px;
+        }
+        dt.nav2 {
+          background: url(/images/pipes/nav2.png) no-repeat;
+        }
+        dt.nav3 {
+          background: url(/images/pipes/nav3.png) no-repeat;
+          height: 49px;
+          width: 427px;
+          top: -23px;
         }
         dt.active {
           color: white;
@@ -195,6 +209,15 @@
       }
       dl dd.section {
         background: black;
+        .fromblog {
+          background: url(/images/pipes/fromblog.png) no-repeat;
+          height: 79px;
+          padding: 10px;
+          margin-left: -11px;
+        }
+      }
+      dl dd.section#blog {
+        background: transparent;
       }
     }
   }
