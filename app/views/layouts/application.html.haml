@@ -49,12 +49,27 @@
       = content_for?(:content) ? yield(:content) : yield
       .clear
 
-    = javascript_include_tag ['jquery-5.1.min.js', 'jquery-ui-1.8.18.custom.min.js', 'jquery.cmtextconstrain.js', 'slides.min.jquery.js', 'jquery.evoslider.lite-1.1.0.min.js']
+    = javascript_include_tag ['jquery-1.7.1.min.js', 'jquery-ui-1.8.18.custom.min.js', 'jquery.cmtextconstrain.js', 'slides.min.jquery.js', 'jquery.evoslider-1.0.0.min.js']
 
     :javascript
       $('.tabs').tabs();
       $('.slides').slides({ generatePagination: false, play: 5000 });
-      $('#homepage-features').evoSlider({ height: 460 });
+      var sr_evoSlider = $('#homepage-features').evoSlider({
+        height: 460,
+        showIndex: false,
+        after: function () {
+          $('dl.slides_container').children('dt').each(function(index) {
+            var inactive_selector = 'dl.slides_container dd.' + $(this).attr('class').replace('active', '');
+            console.log(inactive_selector);
+            if (!$(this).hasClass('active')) {
+              $(inactive_selector).hide();
+            }
+            else {
+              $(inactive_selector).show();
+            }
+          });
+        }
+      });
 
     - if @truncate_bio
       :javascript

@@ -15,29 +15,31 @@
       %dl.slides_container
   
         %dt.nav1
-        %dd.section#blog
+        %dd.section.nav1#blog
           .fromblog
             %h1
               FROM THE BLOG
             %h2
               Artist interviews, news and more...
           - if @blog_posts.present?
-            - @blog_posts.each do |blog_post|
-              = render :partial => 'home/blog', :locals => { :blog_post => blog_post }
+            - @blog_posts.each_with_index do |blog_post, i|
+              = render :partial => 'home/blog', :locals => { :blog_post => blog_post, :index => i+1 }
+          .pipe-bottom
           .more-link
             = link_to('TAKE ME TO THE BLOG', 'http://searchandrestore.tumblr.com', :class => 'box more')
       
         %dt.nav2
-        %dd.section#featured-video
+        %dd.section.nav2#featured-video
           - if @featured_video.present?
             = render :partial => 'application/player', :locals => { :selected_video => @featured_video, :show => @featured_video.show }
             
         %dt.nav3
-        %dd.section#tonights_shows
-          %h1
-            TONIGHT'S SHOWS
-          %h2
-            Top picks selected by Search & Restore
+        %dd.section.nav3#tonights_shows
+          .shows
+            %h1
+              TONIGHT'S SHOWS
+            %h2
+              Top picks selected by Search & Restore
           %ul.containers.show-listing
             - @top_picks.each do |show|
               %li.container[show]
@@ -54,14 +56,14 @@
             = link_to('SEE MORE SHOWS', shows_path, :class => 'box more')
 
         - if @homepage.blurbs[0].present?
-          %dt= @homepage.blurbs[0].title
-          %dd.section#homepage-blur
+          %dt.nav4= @homepage.blurbs[0].title
+          %dd.section.nav4#homepage-blurb
             :textile
               #{@homepage.blurbs[0].text}
 
         - if @homepage.blurbs[1].present?
-          %dt= @homepage.blurbs[1].title
-          %dd.section#homepage-blur
+          %dt.nav5= @homepage.blurbs[1].title
+          %dd.section.nav5#homepage-blurb
             :textile
               #{@homepage.blurbs[1].text}
       
@@ -101,7 +103,7 @@
             Let's connect on
             = link_to('FACEBOOK', '', :class => 'pipe-link')
             = link_to('TWITTER', '', :class => 'pipe-link')
-    
+
     .clear
     
     .col1-2

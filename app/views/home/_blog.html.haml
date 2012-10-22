@@ -16,6 +16,8 @@
 - if defined? post_text
   - post_link = link_to(truncate(post_text, :length => 70, :separator => ' '), blog_post['post_url'])
 
-.blog-post        
-  %span.post-date= posted_at
-  %span.post-link= post_link unless !defined? post_link
+.blog-post
+  -# todo: small, medium, and large classes
+  %div{ :class => 'post-' + index.to_s }
+    %span.post-date= posted_at
+    %span.post-link= post_link unless !defined? post_link
