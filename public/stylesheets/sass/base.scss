@@ -2,6 +2,8 @@
 // (n.b. NOT the other way around)
 //$ORANGE: #ff9900;
 
+* { margin: 0; padding: 0; }
+
 @import "components/spacing";
 @import "components/forms";
 @import "components/links";
@@ -17,8 +19,6 @@
 @import "pages/resources";
 @import "pages/video";
 @import "pages/venues";
-
-* { margin: 0; padding: 0; }
 
 .jazz {
   @include margins();
