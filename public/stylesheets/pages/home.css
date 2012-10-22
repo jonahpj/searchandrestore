@@ -119,12 +119,12 @@
     background: url(/images/pipes/socialmedia.png) no-repeat; }
 .jazz.page-home #footer {
   text-align: center;
-  color: white; }
+  color: white;
+  margin-top: 33px; }
   .jazz.page-home #footer .site-tagline {
     background: url(/images/pipes/tagline.png) no-repeat;
     height: 31px;
     color: gray;
-    margin-top: 30px;
     padding-top: 5px;
     position: relative;
     left: -7px; }

@@ -18,6 +18,8 @@
 @import "pages/video";
 @import "pages/venues";
 
+* { margin: 0; padding: 0; }
+
 .jazz {
   @include margins();
   @include paddings();
