@@ -17,6 +17,7 @@
 @import "pages/resources";
 @import "pages/video";
 @import "pages/venues";
+@import "pages/tumblr";
 
 .jazz {
   @include margins();
@@ -30,8 +31,8 @@ body {
   font-family: Ariel, sans-serif;
   margin:0;
   padding:0;
-  /*background: url(/images/body_bg.png);*/
-  background: url(/images/background.png) no-repeat top;
+  background: url(/images/body_bg.png);
+  /*background: url(/images/background.png) no-repeat top;*/
 }
 ul {
   list-style: none;

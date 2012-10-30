@@ -1,0 +1,35 @@
+.blog-body {background: url(/images/body_bg.png);}
+
+
+.tumblr-container {
+	float: left;
+	overflow: auto;
+	.tumblr-post {
+		margin: 10px 0 20px 0;
+		background-color: #fff;
+		.tumblr-wrapper {
+			width: 500px;
+			padding: 10px;
+			h2 {
+				margin-bottom: 0; 
+				text-transform: capitalize;
+				margin-bottom: 10px;
+				&.quoted-text {font-size: 30px; font-style: italic; margin: 0; padding: 5px 0 0 0;}
+			}
+			.tumblr-caption {
+				font-size: 13px;
+				padding: 15px;
+			}
+			.tumblr-post-date {font-size: 13px; padding: 3px 0; margin: 0 5px 10px 0;}
+			.tumblr-post-photo {margin: 5px 0;}
+		}
+		.tumblr-meta-wrapper {
+			padding: 6px 10px;
+			background-color: #000000;
+			color: #fff;
+			font-size: 13px;
+			a {font-weight: bold;}
+		}
+
+	}
+}
