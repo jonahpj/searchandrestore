@@ -7,7 +7,7 @@ gem 'rails', '3.0.4'
 
 #gem 'sqlite3'
 gem 'mysql2'
-gem 'pg'
+#gem 'pg'
 gem 'devise'
 gem 'cancan'
 gem 'haml'
@@ -21,6 +21,7 @@ gem 'RedCloth'
 gem 'rdoc'
 gem 'thin'
 gem 'heroku'
+gem "tumblr-api", "~> 0.1.4"
 
 # Use unicorn as the web server
 # gem 'unicorn'

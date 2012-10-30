@@ -95,6 +95,9 @@ GEM
       rubyzip
     heroku-api (0.2.13)
       excon (~> 0.15.4)
+    httparty (0.9.0)
+      multi_json (~> 1.0)
+      multi_xml
     i18n (0.6.0)
     inherited_resources (1.2.2)
       has_scope (~> 0.5.0)
@@ -116,11 +119,11 @@ GEM
       arel (~> 2.0.2)
     mime-types (1.17.2)
     multi_json (1.1.0)
+    multi_xml (0.5.1)
     mysql2 (0.2.6)
     netrc (0.7.5)
     nokogiri (1.5.0)
     orm_adapter (0.0.5)
-    pg (0.13.2)
     polyglot (0.3.2)
     rack (1.2.5)
     rack-mount (0.6.14)
@@ -181,6 +184,9 @@ GEM
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
+    tumblr-api (0.1.4)
+      activesupport
+      httparty
     tzinfo (0.3.29)
     warden (1.0.5)
       rack (>= 1.0)
@@ -208,7 +214,6 @@ DEPENDENCIES
   heroku
   launchy
   mysql2
-  pg
   rails (= 3.0.4)
   rdoc
   rmagick
@@ -220,4 +225,5 @@ DEPENDENCIES
   state_machine
   thin
   timecop
+  tumblr-api (~> 0.1.4)
   watchr
