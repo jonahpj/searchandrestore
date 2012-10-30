@@ -7,12 +7,7 @@
         - @posts.each do |post|         
           .tumblr-post
             .tumblr-wrapper
-              - case post['type']
-                - when 'quote'               
-                  %h2.quoted-text
-                    &ldquo;
-                    = raw post["quote_text"] 
-                    &rdquo;                  
+              - case post['type']                  
                 -when 'photo'
                   - img_link = raw post["photo_url"][1]["__content__"]
                   = link_to image_tag(img_link), img_link
@@ -20,13 +15,17 @@
                 -when 'video'
                   = raw post["video_player"][1]["__content__"]
                   .tumblr-caption= raw post["video_caption"] 
+                 -when 'audio'
+                   = raw post["audio_player"]
+                   .tumblr-caption= raw post["audio_caption"]
                 -when 'regular'    
                   %h2= raw post["regular_title"]
                   = raw post["regular_body"]
-                -when 'audio'
-                  = raw post["audio_player"]
-                  .tumblr-caption= raw post["audio_caption"]
-                  
+                 -when 'quote'               
+                   %h2.quoted-text
+                     &ldquo;
+                     = raw post["quote_text"] 
+                     &rdquo;
             .tumblr-meta-wrapper
               - permalink= raw post['url_with_slug']
               = link_to "Permalink", permalink
