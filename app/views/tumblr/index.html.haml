@@ -15,17 +15,17 @@
                 -when 'video'
                   = raw post["video_player"][1]["__content__"]
                   .tumblr-caption= raw post["video_caption"] 
-                 -when 'audio'
-                   = raw post["audio_player"]
-                   .tumblr-caption= raw post["audio_caption"]
-                -when 'regular'    
+                -when 'audio'
+                  = raw post["audio_player"]
+                  .tumblr-caption= raw post["audio_caption"]
+                -when 'regular'
                   %h2= raw post["regular_title"]
                   = raw post["regular_body"]
-                 -when 'quote'               
-                   %h2.quoted-text
-                     &ldquo;
-                     = raw post["quote_text"] 
-                     &rdquo;
+                -when 'quote'               
+                  %h2.quoted-text
+                    &ldquo;
+                    = raw post["quote_text"] 
+                    &rdquo;
             .tumblr-meta-wrapper
               - permalink= raw post['url_with_slug']
               = link_to "Permalink", permalink
