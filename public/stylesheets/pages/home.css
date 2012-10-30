@@ -26,16 +26,27 @@
   .jazz.page-home .col-1 h1, .jazz.page-home .col-2 h1 {
     color: #ffffff;
     font-size: 35px;
-    margin-top: 10px;
-    margin-bottom: 0px; }
+    /*margin-top: 10px;
+    margin-bottom: 0px;*/ }
   .jazz.page-home .col-1 h2, .jazz.page-home .col-2 h2 {
     color: Gray; }
+.jazz.page-home .col-1.mailing-list {
+  margin-top: 28px; }
 .jazz.page-home #graphic {
   margin-left: 505px;
   width: 470px;
-  margin-top: 42px; }
+  margin-top: 42px;
+  margin-bottom: 0px; }
   .jazz.page-home #graphic img {
     max-width: 438px; }
+.jazz.page-home #exciting-news {
+  /*float: right;
+  /*width: 385px;  */
+  /*margin-bottom: 40px; */
+  /*margin-top: 20px; */
+  /*.body { */
+  /*  padding-bottom: 10px; */
+  /*}*/ */ }
 .jazz.page-home #blog h1 {
   color: white; }
 .jazz.page-home #blog .blog-post {
@@ -61,7 +72,7 @@
   .jazz.page-home #blog .blog-post .post-3 {
     background: url(/images/pipes/blogpost-m.png) no-repeat;
     margin-top: 34px; }
-.jazz.page-home #blog .pipe-bottom {
+.jazz.page-home .pipe-bottom {
   background: url(/images/pipes/blogbottom.png) no-repeat;
   height: 13px;
   margin-left: -10px;
@@ -84,34 +95,53 @@
     color: #666; }
 .jazz.page-home #intro a.box {
   width: 210px; }
-.jazz.page-home #mailing-list .body-home {
-  background: url(/images/pipes/ml-bg.png) no-repeat;
-  height: 189px;
-  width: 490px;
-  margin-top: 27px;
-  position: relative; }
-.jazz.page-home #mailing-list .body {
+.jazz.page-home #mailing-list {
+  height: 191px; }
+  .jazz.page-home #mailing-list .body-home {
+    background: url(/images/pipes/ml-bg.png) no-repeat;
+    background-position: top left;
+    height: 189px;
+    width: 490px;
+    /*margin-top: 27px;*/ }
+  .jazz.page-home #mailing-list .body {
+    padding-top: 5px; }
+  .jazz.page-home #mailing-list .actions {
+    padding-left: 95px;
+    margin-bottom: 34px; }
+  .jazz.page-home #mailing-list h1 {
+    padding-top: 15px;
+    font-size: 34px; }
+  .jazz.page-home #mailing-list h2 {
+    font-size: 18px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    color: #999; }
+  .jazz.page-home #mailing-list .field.text .wrapper input {
+    width: 310px; }
+  .jazz.page-home #mailing-list .field.text label {
+    width: 75px;
+    margin-right: 10px;
+    font-size: 14px; }
+.jazz.page-home #tonights_shows h1,
+.jazz.page-home .fromblog h1 {
+  color: white;
+  font-size: 34px;
   padding-top: 5px; }
-.jazz.page-home #mailing-list .actions {
-  padding-left: 95px; }
-.jazz.page-home #mailing-list h1, .jazz.page-home #mailing-list h2 {
-  padding-left: 10px; }
-.jazz.page-home #mailing-list .field.text .wrapper input {
-  width: 310px; }
-.jazz.page-home #mailing-list .field.text label {
-  width: 75px;
-  margin-right: 10px;
-  font-size: 14px; }
-.jazz.page-home #tonights_shows h1 {
-  color: white; }
+.jazz.page-home #tonights_shows h2,
+.jazz.page-home .fromblog h2 {
+  font-size: 18px;
+  padding-top: 10px;
+  font-color: #999; }
 .jazz.page-home #support {
   text-align: center; }
-  .jazz.page-home #support h1, .jazz.page-home #support h2, .jazz.page-home #support h3 {
+  .jazz.page-home #support h1 {
+    padding-top: 10px; }
+  .jazz.page-home #support h3 {
     color: white; }
   .jazz.page-home #support .support-us {
     margin-top: 68px;
     background: url(/images/pipes/support.png) no-repeat;
-    height: 75px; }
+    height: 76px; }
   .jazz.page-home #support .social-media {
     margin-top: 8px;
     padding-top: 4px;
@@ -119,8 +149,7 @@
     background: url(/images/pipes/socialmedia.png) no-repeat; }
 .jazz.page-home #footer {
   text-align: center;
-  color: white;
-  margin-top: 33px; }
+  color: white; }
   .jazz.page-home #footer .site-tagline {
     background: url(/images/pipes/tagline.png) no-repeat;
     height: 31px;
@@ -139,32 +168,33 @@
   background: transparent;
   height: 484px !important;
   padding-top: 0; }
-  .jazz.page-home .evoslider.default dl.slides_container dd {
-    display: none; }
-    .jazz.page-home .evoslider.default dl.slides_container dd ul.show-listing {
-      margin-left: -10px; }
-  .jazz.page-home .evoslider.default dl.slides_container dd.nav1 {
-    display: block; }
-  .jazz.page-home .evoslider.default dl.slides_container dt {
-    text-align: center;
-    text-shadow: none;
-    font-size: 20px;
-    background: transparent; }
-  .jazz.page-home .evoslider.default dl.slides_container dt.nav1 {
-    background: url(/images/pipes/nav1.png) no-repeat;
-    height: 49px !important;
-    top: -45px; }
-  .jazz.page-home .evoslider.default dl.slides_container dt.nav2 {
-    background: url(/images/pipes/nav2.png) no-repeat;
-    height: 49px !important; }
-  .jazz.page-home .evoslider.default dl.slides_container dt.nav3 {
-    background: url(/images/pipes/nav3.png) no-repeat;
-    height: 49px !important;
-    width: 427px;
-    top: -28px; }
-  .jazz.page-home .evoslider.default dl.slides_container dt.active {
-    color: white;
-    display: block !important; }
+  .jazz.page-home .evoslider.default dl.slides_container {
+    height: 481px !important; }
+    .jazz.page-home .evoslider.default dl.slides_container dd {
+      display: none;
+      height: 475px !important; }
+    .jazz.page-home .evoslider.default dl.slides_container dd.nav1 {
+      display: block; }
+    .jazz.page-home .evoslider.default dl.slides_container dt {
+      text-align: center;
+      text-shadow: none;
+      font-size: 20px;
+      background: transparent; }
+    .jazz.page-home .evoslider.default dl.slides_container dt.nav1 {
+      background: url(/images/pipes/nav1.png) no-repeat;
+      height: 49px !important;
+      top: -45px; }
+    .jazz.page-home .evoslider.default dl.slides_container dt.nav2 {
+      background: url(/images/pipes/nav2.png) no-repeat;
+      height: 49px !important; }
+    .jazz.page-home .evoslider.default dl.slides_container dt.nav3 {
+      background: url(/images/pipes/nav3.png) no-repeat;
+      height: 49px !important;
+      width: 427px;
+      top: -28px; }
+    .jazz.page-home .evoslider.default dl.slides_container dt.active {
+      color: white;
+      display: block !important; }
   .jazz.page-home .evoslider.default dl dd.section {
     width: 690px !important; }
     .jazz.page-home .evoslider.default dl dd.section .fromblog {
@@ -175,7 +205,7 @@
     .jazz.page-home .evoslider.default dl dd.section .shows {
       background: url(/images/pipes/shows.png) no-repeat;
       height: 74px;
-      padding: 10px;
+      padding: 10px 10px 0;
       margin-left: -11px; }
   .jazz.page-home .evoslider.default dl dd.section#blog, .jazz.page-home .evoslider.default dl dd.section#tonights_shows {
     background: transparent; }

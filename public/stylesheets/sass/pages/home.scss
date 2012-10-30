@@ -37,29 +37,33 @@
       h1 {
         color: #ffffff;
         font-size: 35px;
-        margin-top: 10px;
-        margin-bottom: 0px;
+        /*margin-top: 10px;
+        margin-bottom: 0px;*/
       }
       h2 {
         color: Gray;
       }
     }
+    .col-1.mailing-list {
+      margin-top: 28px;
+    }
     #graphic {
       margin-left: 505px;
       width: 470px;
       margin-top: 42px;
+      margin-bottom: 0px;
       img {
         max-width: 438px;
       }
     }
     #exciting-news {
-      //float: right;
+      /*float: right;
       //width: 385px; 
       //margin-bottom: 40px;
       //margin-top: 20px;
       //.body {
       //  padding-bottom: 10px;
-      //}
+      //}*/
     }
     #blog {
       h1 {
@@ -96,12 +100,12 @@
           margin-top: 34px;
         }
       }
-      .pipe-bottom {
-        background: url(/images/pipes/blogbottom.png) no-repeat;
-        height: 13px;
-        margin-left: -10px;
-        margin-top: 5px;
-      }
+    }
+    .pipe-bottom {
+      background: url(/images/pipes/blogbottom.png) no-repeat;
+      height: 13px;
+      margin-left: -10px;
+      margin-top: 5px;
     }
     #featured-video .body {
       padding: 5px;
@@ -133,21 +137,30 @@
       }
     }
     #mailing-list {
+      height: 191px;
       .body-home {
         background: url(/images/pipes/ml-bg.png) no-repeat;
+        background-position: top left;
         height: 189px;
         width: 490px;
-        margin-top: 27px;
-        position: relative;
+        /*margin-top: 27px;*/
       }
       .body {
         padding-top:5px;
       }
       .actions {
         padding-left: 95px;
+        margin-bottom: 34px;
       }
-      h1, h2 {
+      h1{
+        padding-top: 15px;
+        font-size:34px;
+      }
+      h2 {
+        font-size:18px;
         padding-left: 10px;
+        padding-bottom: 10px;
+        color: #999;
       }
       .field.text {
         .wrapper input {
@@ -160,23 +173,30 @@
         }
       }
     }
-    #tonights_shows {
-      h1 {
-        color: white;
-      }
-      h2 {
-        // todo
-      }
+    #tonights_shows h1,
+    .fromblog h1 {
+      color: white;
+      font-size: 34px;
+      padding-top: 5px;
+    }
+    #tonights_shows h2,
+    .fromblog h2 {
+      font-size: 18px;
+      padding-top: 10px;
+      font-color: #999;
     }
     #support {
       text-align: center;
-      h1, h2, h3 {
+      h1 {
+        padding-top: 10px;
+      }
+      h3 {
         color: white;
       }
       .support-us {
         margin-top: 68px;
         background: url(/images/pipes/support.png) no-repeat;
-        height: 75px;
+        height: 76px;
       }
       .social-media {
         margin-top: 8px;
@@ -188,7 +208,6 @@
     #footer {
       text-align: center;
       color: white;
-      margin-top: 33px;
       .site-tagline {
         background: url(/images/pipes/tagline.png) no-repeat;
         height: 31px;
@@ -212,11 +231,10 @@
       height: 484px !important;
       padding-top: 0;
       dl.slides_container {
+        height: 481px !important;
         dd {
           display: none;
-          ul.show-listing {
-            margin-left: -10px;
-          }
+          height: 475px !important;
         }
         dd.nav1 {
           display: block;
@@ -258,7 +276,7 @@
         .shows {
           background: url(/images/pipes/shows.png) no-repeat;
           height: 74px;
-          padding: 10px;
+          padding: 10px 10px 0;
           margin-left: -11px;
         }
       }

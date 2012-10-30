@@ -53,6 +53,7 @@
                     %ul.inline-list
                       - show.performances.each do |performance|
                         %li.featured-musician= performance_link(performance, :class => 'box')
+            .pipe-bottom
             = link_to('SEE MORE SHOWS', shows_path, :class => 'box more')
 
         - if @homepage.blurbs[0].present?
@@ -80,15 +81,15 @@
   
   .col1-2
   
-    .col-1
+    .col-1.mailing-list
       #mailing-list
         .body-home
           %h1
-            JOIN OUR MAILING LIST
+            JOIN OUR MALING LIST
           %h2
             To keep yourself entertained and inspired
           = render :partial => 'mailing_list'
-        .actions.clear.floatleft
+        .actions.floatleft
           = submit_tag('SUBSCRIBE', :id => 'mc-embedded-subscribe', :class => 'box more')
           = link_to 'UNSUBSCRIBE', 'http://SearchAndRestore.us1.list-manage1.com/unsubscribe?u=303dcaaa45addeada91b6a5e3&id=dc362c84a7', :target => '_blank', :class => 'box more'
     .col-2
@@ -106,7 +107,7 @@
 
     .clear
     
-    .col1-2
+    .col1-2.footer
       #footer
         .site-tagline
           %span.site-name
