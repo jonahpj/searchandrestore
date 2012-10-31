@@ -299,6 +299,9 @@
   .jazz .media-with-info.large .info {
     padding-left: 172px; }
 
+body {
+  background: url(/images/background.png) no-repeat top !important; }
+
 .jazz.page-home dd.section {
   padding-left: 10px;
   padding-top: 10px; }
@@ -918,8 +921,7 @@ body {
   font-family: Ariel, sans-serif;
   margin: 0;
   padding: 0;
-  /*background: url(/images/body_bg.png);*/
-  background: url(/images/background.png) no-repeat top; }
+  background: url(/images/body_bg.png); }
 
 ul {
   list-style: none;
