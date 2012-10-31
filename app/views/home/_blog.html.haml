@@ -1,3 +1,12 @@
+- case index
+  - when 1
+    - truncate_length = 50
+  - when 2
+    - truncate_length = 100
+  - when 3
+    - truncate_length = 55
+
+
 - posted_at = Time.at(blog_post['timestamp'].to_i).strftime('%-m/%-d/%Y')
 - case blog_post['type']
   - when 'photo'
@@ -14,7 +23,7 @@
       -# todo: truncate
       - post_text = blog_post['body']
 - if defined? post_text
-  - post_link = link_to(truncate(post_text, :length => 70, :separator => ' '), blog_post['post_url'])
+  - post_link = link_to(truncate(post_text, :length => truncate_length, :separator => ' '), blog_post['post_url'])
 
 .blog-post
   -# todo: small, medium, and large classes

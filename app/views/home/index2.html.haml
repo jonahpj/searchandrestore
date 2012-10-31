@@ -72,7 +72,7 @@
   
   .col1-2
   
-    -#.col-2
+    .col-2
       #graphic
         - if @homepage.graphic.present?
           = @homepage.graphic.html_safe
@@ -85,33 +85,30 @@
       #mailing-list
         .body-home
           %h1
-            JOIN OUR MALING LIST
+            JOIN OUR MAILING LIST
           %h2
             To keep yourself entertained and inspired
           = render :partial => 'mailing_list'
-        .actions.floatleft
-          = submit_tag('SUBSCRIBE', :id => 'mc-embedded-subscribe', :class => 'box more')
-          = link_to 'UNSUBSCRIBE', 'http://SearchAndRestore.us1.list-manage1.com/unsubscribe?u=303dcaaa45addeada91b6a5e3&id=dc362c84a7', :target => '_blank', :class => 'box more'
     .col-2
       #support
         .support-us
           %h1
-            SUPPORT US
+            = link_to('SUPPORT US', 'donate')
           %h3
             In exchange for good karma and great jazz
         .social-media
           %h3
             Let's connect on
-            = link_to('FACEBOOK', '', :class => 'pipe-link')
-            = link_to('TWITTER', '', :class => 'pipe-link')
+            = link_to('FACEBOOK', 'http://facebook.com/helpjazz', :class => 'pipe-link box')
+            = link_to('TWITTER', 'https://twitter.com/SearchNRestore', :class => 'pipe-link box')
 
     .clear
     
-    .col1-2.footer
-      #footer
-        .site-tagline
-          %span.site-name
-            SEARCH &amp; RESTORE
-          Bringing the artists and audiences of new jazz and improvised music together in new ways, never forgetting its DIY roots.
-        .site-copyright
-          Copyright &copy; Search &amp; Restore 2012. All rights reserved.
+  .col1-2.footer
+    #footer
+      .site-tagline
+        %span.site-name
+          SEARCH &amp; RESTORE
+        Bringing the artists and audiences of new jazz and improvised music together in new ways, never forgetting its DIY roots.
+      .site-copyright
+        Copyright &copy; Search &amp; Restore 2012. All rights reserved.

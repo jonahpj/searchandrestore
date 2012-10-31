@@ -20,3 +20,8 @@
         #mc-responses.clear
           #mc-error-response.response{ :style => 'display: none;' }
           #mc-success-response.response{ :style => 'display: none;' }
+          
+        .actions.floatleft
+          = submit_tag('SUBSCRIBE', :id => 'mc-embedded-subscribe', :class => 'button box more')
+          = link_to 'UNSUBSCRIBE', 'http://SearchAndRestore.us1.list-manage1.com/unsubscribe?u=303dcaaa45addeada91b6a5e3&id=dc362c84a7', :target => '_blank', :class => 'box more'
+          

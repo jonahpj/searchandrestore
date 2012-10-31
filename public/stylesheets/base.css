@@ -304,7 +304,7 @@
   padding-top: 10px; }
 .jazz.page-home .box.more {
   padding: 10px 13px 10px 13px;
-  font-size: 13px; }
+  font-size: 14px; }
 .jazz.page-home h3.container {
   margin-bottom: 5px; }
   .jazz.page-home h3.container img {
@@ -319,9 +319,10 @@
   background: url(/images/home/masthead_bg.png) repeat-x;
   margin-bottom: 0px; }
 .jazz.page-home #main-content {
+  height: 1420px;
   /*background: url(/images/titles/home_title_bottom.png) no-repeat top left;*/ }
-.jazz.page-home .col-1-2.with-banner {
-  margin-top: 0px; }
+.jazz.page-home .col1-2.footer {
+  margin-top: 66px; }
 .jazz.page-home .col-1, .jazz.page-home .col-2 {
   width: 470px; }
   .jazz.page-home .col-1 h1, .jazz.page-home .col-2 h1 {
@@ -331,11 +332,10 @@
     margin-bottom: 0px;*/ }
   .jazz.page-home .col-1 h2, .jazz.page-home .col-2 h2 {
     color: Gray; }
-.jazz.page-home .col-1.mailing-list {
-  margin-top: 28px; }
 .jazz.page-home #graphic {
   margin-left: 505px;
   width: 470px;
+  height: 551px;
   margin-top: 42px;
   margin-bottom: 0px; }
   .jazz.page-home #graphic img {
@@ -356,7 +356,7 @@
   .jazz.page-home #blog .blog-post .post-date {
     font-size: 14px; }
   .jazz.page-home #blog .blog-post .post-link {
-    font-size: 20px; }
+    font-size: 18px; }
   .jazz.page-home #blog .blog-post .post-1, .jazz.page-home #blog .blog-post .post-2, .jazz.page-home #blog .blog-post .post-3 {
     padding-top: 30px;
     padding-left: 10px;
@@ -373,6 +373,8 @@
   .jazz.page-home #blog .blog-post .post-3 {
     background: url(/images/pipes/blogpost-m.png) no-repeat;
     margin-top: 34px; }
+    .jazz.page-home #blog .blog-post .post-3 .post-link {
+      width: 480px; }
 .jazz.page-home .pipe-bottom {
   background: url(/images/pipes/blogbottom.png) no-repeat;
   height: 13px;
@@ -397,6 +399,7 @@
 .jazz.page-home #intro a.box {
   width: 210px; }
 .jazz.page-home #mailing-list {
+  margin-top: 28px;
   height: 191px; }
   .jazz.page-home #mailing-list .body-home {
     background: url(/images/pipes/ml-bg.png) no-repeat;
@@ -408,6 +411,7 @@
     padding-top: 5px; }
   .jazz.page-home #mailing-list .actions {
     padding-left: 95px;
+    margin-top: 25px;
     margin-bottom: 34px; }
   .jazz.page-home #mailing-list h1 {
     padding-top: 15px;
@@ -437,6 +441,8 @@
   text-align: center; }
   .jazz.page-home #support h1 {
     padding-top: 10px; }
+    .jazz.page-home #support h1 a {
+      color: white; }
   .jazz.page-home #support h3 {
     color: white; }
   .jazz.page-home #support .support-us {
@@ -445,9 +451,12 @@
     height: 76px; }
   .jazz.page-home #support .social-media {
     margin-top: 8px;
-    padding-top: 4px;
+    /*padding-top: 4px;*/
     height: 26px;
     background: url(/images/pipes/socialmedia.png) no-repeat; }
+    .jazz.page-home #support .social-media .pipe-link {
+      height: 18px;
+      padding-top: 6px; }
 .jazz.page-home #footer {
   text-align: center;
   color: white; }
@@ -909,8 +918,8 @@ body {
   font-family: Ariel, sans-serif;
   margin: 0;
   padding: 0;
-  background: url(/images/body_bg.png);
-  /*background: url(/images/background.png) no-repeat top;*/ }
+  /*background: url(/images/body_bg.png);*/
+  background: url(/images/background.png) no-repeat top; }
 
 ul {
   list-style: none;

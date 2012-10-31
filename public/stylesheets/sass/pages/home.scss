@@ -1,4 +1,6 @@
 .jazz {
+  .site-container {
+  }
   &.page-home {
     dd.section {
       padding-left: 10px;
@@ -6,7 +8,7 @@
     }
     .box.more {
       padding: 10px 13px 10px 13px;
-      font-size: 13px;
+      font-size: 14px;
     }
     h3.container {
       img {display:block;}
@@ -25,12 +27,13 @@
       margin-bottom: 0px;
     }
     #main-content {
+      height: 1420px;
       /*background: url(/images/titles/home_title_bottom.png) no-repeat top left;*/
       #main-content-secondary {
       }
     }
-    .col-1-2.with-banner {
-      margin-top: 0px;
+    .col1-2.footer {
+      margin-top: 66px;
     }
     .col-1, .col-2 {
       width: 470px;
@@ -45,11 +48,11 @@
       }
     }
     .col-1.mailing-list {
-      margin-top: 28px;
     }
     #graphic {
       margin-left: 505px;
       width: 470px;
+      height: 551px;
       margin-top: 42px;
       margin-bottom: 0px;
       img {
@@ -76,7 +79,7 @@
           font-size: 14px;
         }
         .post-link {
-          font-size: 20px;
+          font-size: 18px;
         }
         // todo: small, medium, and large classes
         .post-1, .post-2, .post-3 {
@@ -98,6 +101,9 @@
         .post-3 {
           background: url(/images/pipes/blogpost-m.png) no-repeat;
           margin-top: 34px;
+          .post-link {
+            width: 480px;
+          }
         }
       }
     }
@@ -137,6 +143,7 @@
       }
     }
     #mailing-list {
+      margin-top: 28px;
       height: 191px;
       .body-home {
         background: url(/images/pipes/ml-bg.png) no-repeat;
@@ -150,6 +157,7 @@
       }
       .actions {
         padding-left: 95px;
+        margin-top: 25px;
         margin-bottom: 34px;
       }
       h1{
@@ -189,6 +197,9 @@
       text-align: center;
       h1 {
         padding-top: 10px;
+        a {
+          color: white;
+        }
       }
       h3 {
         color: white;
@@ -200,9 +211,13 @@
       }
       .social-media {
         margin-top: 8px;
-        padding-top: 4px;
+        /*padding-top: 4px;*/
         height: 26px;
         background: url(/images/pipes/socialmedia.png) no-repeat;
+        .pipe-link {
+          height: 18px;
+          padding-top: 6px;
+        }
       }
     }
     #footer {
