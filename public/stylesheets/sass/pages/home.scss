@@ -1,10 +1,6 @@
-body {
-  background: url(/images/background.png) no-repeat top !important;
-}
 .jazz {
-  .site-container {
-  }
   &.page-home {
+    background: url(/images/background.png) no-repeat top !important;
     dd.section {
       padding-left: 10px;
       padding-top: 10px;
