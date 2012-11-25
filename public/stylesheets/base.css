@@ -1056,6 +1056,8 @@ body.page-resources .nav li#nav-resources a {
   background-color: #ff9900; }
 body.page-donate .nav li#nav-donate a {
   background-color: #ff9900; }
+body.page-blog .nav li#nav-blog a {
+  background-color: #ff9900; }
 
 .clear {
   clear: both; }

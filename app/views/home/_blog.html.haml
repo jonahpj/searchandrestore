@@ -23,7 +23,8 @@
       -# todo: truncate
       - post_text = blog_post['body']
 - if defined? post_text
-  - post_link = link_to(truncate(post_text, :length => truncate_length, :separator => ' '), blog_post['post_url'])
+  -# post_link = link_to(truncate(post_text, :length => truncate_length, :separator => ' '), blog_post['post_url'])
+  - post_link = link_to(truncate(post_text, :length => truncate_length, :separator => ' '), blog_path)
 
 .blog-post
   -# todo: small, medium, and large classes

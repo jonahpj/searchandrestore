@@ -189,6 +189,11 @@ body {
       background-color: $ORANGE;
     }
   }
+  &.page-blog {
+    .nav li#nav-blog a {
+      background-color: $ORANGE;
+    }
+  }
 }
 .clear {
   clear: both;

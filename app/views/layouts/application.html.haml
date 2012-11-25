@@ -45,6 +45,8 @@
             %a{:href => resources_path} Resources
           %li#nav-donate
             %a{:href => donate_path} Donate
+          %li#nav-blog
+            = link_to('Blog', blog_path)
     .site-container#main-content
       = content_for?(:content) ? yield(:content) : yield
       .clear
@@ -57,6 +59,7 @@
       var sr_evoSlider = $('#homepage-features').evoSlider({
         height: 460,
         showIndex: false,
+        interval: 2500,
         after: function () {
           $('dl.slides_container').children('dt').each(function(index) {
             var inactive_selector = 'dl.slides_container dd.' + $(this).attr('class').replace('active', '');
