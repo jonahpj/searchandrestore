@@ -1,0 +1,31 @@
+- show = selected_video.show
+
+#video_player_container{ :data => { :video => selected_video.id, :show => show.id} }
+  .container.section.mb15
+    :plain
+      #{selected_video.embed_code}
+    %p
+      = link_to(show.group_name, show, :class => 'box dark')
+      - if show.venue.present?
+        = link_to(show.venue.name, show.venue, :class => 'box venue-link')
+      = show.when.strftime("%m/%d/%Y")
+    
+    
+    %h3 Featured Artists:
+    %ul.inline-list
+      - show.performances.each do |performance|
+        %li= performance_link(performance, :class => 'box')
+
+  - if show.videos.count > 1
+    %h3.pl10 More videos from this show:
+    .section
+      %ul#related_videos.inline-list.grid-view
+        - show.videos.each do |video|
+          %li{ :class => cycle('first','','','last') }
+            = render :partial => 'videos/video_thumb', :locals => { :video => video }
+        -#  %a.block{:href => video_path(video), :title => video.title, :data => { :video => video.id, :show => video.show.id, :embed_code => video.embed_code }}
+        -#    .body
+        -#      = image_tag(video.thumbnail.url(:tiny))
+        -#      .clear
+        -#      %span.box.block.name
+        -#        %span= video.title
