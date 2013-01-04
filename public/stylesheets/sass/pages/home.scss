@@ -3,6 +3,9 @@
     background: url(/images/background.png) no-repeat top !important;
     dd.section {
       padding-left: 10px;
+      padding-top: 6px;
+    }
+    dd.section#featured-video {
       padding-top: 10px;
     }
     .box.more {
@@ -83,12 +86,11 @@
         // todo: small, medium, and large classes
         .post-1, .post-2, .post-3 {
           padding-top: 30px;
-          padding-left: 10px;
           height: inherit;
         }
         .post-1 {
           background: url(/images/pipes/blogpost-s.png) no-repeat;
-          margin-top: -15px;
+          margin-top: -10px;
         }
         .post-2 {
           background: url(/images/pipes/blogpost-l.png) no-repeat;
@@ -190,7 +192,7 @@
     .fromblog h2 {
       font-size: 18px;
       padding-top: 10px;
-      font-color: #999;
+      color: gray;
     }
     #support {
       text-align: center;
@@ -262,17 +264,18 @@
         dt.nav1 {
           background: url(/images/pipes/nav1.png) no-repeat;
           height: 49px !important;
-          top: -45px;
+          top: -46px;
         }
         dt.nav2 {
           background: url(/images/pipes/nav2.png) no-repeat;
           height: 49px !important;
+          top: -1px;
         }
         dt.nav3 {
           background: url(/images/pipes/nav3.png) no-repeat;
           height: 49px !important;
           width: 427px;
-          top: -28px;
+          top: -29px;
         }
         dt.active {
           color: white;
@@ -284,14 +287,27 @@
         .fromblog {
           background: url(/images/pipes/fromblog.png) no-repeat;
           height: 79px;
-          padding: 10px;
+          padding: 15px 0 0 30px;
           margin-left: -11px;
         }
+        .blog-post .post {
+          padding-left: 30px;
+        }
         .shows {
-          background: url(/images/pipes/shows.png) no-repeat;
-          height: 74px;
+          height: 70px;
           padding: 10px 10px 0;
           margin-left: -11px;
+          background: url(/images/pipes/shows.png) no-repeat;
+        }
+        .show-meta {
+          height: 15px;
+        }
+        .showpipe {
+          background: url(/images/pipes/show.png) no-repeat;
+          height: 14px;
+          width: 24px;
+          position: relative;
+          left: -18px;
         }
       }
       dl dd.section#blog, dl dd.section#tonights_shows {

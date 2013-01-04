@@ -70,6 +70,15 @@
               $(inactive_selector).show();
             }
           });
+          $('.showpipe').each(function() {
+            if ($(this).css('top') == 'auto') {
+              var sp_id = $(this).attr('id');
+              var show = '#show_' + sp_id.split('_')[1] + ' .body';
+              var sp_top = $(show).height() + $('.show-meta').height();
+              $(this).css('background', "url('/images/pipes/show.png') no-repeat");
+              $(this).css('top', '-' + sp_top + 'px');
+            }
+          });
         }
       });
 

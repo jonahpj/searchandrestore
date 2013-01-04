@@ -28,6 +28,6 @@
 
 .blog-post
   -# todo: small, medium, and large classes
-  %div{ :class => 'post-' + index.to_s }
+  %div{ :class => 'post post-' + index.to_s }
     %span.post-date= posted_at
     %span.post-link= post_link unless !defined? post_link

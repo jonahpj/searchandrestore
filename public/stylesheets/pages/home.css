@@ -2,6 +2,8 @@
   background: url(/images/background.png) no-repeat top !important; }
   .jazz.page-home dd.section {
     padding-left: 10px;
+    padding-top: 6px; }
+  .jazz.page-home dd.section#featured-video {
     padding-top: 10px; }
   .jazz.page-home .box.more {
     padding: 10px 13px 10px 13px;
@@ -60,11 +62,10 @@
       font-size: 18px; }
     .jazz.page-home #blog .blog-post .post-1, .jazz.page-home #blog .blog-post .post-2, .jazz.page-home #blog .blog-post .post-3 {
       padding-top: 30px;
-      padding-left: 10px;
       height: inherit; }
     .jazz.page-home #blog .blog-post .post-1 {
       background: url(/images/pipes/blogpost-s.png) no-repeat;
-      margin-top: -15px; }
+      margin-top: -10px; }
     .jazz.page-home #blog .blog-post .post-2 {
       background: url(/images/pipes/blogpost-l.png) no-repeat;
       margin-top: 5px;
@@ -137,7 +138,7 @@
   .jazz.page-home .fromblog h2 {
     font-size: 18px;
     padding-top: 10px;
-    font-color: #999; }
+    color: gray; }
   .jazz.page-home #support {
     text-align: center; }
     .jazz.page-home #support h1 {
@@ -194,15 +195,16 @@
       .jazz.page-home .evoslider.default dl.slides_container dt.nav1 {
         background: url(/images/pipes/nav1.png) no-repeat;
         height: 49px !important;
-        top: -45px; }
+        top: -46px; }
       .jazz.page-home .evoslider.default dl.slides_container dt.nav2 {
         background: url(/images/pipes/nav2.png) no-repeat;
-        height: 49px !important; }
+        height: 49px !important;
+        top: -1px; }
       .jazz.page-home .evoslider.default dl.slides_container dt.nav3 {
         background: url(/images/pipes/nav3.png) no-repeat;
         height: 49px !important;
         width: 427px;
-        top: -28px; }
+        top: -29px; }
       .jazz.page-home .evoslider.default dl.slides_container dt.active {
         color: white;
         display: block !important; }
@@ -211,12 +213,22 @@
       .jazz.page-home .evoslider.default dl dd.section .fromblog {
         background: url(/images/pipes/fromblog.png) no-repeat;
         height: 79px;
-        padding: 10px;
+        padding: 15px 0 0 30px;
         margin-left: -11px; }
+      .jazz.page-home .evoslider.default dl dd.section .blog-post .post {
+        padding-left: 30px; }
       .jazz.page-home .evoslider.default dl dd.section .shows {
-        background: url(/images/pipes/shows.png) no-repeat;
-        height: 74px;
+        height: 70px;
         padding: 10px 10px 0;
-        margin-left: -11px; }
+        margin-left: -11px;
+        background: url(/images/pipes/shows.png) no-repeat; }
+      .jazz.page-home .evoslider.default dl dd.section .show-meta {
+        height: 15px; }
+      .jazz.page-home .evoslider.default dl dd.section .showpipe {
+        background: url(/images/pipes/show.png) no-repeat;
+        height: 14px;
+        width: 24px;
+        position: relative;
+        left: -18px; }
     .jazz.page-home .evoslider.default dl dd.section#blog, .jazz.page-home .evoslider.default dl dd.section#tonights_shows {
       background: transparent; }
