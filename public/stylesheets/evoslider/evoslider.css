@@ -100,6 +100,7 @@ The slide content area
 	padding: 0;
 	border: 0;
     overflow: hidden;
+	background: #333;
 }
 
 /*  _______________________________________

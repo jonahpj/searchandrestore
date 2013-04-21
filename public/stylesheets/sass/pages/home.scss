@@ -9,7 +9,7 @@
       padding-top: 10px;
     }
     .box.more {
-      padding: 10px 13px 10px 13px;
+      padding: 8px 13px 8px 13px;
       font-size: 14px;
     }
     h3.container {
@@ -259,7 +259,6 @@
           text-align: center;
           text-shadow: none;
           font-size: 20px;
-          background: transparent;
         }
         dt.nav1 {
           background: url(/images/pipes/nav1.png) no-repeat;
@@ -267,15 +266,15 @@
           top: -46px;
         }
         dt.nav2 {
-          background: url(/images/pipes/nav2.png) no-repeat;
-          height: 49px !important;
-          top: -1px;
-        }
-        dt.nav3 {
           background: url(/images/pipes/nav3.png) no-repeat;
           height: 49px !important;
+          top: -30px;
+        }
+        dt.nav3 {
+          background: url(/images/pipes/nav2.png) no-repeat;
+          height: 49px !important;
           width: 427px;
-          top: -29px;
+          top: -1px;
         }
         dt.active {
           color: white;
@@ -310,8 +309,16 @@
           left: -18px;
         }
       }
-      dl dd.section#blog, dl dd.section#tonights_shows {
-        background: transparent;
+      dl dd.section#blog {
+		   background: url(/images/background.png) no-repeat -276px -147px !important;
+		   .more-link {display: none;}
+      }
+	  dl dd.section#featured-video {
+		   background: url(/images/background.png) no-repeat -325px -147px !important;
+		   margin-left: -1px;
+      }
+	  dl dd.section#tonights_shows {
+		   background: url(/images/background.png) no-repeat -373px -147px !important;
       }
     }
   }

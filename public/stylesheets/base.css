@@ -307,7 +307,7 @@
   .jazz.page-home dd.section#featured-video {
     padding-top: 10px; }
   .jazz.page-home .box.more {
-    padding: 10px 13px 10px 13px;
+    padding: 8px 13px 8px 13px;
     font-size: 14px; }
   .jazz.page-home h3.container {
     margin-bottom: 5px; }
@@ -491,21 +491,20 @@
       .jazz.page-home .evoslider.default dl.slides_container dt {
         text-align: center;
         text-shadow: none;
-        font-size: 20px;
-        background: transparent; }
+        font-size: 20px; }
       .jazz.page-home .evoslider.default dl.slides_container dt.nav1 {
         background: url(/images/pipes/nav1.png) no-repeat;
         height: 49px !important;
         top: -46px; }
       .jazz.page-home .evoslider.default dl.slides_container dt.nav2 {
-        background: url(/images/pipes/nav2.png) no-repeat;
-        height: 49px !important;
-        top: -1px; }
-      .jazz.page-home .evoslider.default dl.slides_container dt.nav3 {
         background: url(/images/pipes/nav3.png) no-repeat;
         height: 49px !important;
+        top: -30px; }
+      .jazz.page-home .evoslider.default dl.slides_container dt.nav3 {
+        background: url(/images/pipes/nav2.png) no-repeat;
+        height: 49px !important;
         width: 427px;
-        top: -29px; }
+        top: -1px; }
       .jazz.page-home .evoslider.default dl.slides_container dt.active {
         color: white;
         display: block !important; }
@@ -531,8 +530,15 @@
         width: 24px;
         position: relative;
         left: -18px; }
-    .jazz.page-home .evoslider.default dl dd.section#blog, .jazz.page-home .evoslider.default dl dd.section#tonights_shows {
-      background: transparent; }
+    .jazz.page-home .evoslider.default dl dd.section#blog {
+      background: url(/images/background.png) no-repeat -276px -147px !important; }
+      .jazz.page-home .evoslider.default dl dd.section#blog .more-link {
+        display: none; }
+    .jazz.page-home .evoslider.default dl dd.section#featured-video {
+      background: url(/images/background.png) no-repeat -325px -147px !important;
+      margin-left: -1px; }
+    .jazz.page-home .evoslider.default dl dd.section#tonights_shows {
+      background: url(/images/background.png) no-repeat -373px -147px !important; }
 
 .jazz.section-artists .masthead-top {
   background-image: url(/images/titles/artists_title.png);
