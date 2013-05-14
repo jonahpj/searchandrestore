@@ -1,5 +1,5 @@
 .jazz.page-home {
-  background: url(/images/background.png) no-repeat top !important; }
+  background: transparent url(/images/background-2013.jpg) no-repeat -89px -65px !important; }
   .jazz.page-home dd.section {
     padding-left: 10px;
     padding-top: 6px; }
@@ -22,10 +22,11 @@
     background: url(/images/home/masthead_bg.png) repeat-x;
     margin-bottom: 0px; }
   .jazz.page-home #main-content {
-    height: 1420px;
     /*background: url(/images/titles/home_title_bottom.png) no-repeat top left;*/ }
+  .jazz.page-home .col1-2 #footer-pipe-container {
+    margin-top: 43px; }
   .jazz.page-home .col1-2.footer {
-    margin-top: 66px; }
+    margin-top: 69px; }
   .jazz.page-home .col-1, .jazz.page-home .col-2 {
     width: 470px; }
     .jazz.page-home .col-1 h1, .jazz.page-home .col-2 h1 {
@@ -51,32 +52,35 @@
     /*.body { */
     /*  padding-bottom: 10px; */
     /*}*/ */ }
-  .jazz.page-home #blog h1 {
-    color: white; }
-  .jazz.page-home #blog .blog-post {
-    height: 90px;
-    margin-left: -10px; }
-    .jazz.page-home #blog .blog-post .post-date {
-      font-size: 14px; }
-    .jazz.page-home #blog .blog-post .post-link {
-      font-size: 18px; }
-    .jazz.page-home #blog .blog-post .post-1, .jazz.page-home #blog .blog-post .post-2, .jazz.page-home #blog .blog-post .post-3 {
-      padding-top: 30px;
-      height: inherit; }
-    .jazz.page-home #blog .blog-post .post-1 {
-      background: url(/images/pipes/blogpost-s.png) no-repeat;
-      margin-top: -10px; }
-    .jazz.page-home #blog .blog-post .post-2 {
-      background: url(/images/pipes/blogpost-l.png) no-repeat;
-      margin-top: 5px;
-      padding-top: 40px;
-      height: 118px;
-      width: 584px; }
-    .jazz.page-home #blog .blog-post .post-3 {
-      background: url(/images/pipes/blogpost-m.png) no-repeat;
-      margin-top: 34px; }
-      .jazz.page-home #blog .blog-post .post-3 .post-link {
-        width: 480px; }
+  .jazz.page-home #blog {
+    padding: 23px 0 0 6px;
+    height: 698px; }
+    .jazz.page-home #blog h1 {
+      color: white; }
+    .jazz.page-home #blog .blog-post {
+      height: 90px;
+      margin-left: -10px; }
+      .jazz.page-home #blog .blog-post .post-date {
+        font-size: 14px; }
+      .jazz.page-home #blog .blog-post .post-link {
+        font-size: 18px; }
+      .jazz.page-home #blog .blog-post .post-1, .jazz.page-home #blog .blog-post .post-2, .jazz.page-home #blog .blog-post .post-3 {
+        padding-top: 30px;
+        height: inherit; }
+      .jazz.page-home #blog .blog-post .post-1 {
+        background: url(/images/pipes/blogpost-s.png) no-repeat;
+        margin-top: -10px; }
+      .jazz.page-home #blog .blog-post .post-2 {
+        background: url(/images/pipes/blogpost-l.png) no-repeat;
+        margin-top: 5px;
+        padding-top: 40px;
+        height: 118px;
+        width: 584px; }
+      .jazz.page-home #blog .blog-post .post-3 {
+        background: url(/images/pipes/blogpost-m.png) no-repeat;
+        margin-top: 34px; }
+        .jazz.page-home #blog .blog-post .post-3 .post-link {
+          width: 480px; }
   .jazz.page-home .pipe-bottom {
     background: url(/images/pipes/blogbottom.png) no-repeat;
     height: 13px;
@@ -163,7 +167,7 @@
     text-align: center;
     color: white; }
     .jazz.page-home #footer .site-tagline {
-      background: url(/images/pipes/tagline.png) no-repeat;
+      background: transparent;
       height: 31px;
       color: gray;
       padding-top: 5px;
@@ -177,8 +181,9 @@
       margin-top: 10px; }
   .jazz.page-home .evoslider.default {
     border: none;
-    background: transparent;
-    height: 484px !important;
+    background: #fff;
+    height: 356px !important;
+    overflow: hidden;
     padding-top: 0; }
     .jazz.page-home .evoslider.default dl.slides_container {
       height: 481px !important; }

@@ -15,96 +15,59 @@
       %dl.slides_container
   
         %dt.nav1
-        %dd.section.nav1#blog
-          .fromblog
-            %h1
-              FROM THE BLOG
-            %h2
-              Artist interviews, news and more...
-          - if @blog_posts.present?
-            - @blog_posts.each_with_index do |blog_post, i|
-              = render :partial => 'home/blog', :locals => { :blog_post => blog_post, :index => i+1 }
-          .pipe-bottom
-          .more-link
-            = link_to('TAKE ME TO THE BLOG', 'http://searchandrestore.tumblr.com', :class => 'box more')
-      
+        
         %dt.nav2
         %dd.section.nav2#featured-video
           - if @featured_video.present?
             = render :partial => 'player_home', :locals => { :selected_video => @featured_video, :show => @featured_video.show }
             
-        %dt.nav3
-        %dd.section.nav3#tonights_shows
-          .shows
-            %h1
-              TONIGHT'S SHOWS
-            %h2
-              Top picks selected by Search & Restore
-          %ul.containers.show-listing
-            - @top_picks.each_with_index do |show, i|
-              %li.container[show]
-                .body
-                  .show-meta
-                    %p.box.dark.band= show.group_name
-                    = link_to("#{show.venue.name}", show.venue, :class => 'box venue')
-                    %p.date= show.when.strftime("%-m/%d/%Y %l%P")
-                  .clear
-                  - if show.performances.present?
-                    %h3#featured-musicians-title Featured Musicians:
-                    %ul.inline-list
-                      - show.performances.each do |performance|
-                        %li.featured-musician= performance_link(performance, :class => 'box')
-              %li.showpipe{:id => "showpipe_#{i+1}"}
-            .pipe-bottom
-            = link_to('SEE MORE SHOWS', shows_path, :class => 'box more')
-
-        - if @homepage.blurbs[0].present?
-          %dt.nav4= @homepage.blurbs[0].title
-          %dd.section.nav4#homepage-blurb
-            :textile
-              #{@homepage.blurbs[0].text}
-
-        - if @homepage.blurbs[1].present?
-          %dt.nav5= @homepage.blurbs[1].title
-          %dd.section.nav5#homepage-blurb
-            :textile
-              #{@homepage.blurbs[1].text}
-      
+       
   .clear
   
   .col1-2
-  
+    .col-1
+      #blog
+        .fromblog
+          %h1
+            FROM THE BLOG
+          %h2
+            Artist interviews, news and more...
+        - if @blog_posts.present?
+          - @blog_posts.each_with_index do |blog_post, i|
+            = render :partial => 'home/blog', :locals => { :blog_post => blog_post, :index => i+1 }
+        .more-link
+          = link_to('TAKE ME TO THE BLOG', 'http://searchandrestore.tumblr.com', :class => 'box more')
+    
     .col-2
       #graphic
         - if @homepage.graphic.present?
           = @homepage.graphic.html_safe
-
   .clear
 
   .col1-2
-  
-    .col-1.mailing-list
-      #mailing-list
-        .body-home
-          %h1
-            JOIN OUR MAILING LIST
-          %h2
-            To keep yourself entertained and inspired
-          = render :partial => 'mailing_list'
-    .col-2
-      #support
-        .support-us
-          %h1
-            = link_to('SUPPORT US', 'donate')
-          %h3
-            In exchange for good karma and great jazz
-        .social-media
-          %h3
-            Let's connect on
-            = link_to('FACEBOOK', 'http://facebook.com/helpjazz', :class => 'pipe-link box')
-            = link_to('TWITTER', 'https://twitter.com/SearchNRestore', :class => 'pipe-link box')
+    #footer-pipe-container
+      .col-1.mailing-list
+        #mailing-list
+          .body-home
+            %h1
+              JOIN OUR MAILING LIST
+            %h2
+              To keep yourself entertained and inspired
+            = render :partial => 'mailing_list'
+      .col-2
+        #support
+          .support-us
+            %h1
+              = link_to('SUPPORT US', 'donate')
+            %h3
+              In exchange for good karma and great jazz
+          .social-media
+            %h3
+              Let's connect on
+              = link_to('FACEBOOK', 'http://facebook.com/helpjazz', :class => 'pipe-link box')
+              = link_to('TWITTER', 'https://twitter.com/SearchNRestore', :class => 'pipe-link box')
 
-    .clear
+      .clear
     
   .col1-2.footer
     #footer
