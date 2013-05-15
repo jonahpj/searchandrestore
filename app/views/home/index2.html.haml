@@ -25,23 +25,35 @@
   .clear
   
   .col1-2
-    .col-1
-      #blog
-        .fromblog
-          %h1
-            FROM THE BLOG
-          %h2
-            Artist interviews, news and more...
-        - if @blog_posts.present?
-          - @blog_posts.each_with_index do |blog_post, i|
-            = render :partial => 'home/blog', :locals => { :blog_post => blog_post, :index => i+1 }
-        .more-link
-          = link_to('TAKE ME TO THE BLOG', 'http://searchandrestore.tumblr.com', :class => 'box more')
-    
-    .col-2
-      #graphic
-        - if @homepage.graphic.present?
-          = @homepage.graphic.html_safe
+    #blog
+      .fromblog
+        %h1
+          FROM THE BLOG
+        %h2
+          Artist interviews, news and more...
+      - if @blog_posts.present?
+        - @blog_posts.each_with_index do |blog_post, i|
+          = render :partial => 'home/blog', :locals => { :blog_post => blog_post, :index => i+1 }
+      .more-link
+        = link_to('TAKE ME TO THE BLOG', 'http://searchandrestore.tumblr.com', :class => 'box more')
+    #tonights_shows
+      .shows
+        %h1
+          TONIGHT'S SHOWS
+        %h2
+          Top picks selected by Search & Restore
+        %ul.containers.show-listing
+          - @top_picks.each_with_index do |show, i|
+            %li.container[show]
+              .body
+                .show-meta
+                  .show-data-wrapper
+                    .box.dark.band= show.group_name
+                  .show-data-wrapper
+                    = link_to("#{show.venue.name}", show.venue, :class => 'box venue')
+                  .date= show.when.strftime("%-m/%d/%Y %l%P")
+            .clear
+        = link_to('SEE MORE SHOWS', shows_path, :class => 'box more')
   .clear
 
   .col1-2

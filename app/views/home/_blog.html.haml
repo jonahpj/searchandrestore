@@ -1,22 +1,22 @@
-- case index
-  - when 1
-    - truncate_length = 50
-  - when 2
-    - truncate_length = 100
-  - when 3
-    - truncate_length = 55
 
-
+- truncate_length = 250
 - posted_at = Time.at(blog_post['timestamp'].to_i).strftime('%-m/%-d/%Y')
 - case blog_post['type']
   - when 'photo'
-    - post_text = strip_tags(blog_post['caption'])
+    - post_text = "Gig Alert!"
+    - post_tags = blog_post["tags"]
+    - post_body = strip_tags(blog_post['caption'])
+    
   - when 'quote'
-    - post_text = strip_tags(blog_post['text'])
+    - post_text = "Quote of the Day"
+    - post_tags = blog_post['tags']
+    - post_body = strip_tags(blog_post['text'])
   - when 'video'
-    -# todo
-  -# text post: optional title, required body
+    - post_text = "Click to Watch"
+    - post_tags = blog_post['tags']
+    - post_body = strip_tags(blog_post['caption'])
   - when 'text'
+    - post_tags = blog_post['tags']
     - if blog_post['text'].present?
       - post_text = blog_post['title']
     - else
@@ -25,9 +25,17 @@
 - if defined? post_text
   -# post_link = link_to(truncate(post_text, :length => truncate_length, :separator => ' '), blog_post['post_url'])
   - post_link = link_to(truncate(post_text, :length => truncate_length, :separator => ' '), blog_path)
+- if defined? post_body
+  - post_body_truncated = truncate(post_body, :length => truncate_length, :separator => ' ')
+
 
 .blog-post
   -# todo: small, medium, and large classes
-  %div{ :class => 'post post-' + index.to_s }
-    %span.post-date= posted_at
-    %span.post-link= post_link unless !defined? post_link
+  %div{ :class => 'post' }
+    .post-link= post_link unless !defined? post_link
+    .post-meta
+      %span.post-date= posted_at
+      %span.post-tags= post_tags
+    .post-body= post_body_truncated
+    
+    

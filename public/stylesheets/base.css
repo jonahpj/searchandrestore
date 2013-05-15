@@ -300,7 +300,7 @@
     padding-left: 172px; }
 
 .jazz.page-home {
-  background: transparent url(/images/background-2013.jpg) no-repeat -89px -65px !important; }
+  background: url(/images/home/background_2013.jpg) no-repeat -89px -65px !important; }
   .jazz.page-home dd.section {
     padding-left: 10px;
     padding-top: 6px; }
@@ -354,39 +354,82 @@
     /*  padding-bottom: 10px; */
     /*}*/ */ }
   .jazz.page-home #blog {
-    padding: 23px 0 0 6px;
-    height: 698px; }
-    .jazz.page-home #blog h1 {
-      color: white; }
-    .jazz.page-home #blog .blog-post {
-      height: 90px;
-      margin-left: -10px; }
-      .jazz.page-home #blog .blog-post .post-date {
-        font-size: 14px; }
-      .jazz.page-home #blog .blog-post .post-link {
-        font-size: 18px; }
-      .jazz.page-home #blog .blog-post .post-1, .jazz.page-home #blog .blog-post .post-2, .jazz.page-home #blog .blog-post .post-3 {
-        padding-top: 30px;
-        height: inherit; }
-      .jazz.page-home #blog .blog-post .post-1 {
-        background: url(/images/pipes/blogpost-s.png) no-repeat;
-        margin-top: -10px; }
-      .jazz.page-home #blog .blog-post .post-2 {
-        background: url(/images/pipes/blogpost-l.png) no-repeat;
-        margin-top: 5px;
-        padding-top: 40px;
-        height: 118px;
-        width: 584px; }
-      .jazz.page-home #blog .blog-post .post-3 {
-        background: url(/images/pipes/blogpost-m.png) no-repeat;
-        margin-top: 34px; }
-        .jazz.page-home #blog .blog-post .post-3 .post-link {
-          width: 480px; }
-  .jazz.page-home .pipe-bottom {
-    background: url(/images/pipes/blogbottom.png) no-repeat;
-    height: 13px;
-    margin-left: -10px;
-    margin-top: 5px; }
+    padding: 23px 0 0 0;
+    height: 698px;
+    width: 628px;
+    float: left;
+    background: url(/images/home/blog_bgrnd.png) no-repeat -5px 36px !important; }
+    .jazz.page-home #blog .fromblog {
+      background: #000;
+      margin: 10px 0 8px -1px;
+      padding: 5px 0 5px 10px;
+      width: 620px; }
+      .jazz.page-home #blog .fromblog h1 {
+        color: white;
+        font-size: 40px; }
+      .jazz.page-home #blog .fromblog h2 {
+        font-size: 18px;
+        padding: 0 0 10px 0; }
+    .jazz.page-home #blog .blog-post .post-meta {
+      font-size: 13px; }
+      .jazz.page-home #blog .blog-post .post-meta .post-date {
+        color: #666666; }
+      .jazz.page-home #blog .blog-post .post-meta .post-tags {
+        color: #ff9900; }
+    .jazz.page-home #blog .blog-post .post-link {
+      font-size: 21px;
+      text-transform: uppercase;
+      font-weight: bold; }
+      .jazz.page-home #blog .blog-post .post-link a {
+        color: #000; }
+    .jazz.page-home #blog .blog-post .post-body {
+      margin-top: 10px;
+      color: #666666;
+      font-size: 15px; }
+    .jazz.page-home #blog .blog-post .post {
+      width: 590px;
+      margin: 0 10px 10px 8px;
+      padding: 17px 0 0 21px;
+      height: 134px;
+      float: left;
+      overflow: hidden; }
+    .jazz.page-home #blog .more-link {
+      margin: 15px 0 0 8px;
+      float: left; }
+  .jazz.page-home #tonights_shows {
+    width: 270px;
+    height: 572px;
+    overflow: hidden;
+    float: right;
+    background: url(/images/home/shows_bgrnd.png) no-repeat 0px 0px !important;
+    margin: 21px 24px 0 0;
+    padding: 5px 16px 0 10px; }
+    .jazz.page-home #tonights_shows .show-listing {
+      width: 265px;
+      height: 327px;
+      margin: 32px 0 12px 15px; }
+      .jazz.page-home #tonights_shows .show-listing li.container {
+        background-color: transparent;
+        height: 112px; }
+        .jazz.page-home #tonights_shows .show-listing li.container .show-data-wrapper {
+          width: 100%;
+          float: left;
+          padding-bottom: 5px;
+          text-transform: uppercase; }
+          .jazz.page-home #tonights_shows .show-listing li.container .show-data-wrapper .box {
+            padding: 5px; }
+        .jazz.page-home #tonights_shows .show-listing li.container .date {
+          color: #fff; }
+  .jazz.page-home #tonights_shows h1,
+  .jazz.page-home .fromblog h1 {
+    color: white;
+    font-size: 27px;
+    padding-top: 5px; }
+  .jazz.page-home #tonights_shows h2,
+  .jazz.page-home .fromblog h2 {
+    font-size: 16px;
+    padding-top: 0;
+    color: gray; }
   .jazz.page-home #featured-video .body {
     padding: 5px; }
     .jazz.page-home #featured-video .body img {
@@ -434,16 +477,6 @@
       width: 75px;
       margin-right: 10px;
       font-size: 14px; }
-  .jazz.page-home #tonights_shows h1,
-  .jazz.page-home .fromblog h1 {
-    color: white;
-    font-size: 34px;
-    padding-top: 5px; }
-  .jazz.page-home #tonights_shows h2,
-  .jazz.page-home .fromblog h2 {
-    font-size: 18px;
-    padding-top: 10px;
-    color: gray; }
   .jazz.page-home #support {
     text-align: center; }
     .jazz.page-home #support h1 {

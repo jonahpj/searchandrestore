@@ -1,6 +1,6 @@
 .jazz {
   &.page-home {
-    background: transparent url(/images/background-2013.jpg) no-repeat -89px -65px !important;
+    background: url(/images/home/background_2013.jpg) no-repeat -89px -65px !important;
     dd.section {
       padding-left: 10px;
       padding-top: 6px;
@@ -75,50 +75,98 @@
       //}*/
     }
     #blog {
-	  padding: 23px 0 0 6px;
+	  padding: 23px 0 0 0;
 	  height: 698px;
-      h1 {
-        color: white;
-      }
+	  width: 628px;
+	  float: left;
+	  background: url(/images/home/blog_bgrnd.png) no-repeat -5px 36px !important;
+	  .fromblog {
+	   	background: #000;
+	   	margin: 10px 0 8px -1px;
+	   	padding: 5px 0 5px 10px;
+	   	width: 620px;
+       	h1 {
+         	color: white;
+			font-size: 40px;
+       	}
+		h2 {
+			font-size: 18px;
+			padding: 0 0 10px 0;
+		}
+	  }
       .blog-post {
-        height: 90px;
-        margin-left: -10px;
-        .post-date {
-          font-size: 14px;
-        }
+		.post-meta {
+			font-size: 13px;
+        	.post-date {
+		      color: #666666;
+	        }
+			.post-tags {
+			  color: #ff9900;
+			}
+		}
         .post-link {
-          font-size: 18px;
+          font-size: 21px;
+		  text-transform: uppercase;
+		  font-weight: bold;
+		  a {color: #000;}
         }
+		.post-body {
+		  margin-top: 10px;
+		  color: #666666;
+		  font-size: 15px;
+		}
         // todo: small, medium, and large classes
-        .post-1, .post-2, .post-3 {
-          padding-top: 30px;
-          height: inherit;
-        }
-        .post-1 {
-          background: url(/images/pipes/blogpost-s.png) no-repeat;
-          margin-top: -10px;
-        }
-        .post-2 {
-          background: url(/images/pipes/blogpost-l.png) no-repeat;
-          margin-top: 5px;
-          padding-top: 40px;
-          height: 118px;
-          width: 584px;
-        }
-        .post-3 {
-          background: url(/images/pipes/blogpost-m.png) no-repeat;
-          margin-top: 34px;
-          .post-link {
-            width: 480px;
-          }
-        }
+		.post {
+			width: 590px;
+			margin: 0 10px 10px 8px;
+			padding: 17px 0 0 21px;
+			height: 134px;
+			float: left;
+			overflow: hidden;
+		}
       }
+	  .more-link {
+			margin: 15px 0 0 8px;
+			float: left;
+	  }
     }
-    .pipe-bottom {
-      background: url(/images/pipes/blogbottom.png) no-repeat;
-      height: 13px;
-      margin-left: -10px;
-      margin-top: 5px;
+	#tonights_shows {
+		width: 270px;
+		height: 572px;
+		overflow: hidden;
+		float: right;
+		background: url(/images/home/shows_bgrnd.png) no-repeat 0px 0px !important;
+		margin: 21px 24px 0 0;
+		padding: 5px 16px 0 10px;
+		.show-listing {
+			width: 265px;
+			height: 327px;
+			margin: 32px 0 12px 15px;
+			li.container {
+				background-color: transparent;
+				height: 112px;
+				.show-data-wrapper {
+					width: 100%; 
+					float: left; 
+					padding-bottom: 5px; 
+					text-transform: uppercase;
+					.box {padding: 5px;}
+				}
+				.date {color: #fff;}
+			}
+		}
+	}
+    #tonights_shows h1,
+    .fromblog h1 {
+      color: white;
+      font-size: 27px;
+      padding-top: 5px;
+    }
+    #tonights_shows h2,
+    .fromblog h2 {
+      font-size: 16px;
+      padding-top: 0;
+      color: gray;
     }
     #featured-video .body {
       padding: 5px;
@@ -187,18 +235,6 @@
           font-size: 14px;
         }
       }
-    }
-    #tonights_shows h1,
-    .fromblog h1 {
-      color: white;
-      font-size: 34px;
-      padding-top: 5px;
-    }
-    #tonights_shows h2,
-    .fromblog h2 {
-      font-size: 18px;
-      padding-top: 10px;
-      color: gray;
     }
     #support {
       text-align: center;
