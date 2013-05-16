@@ -1,6 +1,6 @@
 .jazz {
   &.page-home {
-    background: url(/images/home/background_2013.jpg) no-repeat -89px -65px !important;
+    background: url(/images/home/background_2013.jpg) no-repeat 0 -65px !important;
     dd.section {
       padding-left: 10px;
       padding-top: 6px;
@@ -35,7 +35,7 @@
     }
 	.col1-2 {
 		#footer-pipe-container {
-			margin-top: 43px;
+			margin-top: 15px;
 		}
 	}
     .col1-2.footer {
@@ -75,15 +75,15 @@
       //}*/
     }
     #blog {
-	  padding: 23px 0 0 0;
-	  height: 698px;
-	  width: 628px;
+	  padding: 15px 0 0 13px;
+	  height: 711px;
+	  width: 641px;
 	  float: left;
-	  background: url(/images/home/blog_bgrnd.png) no-repeat -5px 36px !important;
+	  margin: 23px 0 0 -4px;
+	  background: url(/images/home/blog_bgrnd.png) no-repeat -2px 0 !important;
 	  .fromblog {
-	   	background: #000;
-	   	margin: 10px 0 8px -1px;
-	   	padding: 5px 0 5px 10px;
+	   	margin: 0 0 8px -1px;
+	   	padding: 0 0 5px 10px;
 	   	width: 620px;
        	h1 {
          	color: white;
@@ -126,22 +126,22 @@
 		}
       }
 	  .more-link {
-			margin: 15px 0 0 8px;
+			margin: 17px 0 0 8px;
 			float: left;
 	  }
     }
 	#tonights_shows {
-		width: 270px;
+		width: 282px;
 		height: 572px;
 		overflow: hidden;
 		float: right;
 		background: url(/images/home/shows_bgrnd.png) no-repeat 0px 0px !important;
-		margin: 21px 24px 0 0;
-		padding: 5px 16px 0 10px;
+		margin: 21px 0 0 0;
+		padding: 5px 18px 0 10px;
 		.show-listing {
 			width: 265px;
 			height: 327px;
-			margin: 32px 0 12px 15px;
+			margin: 32px 0 8px 15px;
 			li.container {
 				background-color: transparent;
 				height: 112px;
