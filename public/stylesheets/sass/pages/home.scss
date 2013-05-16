@@ -22,7 +22,7 @@
     }
     .masthead-top {
        background-image: url(/images/titles/home_title.png);
-       background-position: 10px 5px;
+       background-position: 10px 1px;
     }
     .masthead {
       background: url(/images/home/masthead_bg.png) repeat-x;
@@ -131,13 +131,13 @@
 	  }
     }
 	#tonights_shows {
-		width: 282px;
+		width: 284px;
 		height: 572px;
 		overflow: hidden;
 		float: right;
 		background: url(/images/home/shows_bgrnd.png) no-repeat 0px 0px !important;
 		margin: 21px 0 0 0;
-		padding: 5px 18px 0 10px;
+		padding: 5px 18px 0 8px;
 		.show-listing {
 			width: 265px;
 			height: 327px;
