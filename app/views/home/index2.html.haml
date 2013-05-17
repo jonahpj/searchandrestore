@@ -13,15 +13,15 @@
   
     #homepage-features.evoslider.default
       %dl.slides_container
-  
-        %dt.nav1
-        
-        %dt.nav2
-        %dd.section.nav2#featured-video
+        %dt
+          welcome
+        %dd.home-banner
+        %dt
+          slide two
+        %dd.video
           - if @featured_video.present?
             = render :partial => 'player_home', :locals => { :selected_video => @featured_video, :show => @featured_video.show }
-            
-       
+             
   .clear
   
   .col1-2
@@ -78,8 +78,7 @@
               Let's connect on
               = link_to('FACEBOOK', 'http://facebook.com/helpjazz', :class => 'pipe-link box')
               = link_to('TWITTER', 'https://twitter.com/SearchNRestore', :class => 'pipe-link box')
-
-      .clear
+  .clear
     
   .col1-2.footer
     #footer

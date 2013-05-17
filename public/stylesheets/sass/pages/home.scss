@@ -145,6 +145,7 @@
 			li.container {
 				background-color: transparent;
 				height: 112px;
+				overflow: hidden;
 				.show-data-wrapper {
 					width: 100%; 
 					float: left; 
@@ -284,85 +285,51 @@
       }
     }
     .evoslider.default {
-      border: none;
-      background: #fff;
+      border-right: 14px solid #000;
+	  border-left: 10px solid #000;
+      border-top: none;
+      border-bottom: none;
+      background: #000;
       height: 356px !important;
 	  overflow: hidden;
       padding-top: 0;
+	  margin: 0 0 0 -5px;
+	  width: 929px !important;
+	  .bullets {display: none;}
+	  .arrow_prev {display: none;}
+	  .arrow_next {display: none;}
+	  #video_player_container {
+	   	h1 {
+	        color: black;
+			font-size: 50px;
+			line-height: 50px;
+			margin: 10px 0 0 0;
+	      }
+		  .box {
+			font-size: 18px;
+			padding: 5px;
+			margin: 5px 0 0 0;
+		}
+		  .date {
+			display: block;
+			margin: 3px 0 0 0;
+			color: #666;
+		}
+		#featured-video-container {
+		  margin: 5px;
+		  float: left;
+		}
+	  }
       dl.slides_container {
         height: 481px !important;
-        dd {
-          display: none;
-          height: 475px !important;
+		width: 940px !important;
+		background-color: #fff;
+        dd.home-banner {
+          background: url(/images/home/welcome_slider.jpg);
+          height: 361px !important;
         }
-        dd.nav1 {
-          display: block;
-        }
-        dt {
-          text-align: center;
-          text-shadow: none;
-          font-size: 20px;
-        }
-        dt.nav1 {
-          background: url(/images/pipes/nav1.png) no-repeat;
-          height: 49px !important;
-          top: -46px;
-        }
-        dt.nav2 {
-          background: url(/images/pipes/nav3.png) no-repeat;
-          height: 49px !important;
-          top: -30px;
-        }
-        dt.nav3 {
-          background: url(/images/pipes/nav2.png) no-repeat;
-          height: 49px !important;
-          width: 427px;
-          top: -1px;
-        }
-        dt.active {
-          color: white;
-          display: block !important;
-        }
-      }
-      dl dd.section {
-        width: 690px !important;
-        .fromblog {
-          background: url(/images/pipes/fromblog.png) no-repeat;
-          height: 79px;
-          padding: 15px 0 0 30px;
-          margin-left: -11px;
-        }
-        .blog-post .post {
-          padding-left: 30px;
-        }
-        .shows {
-          height: 70px;
-          padding: 10px 10px 0;
-          margin-left: -11px;
-          background: url(/images/pipes/shows.png) no-repeat;
-        }
-        .show-meta {
-          height: 15px;
-        }
-        .showpipe {
-          background: url(/images/pipes/show.png) no-repeat;
-          height: 14px;
-          width: 24px;
-          position: relative;
-          left: -18px;
-        }
-      }
-      dl dd.section#blog {
-		   background: url(/images/background.png) no-repeat -276px -147px !important;
-		   .more-link {display: none;}
-      }
-	  dl dd.section#featured-video {
-		   background: url(/images/background.png) no-repeat -325px -147px !important;
-		   margin-left: -1px;
-      }
-	  dl dd.section#tonights_shows {
-		   background: url(/images/background.png) no-repeat -373px -147px !important;
-      }
+		dd.left {display: none;}
+	  }
     }
   }
 }
