@@ -7,7 +7,7 @@
         #{selected_video.embed_code}
     %h1 
       FEATURED VIDEO
-    %p
+    #video_player_info
       = link_to(show.group_name, show, :class => 'box dark')
       - if show.venue.present?
         = link_to(show.venue.name, show.venue, :class => 'box venue-link')
