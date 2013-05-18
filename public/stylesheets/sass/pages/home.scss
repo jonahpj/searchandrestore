@@ -307,10 +307,12 @@
 	      }
 		#video_player_info {
 			float: left;
+			width: 297px;
 		.box {
 			font-size: 18px;
 			padding: 5px;
 			margin: 5px 0 0 0;
+			white-space:normal;
 		}
 		  .date {
 			display: block;
