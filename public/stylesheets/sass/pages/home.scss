@@ -297,6 +297,7 @@
 	  width: 929px !important;
 	  .arrow_prev {display: none;}
 	  .arrow_next {display: none;}
+	  .controlNav {left: 876px; bottom: 4px;}
 	  #video_player_container {
 	   	h1 {
 	        color: black;
@@ -309,6 +310,7 @@
 			width: 297px;
 		.box {
 			font-size: 18px;
+			line-height: 19px;
 			padding: 5px;
 			margin: 5px 0 0 0;
 			white-space:normal;
