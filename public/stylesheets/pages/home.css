@@ -93,7 +93,7 @@
       float: left;
       overflow: hidden; }
     .jazz.page-home #blog .more-link {
-      margin: 17px 0 0 8px;
+      margin: 19px 0 0 8px;
       float: left; }
   .jazz.page-home #tonights_shows {
     width: 284px;
@@ -224,8 +224,6 @@
     padding-top: 0;
     margin: 0 0 0 -5px;
     width: 929px !important; }
-    .jazz.page-home .evoslider.default .bullets {
-      display: none; }
     .jazz.page-home .evoslider.default .arrow_prev {
       display: none; }
     .jazz.page-home .evoslider.default .arrow_next {
@@ -235,14 +233,18 @@
       font-size: 50px;
       line-height: 50px;
       margin: 10px 0 0 0; }
-    .jazz.page-home .evoslider.default #video_player_container .box {
-      font-size: 18px;
-      padding: 5px;
-      margin: 5px 0 0 0; }
-    .jazz.page-home .evoslider.default #video_player_container .date {
-      display: block;
-      margin: 3px 0 0 0;
-      color: #666; }
+    .jazz.page-home .evoslider.default #video_player_container #video_player_info {
+      float: left;
+      width: 297px; }
+      .jazz.page-home .evoslider.default #video_player_container #video_player_info .box {
+        font-size: 18px;
+        padding: 5px;
+        margin: 5px 0 0 0;
+        white-space: normal; }
+      .jazz.page-home .evoslider.default #video_player_container #video_player_info .date {
+        display: block;
+        margin: 3px 0 0 0;
+        color: #666; }
     .jazz.page-home .evoslider.default #video_player_container #featured-video-container {
       margin: 5px;
       float: left; }
