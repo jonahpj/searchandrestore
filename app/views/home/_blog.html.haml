@@ -14,11 +14,8 @@
     - post_text = "Click to Watch"
     - post_body = strip_tags(blog_post['caption'])
   - when 'text'
-    - if blog_post['text'].present?
-      - post_text = blog_post['title']
-    - else
-      -# todo: truncate
-      - post_text = blog_post['body']
+    - post_text = strip_tags(blog_post['title'])
+    - post_body = strip_tags(blog_post['body'])
 - if defined? post_text
   -# post_link = link_to(truncate(post_text, :length => truncate_length, :separator => ' '), blog_post['post_url'])
   - post_link = link_to(truncate(post_text, :length => truncate_length, :separator => ' '), blog_path)
