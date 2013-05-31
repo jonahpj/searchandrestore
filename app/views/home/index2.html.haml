@@ -51,14 +51,7 @@
                 = link_to("#{show.venue.name}", show.venue, :class => 'box venue')
                 %p.date= show.when.strftime("%-m/%d/%Y %l%P")
               .clear
-              - if show.performances.present?
-                %h3#featured-musicians-title Featured Musicians:
-                %ul.inline-list
-                  - show.performances.each do |performance|
-                    %li.featured-musician= performance_link(performance, :class => 'box')
-          %li.showpipe{:id => "showpipe_#{i+1}"}
-        .pipe-bottom
-        = link_to('SEE MORE SHOWS', shows_path, :class => 'box more')
+      = link_to('SEE MORE SHOWS', shows_path, :class => 'box more')
   .clear
 
   .col1-2

@@ -23,7 +23,7 @@ class HomeController < ApplicationController
     #  @well_hello_there = Helpers.truncate(@about.about, :length => (@about.about.index('==<!-- homepage -->==') || 347) + 3)
     #end
 
-    @top_picks    = Show.featured.today.limit(5)
+    @top_picks    = Show.featured.today.limit(3)
 
     @featured_video = @homepage.video(:includes => [:show, { :performances => [:artist, :instrument] }])
 
