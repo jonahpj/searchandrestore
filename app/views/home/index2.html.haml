@@ -1,0 +1,88 @@
+- masthead_bgs = ['videos','venues','resources','donate','artists','about', 'shows']
+- @masthead_bg = masthead_bgs[rand(masthead_bgs.length)] 
+- @page_class = "layout-2 page-home masthead-bg-#{@masthead_bg}"
+
+#main-content-secondary
+  .col-1-2{ :class => @banners.any? && 'with-banner' }
+    - if @banners.any?
+      .banners{ :class => @banners.size > 1 && 'slides' }
+        .slides_container
+          - @banners.each do |banner|
+            .banner.slide
+              = display_banner(banner)
+  
+    #homepage-features.evoslider.default
+      %dl.slides_container
+        %dt
+          welcome
+        %dd.home-banner
+        %dt
+          slide two
+        %dd.video
+          - if @featured_video.present?
+            = render :partial => 'player_home', :locals => { :selected_video => @featured_video, :show => @featured_video.show }
+             
+  .clear
+  
+  .col1-2
+    #blog
+      .fromblog
+        %h1
+          FROM THE BLOG
+        %h2
+          Artist interviews, news and more...
+      - if @blog_posts.present?
+        - @blog_posts.each_with_index do |blog_post, i|
+          = render :partial => 'home/blog', :locals => { :blog_post => blog_post, :index => i+1 }
+      .more-link
+        = link_to('TAKE ME TO THE BLOG', 'http://searchandrestore.tumblr.com', :class => 'box more')
+    #tonights_shows
+      .shows
+        %h1
+          TONIGHT'S SHOWS
+        %h2
+          Top picks selected by Search & Restore
+      %ul.containers.show-listing
+        - @top_picks.each_with_index do |show, i|
+          %li.container[show]
+            .body
+              .show-meta
+                %p.box.dark.band= show.group_name
+                = link_to("#{show.venue.name}", show.venue, :class => 'box venue')
+                %p.date= show.when.strftime("%-m/%d/%Y %l%P")
+              .clear
+      = link_to('SEE MORE SHOWS', shows_path, :class => 'box more')
+  .clear
+
+  .col1-2
+    #footer-pipe-container
+      .col-1.mailing-list
+        #mailing-list
+          .body-home
+            %h1
+              JOIN OUR MAILING LIST
+            %h2
+              To keep yourself entertained and inspired
+            = render :partial => 'mailing_list'
+      .col-2
+        #support
+          .support-us
+            %h1
+              = link_to('SUPPORT US', 'donate')
+            %h3
+              In exchange for good karma and great jazz
+          .social-media
+            %h3
+              Let's connect on
+              = link_to('FACEBOOK', 'http://facebook.com/helpjazz', :class => 'pipe-link box')
+              = link_to('TWITTER', 'https://twitter.com/SearchNRestore', :class => 'pipe-link box')
+  .clear
+    
+  .col1-2.footer
+    #footer
+      .site-tagline
+        %span.site-name
+          SEARCH &amp; RESTORE
+        Bringing the artists and audiences of new jazz and improvised music together in new ways, never forgetting its DIY roots.
+      .site-copyright
+        Copyright &copy; Search &amp; Restore 2012. All rights reserved.

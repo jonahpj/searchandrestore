@@ -1,4 +1,5 @@
 $ORANGE: #ff9900;
+
 .jazz {
   h1, h2, h3, h4, h5, h6 {
     margin-top: 0px;
@@ -26,4 +27,8 @@ $ORANGE: #ff9900;
     font-size: 12px;
   }
 
+  input.box {
+    border: none;
+    font-size: 13px;
+  }
 }
