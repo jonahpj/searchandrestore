@@ -35,7 +35,7 @@
         - @blog_posts.each_with_index do |blog_post, i|
           = render :partial => 'home/blog', :locals => { :blog_post => blog_post, :index => i+1 }
       .more-link
-        = link_to('TAKE ME TO THE BLOG', 'http://searchandrestore.tumblr.com', :class => 'box more')
+        = link_to('TAKE ME TO THE BLOG', blog_path, :class => 'box more')
     #tonights_shows
       .shows
         %h1
