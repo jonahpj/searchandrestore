@@ -1,0 +1,51 @@
+- @page_class = 'layout-2 page-blog'
+
+.col-1-2
+  .tumblr-container
+    .body
+      .jazz
+        - @posts.each do |post|         
+          .tumblr-post
+            .tumblr-wrapper
+              - case post['type']                  
+                -when 'photo'
+                  - img_link = raw post["photo_url"][1]["__content__"]
+                  = link_to image_tag(img_link), img_link
+                  .tumblr-caption= raw post["photo_caption"]
+                -when 'video'
+                  = raw post["video_player"][1]["__content__"]
+                  .tumblr-caption= raw post["video_caption"] 
+                -when 'audio'
+                  = raw post["audio_player"]
+                  .tumblr-caption= raw post["audio_caption"]
+                -when 'regular'
+                  %h2= raw post["regular_title"]
+                  = raw post["regular_body"]
+                -when 'quote'               
+                  %h2.quoted-text
+                    &ldquo;
+                    = raw post["quote_text"] 
+                    &rdquo;
+            .tumblr-meta-wrapper
+              - permalink= raw post['url_with_slug']
+              = link_to "Permalink", permalink
+              %span.tumblr-post-date
+                | Posted on
+                = raw post['date']                
+
+.col-3
+  .section
+    .container.skin-dark
+      .body
+        %h3 Recent Press:
+        %ul.header-meta-list
+          - @press_clippings.each do |pc|
+            %li
+              %h4= pc.source
+              %p.byline
+                %span.date= pc.date.strftime("%m/%d/%Y")
+                %span.author= pc.author
+              = link_to(pc.link.title, pc.link.url, :target => '_blank', :class => 'box')
+
+  = render :partial => 'shared/mailing_list'
+.clear

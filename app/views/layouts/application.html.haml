@@ -4,6 +4,9 @@
     %title Search &amp; Restore
     = stylesheet_link_tag 'base'
     = stylesheet_link_tag 'jquery_ui'
+    -# TODO: only include these on home page
+    = stylesheet_link_tag 'evoslider/evoslider'
+    = stylesheet_link_tag 'evoslider/default/default'
     = csrf_meta_tag
 
   - body_attributes = {:class => @page_class}
@@ -41,17 +44,26 @@
           %li#nav-resources
             %a{:href => resources_path} Resources
           %li#nav-donate
-            %a{:href => donate_path} Donate
-        
+            %a{:href => donate_path} Donate        
+          %li#nav-blog
+            = link_to('Blog', blog_path)
+
     .site-container#main-content
       = content_for?(:content) ? yield(:content) : yield
       .clear
 
-    = javascript_include_tag ['jquery-5.1.min.js', 'jquery-ui-1.8.18.custom.min.js', 'jquery.cmtextconstrain.js', 'slides.min.jquery.js']
+    = javascript_include_tag ['jquery-1.7.1.min.js', 'jquery-ui-1.8.18.custom.min.js', 'jquery.cmtextconstrain.js', 'slides.min.jquery.js', 'jquery.evoslider-1.0.0.min.js']
 
     :javascript
       $('.tabs').tabs();
       $('.slides').slides({ generatePagination: false, play: 5000 });
+      var sr_evoSlider = $('#homepage-features').evoSlider({
+        mode: "scroller",
+        height: 361,
+        width: 973,
+        showIndex: false,
+        interval: 5000,
+      });
 
     - if @truncate_bio
       :javascript

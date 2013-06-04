@@ -1,0 +1,248 @@
+!!!
+%html
+  %head
+    %title Search &amp; Restore
+    = stylesheet_link_tag 'base'
+    = stylesheet_link_tag 'jquery_ui'
+    -# TODO: only include these on home page
+    = stylesheet_link_tag 'evoslider/evoslider'
+    = stylesheet_link_tag 'evoslider/default/default'
+    = csrf_meta_tag
+
+  - body_attributes = {:class => @page_class}
+  - if @uses_gmap
+    -  body_attributes.merge!({:onload => 'initializeMap();',:onunload => 'GUnload();'})
+
+  %body.jazz{body_attributes}
+  
+    - if flash[:notice]
+      .flash#notice
+        = flash[:notice]
+
+    - if flash[:alert]
+      .flash#alert
+        = flash[:alert]
+    
+
+    .masthead
+      .site-container
+        .masthead-top
+          = image_tag('logo.png', :alt => 'Search and Restore', :id => 'logo')
+        %ul.nav
+          %li#nav-home
+            %a{:href => root_path} Home
+          %li#nav-shows
+            = link_to('Shows', shows_path)
+          %li#nav-artists
+            = link_to('Artists', artists_path)
+          %li#nav-venues
+            = link_to('Venues', venues_path)
+          %li#nav-video
+            = link_to('Video', videos_path)
+          %li#nav-about
+            %a{:href => about_path} About
+          %li#nav-resources
+            %a{:href => resources_path} Resources
+          %li#nav-donate
+            %a{:href => donate_path} Donate
+          %li#nav-blog
+            = link_to('Blog', blog_path)
+
+    .site-container#main-content
+      = content_for?(:content) ? yield(:content) : yield
+      .clear
+
+    = javascript_include_tag ['jquery-1.7.1.min.js', 'jquery-ui-1.8.18.custom.min.js', 'jquery.cmtextconstrain.js', 'slides.min.jquery.js', 'jquery.evoslider-1.0.0.min.js']
+
+    :javascript
+      $('.tabs').tabs();
+      $('.slides').slides({ generatePagination: false, play: 5000 });
+      var sr_evoSlider = $('#homepage-features').evoSlider({
+        mode: "scroller",
+        height: 361,
+        width: 973,
+        showIndex: false,
+        interval: 5000,
+      });
+
+    - if @truncate_bio
+      :javascript
+        $('#bio').cmtextconstrain({
+          event: 'click',
+          restrict: {type: 'chars', limit: 110}, // type can be 'words' or 'chars'
+          showControl: {string: 'Read More', title: 'Read More', addclass: 'box'}, // element shown to expose
+          hideControl: {string: 'Read Less', title: 'Read Less', addclass: 'box'}, // element shown to constrain
+          trailingString: '...' // string to show at end of truncated text
+        });
+      
+
+    - if @uses_gmap
+      -# GMAP_KEY
+      %script{:src => "http://maps.google.com/maps/api/js?sensor=false"}
+  
+      - if @venue_map
+        :javascript
+          VENUE_MAP = true;
+
+      :javascript
+        function initializeScrollObserver() {
+          var fixed = $('.fixed-on-scroll');
+          if (fixed && fixed.length === 1) {
+            var top = fixed.offset().top;
+            var elem = fixed[0];
+
+            setTimeout(function() {
+              var sTop = $(document).scrollTop();
+
+              if (sTop > (top)) {
+                elem.style.position = 'fixed';
+                elem.style.marginTop = '-145px';
+              } else {
+                elem.style.position = '';
+                elem.style.marginTop = '-1px';
+              } 
+              setTimeout(arguments.callee, 100);
+            },100);
+
+          }
+        }
+
+        function initializeMap() {
+
+          initializeScrollObserver(); 
+          var latlng = new google.maps.LatLng(40.724001, -73.992837);
+          var myOptions = {
+            zoom: 11,
+            center: latlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+          };
+          var map = new google.maps.Map(document.getElementById("map_canvas"),
+              myOptions);
+
+          var open_infowindow = null;
+
+          var markerBounds = new google.maps.LatLngBounds();
+          
+          $('[data-latitude][data-longitude]').each(function() {
+            var latitude           = $(this).data('latitude'),
+                longitude          = $(this).data('longitude'),
+                name               = $(this).data('name'),
+                address            = $(this).data('address'),
+                include_infowindow = ($(this).data('include-infowindow') == 0 ? false : true);
+
+            var pos = new google.maps.LatLng(latitude, longitude);
+
+            var marker = new google.maps.Marker({
+              position: pos,
+              title: name,
+              icon:"/images/map_point.png"
+            });
+
+            // To add the marker to the map, call setMap();
+            marker.setMap(map);
+            markerBounds.extend(pos);
+
+            if (include_infowindow) {
+              var infowindow = new google.maps.InfoWindow({
+                content: '<h3><strong>' + name + '</strong></h3><p>' + address + '</p>'
+              });
+
+              google.maps.event.addListener(marker,'click',function() {
+                infowindow.open(map, marker);
+              });
+
+              //$(this).mouseover(function() {
+              //  map.setCenter(new google.maps.LatLng(latitude, longitude));
+
+              //  if(open_infowindow) { open_infowindow.close(); }
+
+              //  infowindow.open(map, marker);
+              //  open_infowindow = infowindow;
+              //});
+            }
+          });
+
+          if (typeof VENUE_MAP === 'undefined') {
+            map.fitBounds(markerBounds);
+          }
+          
+        }
+        
+        //40.724001, -73.992837
+        //-74.000692 40.726422 
+        //var map = null;
+        //if (GBrowserIsCompatible()) {
+        //    map = new GMap2(document.getElementById('map_canvas'));
+        //    map.setUIToDefault();
+        //    var geocoder = new GClientGeocoder();
+        //    var address = "75 9th St, 11216, Brooklyn, NY";
+        //    geocoder.getLatLng(
+        //        address,
+        //        function(point) {
+        //          if (!point) {
+        //            return;
+        //          }
+        //          map.setCenter(point, 13);
+        //          marker = new GMarker(point);
+        //          map.addOverlay(marker);
+        //        }
+        //    );
+        //}    
+
+    - if @uses_datepicker
+      :javascript
+        $(function() {
+          $('#datepicker').each(function() {
+            var options = { 
+              inline:      true,
+              dateFormat:  'yy-mm-dd',
+              altField:    $(this).data('input'),
+              defaultDate: $(this).data('default-date')
+            };
+
+            $(this).datepicker(options);
+          });
+        });
+
+    - if @has_video
+      :javascript
+        $(function() {
+          $('a[data-video]').live('click', function(e) {
+            var current_show_id = $('#video_player_container').attr('data-show');
+            var new_show_id     = $(this).attr('data-show');
+            var video_id        = $(this).attr('data-video');
+            
+            if (current_show_id != new_show_id) {
+              // if this video is part of a different show we need to load information
+              // specific to this video and it's related show
+              // TODO show loading?
+              $.get('/videos/' + video_id, function(data) {
+                $('#video_player_container').replaceWith(data);
+                $('html,body').scrollTop(0);
+                // TODO hide loading?
+              });
+            } else {
+              // otherwise it's a related video and we can just swap out the code
+              $('#video_player_container iframe').replaceWith($(this).attr('data-embed_code'));
+            }
+
+            $('a[data-video]').removeClass('active');
+            $('a[data-video=' + video_id + ']').addClass('active');
+
+            e.preventDefault();
+            return false;
+          });
+        });
+
+    - if Rails.env.production?
+      :javascript
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-26371854-1']);
+        _gaq.push(['_setDomainName', '.searchandrestore.com']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();

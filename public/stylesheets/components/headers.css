@@ -16,3 +16,6 @@
   text-transform: uppercase; }
 .jazz h3.box {
   font-size: 12px; }
+.jazz input.box {
+  border: none;
+  font-size: 13px; }

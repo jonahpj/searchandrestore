@@ -8,8 +8,9 @@ Searchandrestore::Application.routes.draw do
   get 'resources' => 'link_groups#index', :as => :resources
   get 'about' => 'about#index', :as => :about
   get 'donate' => 'donate#index', :as => :donate
+  get 'blog' => 'tumblr#index', :as => :blog
 
-  root :to => "home#index"
+  root :to => "home#index2"
 
   namespace :admin do
     namespace :shows do
