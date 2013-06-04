@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .DS_Store
 .bundle
 db/*.sqlite3
@@ -12,3 +13,6 @@ db/schema.rb
 .webbynode/credentials
 public/uploads/*
 vendor/bundle
+=======
+config/database.yml
+>>>>>>> Initial commit
