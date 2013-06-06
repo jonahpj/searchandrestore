@@ -1,5 +1,5 @@
 .jazz.page-home {
-  background: url(/images/home/background_2013.jpg) no-repeat 0 -65px !important; }
+  background: url(/images/home/background_2013.jpg) 0 -65px !important; }
   .jazz.page-home dd.section {
     padding-left: 10px;
     padding-top: 6px; }

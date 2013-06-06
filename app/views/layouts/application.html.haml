@@ -33,6 +33,8 @@
             %a{:href => root_path} Home
           %li#nav-shows
             = link_to('Shows', shows_path)
+          %li#nav-blog
+            = link_to('Blog', blog_path)
           %li#nav-artists
             = link_to('Artists', artists_path)
           %li#nav-venues
@@ -45,8 +47,6 @@
             %a{:href => resources_path} Resources
           %li#nav-donate
             %a{:href => donate_path} Donate        
-          %li#nav-blog
-            = link_to('Blog', blog_path)
 
     .site-container#main-content
       = content_for?(:content) ? yield(:content) : yield
