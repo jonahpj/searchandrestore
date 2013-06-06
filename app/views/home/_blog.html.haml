@@ -4,7 +4,7 @@
 
 - case blog_post['type']
   - when 'photo'
-    - post_text = "Gig Alert!"
+    - post_text = "Click for Photo"
     - post_tags = blog_post["tags"]
     - post_body = strip_tags(blog_post['caption'])
   - when 'quote'
@@ -29,6 +29,9 @@
     .post-link= post_link unless !defined? post_link
     .post-meta
       %span.post-date= posted_at
-    .post-body= post_body_truncated
+    .post-body= post_body
+    = link_to('...read more', blog_path, :class => 'readmore')
+    
+    
     
     
