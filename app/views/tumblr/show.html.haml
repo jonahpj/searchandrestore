@@ -1,0 +1,24 @@
+- @page_class = 'layout-2 page-blog_post'
+
+.col-1-2
+  .tumblr-container
+    - if @blog_posts.present?
+      - @blog_posts.each_with_index do |blog_post, i|
+        = render :partial => 'tumblr/post', :locals => { :blog_post => blog_post, :index => i+1 }
+    
+.col-3
+  .section
+    .container.skin-dark
+      .body
+        %h3 Recent Press:
+        %ul.header-meta-list
+          - @press_clippings.each do |pc|
+            %li
+              %h4= pc.source
+              %p.byline
+                %span.date= pc.date.strftime("%m/%d/%Y")
+                %span.author= pc.author
+              = link_to(pc.link.title, pc.link.url, :target => '_blank', :class => 'box')
+
+  = render :partial => 'shared/mailing_list'
+.clear

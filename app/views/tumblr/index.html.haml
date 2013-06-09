@@ -7,6 +7,7 @@
         - @posts.each do |post|         
           .tumblr-post
             .tumblr-wrapper
+              - id= raw post["id"]
               - case post['type']                  
                 -when 'photo'
                   - img_link = raw post["photo_url"][1]["__content__"]

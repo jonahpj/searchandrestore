@@ -1,0 +1,27 @@
+.tumblr-post
+  .tumblr-wrapper
+    - case blog_post['type']
+      - when 'photo'
+        - img_link = raw blog_post["photo_url"][1]["__content__"]
+        = link_to image_tag(img_link), img_link
+        .tumblr-caption= raw blog_post["photo_caption"]
+      -when 'audio'
+        = raw blog_post["audio_player"]
+        .tumblr-caption= raw blog_post["audio_caption"]
+      - when 'quote'
+        %h2.quoted-text
+          &ldquo;
+          = raw blog_post['text']
+          &rdquo;
+      - when 'video'
+        - post_text = "Click to Watch"
+        - post_body = raw blog_post['caption']
+      - when 'text'
+        %h2= strip_tags(blog_post['title'])
+        = raw blog_post['body']
+  .tumblr-meta-wrapper
+    %span.tumblr-post-date
+      Posted on
+      = raw blog_post['date']
+
+
