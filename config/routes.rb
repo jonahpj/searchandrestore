@@ -9,7 +9,9 @@ Searchandrestore::Application.routes.draw do
   get 'about' => 'about#index', :as => :about
   get 'donate' => 'donate#index', :as => :donate
   get 'blog' => 'tumblr#index', :as => :blog
-  get 'blog_post' => 'tumblr#show', :as => :blog_post
+  
+  match 'blog/post' => 'tumblr#show'
+  
   
 
   root :to => "home#index2"

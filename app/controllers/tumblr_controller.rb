@@ -36,9 +36,10 @@ require 'tumblr'
    def blog
      uri = URI.parse('http://api.tumblr.com')
      api_key = 'vYYBosazRckPMQplWCdDEVryLs55FCmxHu3ZRr02C03ubfPI5H'
+     id = params[:id]
      res = Net::HTTP.start(uri.host, uri.port) do |http|
        # todo: limit
-       http.get('/v2/blog/searchandrestore.tumblr.com/posts?api_key=' + api_key + '&limit=1')
+       http.get('/v2/blog/searchandrestore.tumblr.com/posts?api_key=' + api_key + '&id=' + id)
      end
      json = JSON(res.body)
      json['response']['posts']

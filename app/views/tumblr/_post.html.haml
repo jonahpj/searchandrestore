@@ -1,5 +1,5 @@
 .tumblr-post
-  .tumblr-wrapper
+  .tumblr-wrapper  
     - case blog_post['type']
       - when 'photo'
         - img_link = raw blog_post["photo_url"][1]["__content__"]
@@ -21,7 +21,9 @@
         = raw blog_post['body']
   .tumblr-meta-wrapper
     %span.tumblr-post-date
-      Posted on
+      - id= raw blog_post["id"]
+      = link_to "Permalink", "/blog/post?id=" + id
+      | Posted on
       = raw blog_post['date']
 
 

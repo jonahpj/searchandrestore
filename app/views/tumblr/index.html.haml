@@ -28,8 +28,7 @@
                     = raw post["quote_text"] 
                     &rdquo;
             .tumblr-meta-wrapper
-              - permalink= raw post['url_with_slug']
-              = link_to "Permalink", permalink
+              = link_to "Permalink", "/blog/post?id=" + id
               %span.tumblr-post-date
                 | Posted on
                 = raw post['date']                

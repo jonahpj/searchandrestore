@@ -1,5 +1,5 @@
 
-- truncate_length = 250
+- truncate_length = 47
 - posted_at = Time.at(blog_post['timestamp'].to_i).strftime('%-m/%-d/%Y')
 
 - case blog_post['type']
@@ -18,10 +18,10 @@
     - post_body = strip_tags(blog_post['body'])
 - if defined? post_text
   -# post_link = link_to(truncate(post_text, :length => truncate_length, :separator => ' '), blog_post['post_url'])
-  - post_link = link_to(truncate(post_text, :length => truncate_length, :separator => ' '), blog_path)
+  - id= raw blog_post["id"]
+  - post_link = link_to(truncate(post_text, :length => truncate_length, :separator => ' '), "/blog/post?id=" + id)
 - if defined? post_body
   - post_body_truncated = truncate(post_body, :length => truncate_length, :separator => ' ')
-
 
 .blog-post
   -# todo: small, medium, and large classes
