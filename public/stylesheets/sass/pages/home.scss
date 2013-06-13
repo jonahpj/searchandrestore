@@ -155,19 +155,20 @@
 		.show-listing {
 			width: 265px;
 			height: 312px;
-			margin: 32px 0 8px 15px;
+			margin: 16px 0 8px 15px;
 			li.container {
 				background-color: transparent;
-				height: 104px;
+				height: 112px;
 				overflow: hidden;
 				.show-data-wrapper {
 					width: 100%; 
 					float: left; 
 					padding-bottom: 5px; 
 					text-transform: uppercase;
-					.box {padding: 5px; white-space: normal; margin-bottom: 3px;}
+					.box {padding: 5px; white-space: normal;}
+					.band {white-space: normal; margin-bottom: 3px;}
 				}
-				.date {color: #fff;}
+				.date {color: #fff; margin-top: 1px;}
 			}
 		}
 	}
@@ -347,8 +348,10 @@
 		}
 		.more-videos {
 				color: #fff;
-				font-size: 13px;
-				margin-top: 15px;
+				font-size: 14px;
+				margin-top: 40px;
+				padding: 5px;
+				font-weight: normal;
 		}
 		#featured-video-container {
 		  margin: 5px;
