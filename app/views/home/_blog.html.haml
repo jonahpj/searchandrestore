@@ -28,7 +28,7 @@
   %div{ :class => 'post' }
     .post-link= post_link unless !defined? post_link
     .post-meta
-      %span.post-date= posted_at
+      %span.post-date= posted_at | 
     .post-body= post_body
     = link_to('...read more', blog_path, :class => 'readmore')
     

@@ -84,17 +84,20 @@
 	   	width: 620px;
        	h1 {
          	color: white;
-			font-size: 40px;
+			font-size: 46px;
+			padding-left: 20px;
+			letter-spacing: -2px;
        	}
 		h2 {
 			font-size: 18px;
-			padding: 0 0 10px 0;
+			padding: 0 0 10px 20px;
+			line-height: 15px;
 		}
 	  }
 	  .blog-container {height: 481px;}
       .blog-post {
 		.post-meta {
-			font-size: 13px;
+			font-size: 12px;
         	.post-date {
 		      color: #666666;
 	        }
@@ -103,9 +106,10 @@
 			}
 		}
         .post-link {
-          font-size: 21px;
+          font-size: 20px;
 		  text-transform: uppercase;
 		  font-weight: bold;
+		  letter-spacing: -1px;
 		  a {color: #000;}
         }
 		.post-body {
@@ -131,32 +135,37 @@
 		}
       }
 	  .more-link {
-			margin: 19px 0 0 8px;
+			margin: 16px 0 0 10px;
 			float: left;
+			.more {padding: 15px 20px;}
 	  }
     }
 	#tonights_shows {
+		.more {
+			padding: 15px 20px;
+			margin: 0 0 0 7px;
+		}
 		width: 284px;
 		height: 572px;
 		overflow: hidden;
 		float: right;
 		background: url(/images/home/shows_bgrnd.png) no-repeat 0px 0px !important;
 		margin: 21px 0 0 0;
-		padding: 5px 18px 0 8px;
+		padding: 20px 18px 0 8px;
 		.show-listing {
 			width: 265px;
-			height: 327px;
+			height: 312px;
 			margin: 32px 0 8px 15px;
 			li.container {
 				background-color: transparent;
-				height: 112px;
+				height: 104px;
 				overflow: hidden;
 				.show-data-wrapper {
 					width: 100%; 
 					float: left; 
 					padding-bottom: 5px; 
 					text-transform: uppercase;
-					.box {padding: 5px;}
+					.box {padding: 5px; white-space: normal; margin-bottom: 3px;}
 				}
 				.date {color: #fff;}
 			}
@@ -172,7 +181,8 @@
     .fromblog h2 {
       font-size: 16px;
       padding-top: 0;
-      color: gray;
+	  margin-left: 1px;
+      color: #ccc;
     }
     #featured-video .body {
       padding: 5px;
@@ -307,24 +317,38 @@
 	   	h1 {
 	        color: black;
 			font-size: 50px;
-			line-height: 50px;
+			line-height: 41px;
+			word-spacing: -2px;
 			margin: 10px 0 0 0;
 	      }
 		#video_player_info {
 			float: left;
 			width: 297px;
-		.box {
-			font-size: 18px;
-			line-height: 19px;
-			padding: 5px;
-			margin: 5px 0 0 0;
-			white-space:normal;
+			.box {
+				font-size: 18px;
+				line-height: 24px;
+				padding: 5px;
+				margin: 5px 0 0 0;
+				white-space:normal;
+				font-weight: normal;
+			}
+			.venue-link {
+				display: block;
+				margin: 3px 0 0 0;
+				color: #666;
+				float: left;
+			}
+			.date {
+				display: block;
+				margin: 3px 0 0 0;
+				color: #fff;
+				font-size: 13px;
+			}
 		}
-		  .date {
-			display: block;
-			margin: 3px 0 0 0;
-			color: #666;
-		}
+		.more-videos {
+				color: #fff;
+				font-size: 13px;
+				margin-top: 15px;
 		}
 		#featured-video-container {
 		  margin: 5px;

@@ -64,22 +64,26 @@
       width: 620px; }
       .jazz.page-home #blog .fromblog h1 {
         color: white;
-        font-size: 40px; }
+        font-size: 46px;
+        padding-left: 20px;
+        letter-spacing: -2px; }
       .jazz.page-home #blog .fromblog h2 {
         font-size: 18px;
-        padding: 0 0 10px 0; }
+        padding: 0 0 10px 20px;
+        line-height: 15px; }
     .jazz.page-home #blog .blog-container {
       height: 481px; }
     .jazz.page-home #blog .blog-post .post-meta {
-      font-size: 13px; }
+      font-size: 12px; }
       .jazz.page-home #blog .blog-post .post-meta .post-date {
         color: #666666; }
       .jazz.page-home #blog .blog-post .post-meta .post-tags {
         color: #ff9900; }
     .jazz.page-home #blog .blog-post .post-link {
-      font-size: 21px;
+      font-size: 20px;
       text-transform: uppercase;
-      font-weight: bold; }
+      font-weight: bold;
+      letter-spacing: -1px; }
       .jazz.page-home #blog .blog-post .post-link a {
         color: #000; }
     .jazz.page-home #blog .blog-post .post-body {
@@ -100,8 +104,10 @@
       float: left;
       overflow: hidden; }
     .jazz.page-home #blog .more-link {
-      margin: 19px 0 0 8px;
+      margin: 16px 0 0 10px;
       float: left; }
+      .jazz.page-home #blog .more-link .more {
+        padding: 15px 20px; }
   .jazz.page-home #tonights_shows {
     width: 284px;
     height: 572px;
@@ -109,14 +115,17 @@
     float: right;
     background: url(/images/home/shows_bgrnd.png) no-repeat 0px 0px !important;
     margin: 21px 0 0 0;
-    padding: 5px 18px 0 8px; }
+    padding: 20px 18px 0 8px; }
+    .jazz.page-home #tonights_shows .more {
+      padding: 15px 20px;
+      margin: 0 0 0 7px; }
     .jazz.page-home #tonights_shows .show-listing {
       width: 265px;
-      height: 327px;
+      height: 312px;
       margin: 32px 0 8px 15px; }
       .jazz.page-home #tonights_shows .show-listing li.container {
         background-color: transparent;
-        height: 112px;
+        height: 104px;
         overflow: hidden; }
         .jazz.page-home #tonights_shows .show-listing li.container .show-data-wrapper {
           width: 100%;
@@ -124,7 +133,9 @@
           padding-bottom: 5px;
           text-transform: uppercase; }
           .jazz.page-home #tonights_shows .show-listing li.container .show-data-wrapper .box {
-            padding: 5px; }
+            padding: 5px;
+            white-space: normal;
+            margin-bottom: 3px; }
         .jazz.page-home #tonights_shows .show-listing li.container .date {
           color: #fff; }
   .jazz.page-home #tonights_shows h1,
@@ -136,7 +147,8 @@
   .jazz.page-home .fromblog h2 {
     font-size: 16px;
     padding-top: 0;
-    color: gray; }
+    margin-left: 1px;
+    color: #ccc; }
   .jazz.page-home #featured-video .body {
     padding: 5px; }
     .jazz.page-home #featured-video .body img {
@@ -241,21 +253,33 @@
     .jazz.page-home .evoslider.default #video_player_container h1 {
       color: black;
       font-size: 50px;
-      line-height: 50px;
+      line-height: 41px;
+      word-spacing: -2px;
       margin: 10px 0 0 0; }
     .jazz.page-home .evoslider.default #video_player_container #video_player_info {
       float: left;
       width: 297px; }
       .jazz.page-home .evoslider.default #video_player_container #video_player_info .box {
         font-size: 18px;
-        line-height: 19px;
+        line-height: 24px;
         padding: 5px;
         margin: 5px 0 0 0;
-        white-space: normal; }
+        white-space: normal;
+        font-weight: normal; }
+      .jazz.page-home .evoslider.default #video_player_container #video_player_info .venue-link {
+        display: block;
+        margin: 3px 0 0 0;
+        color: #666;
+        float: left; }
       .jazz.page-home .evoslider.default #video_player_container #video_player_info .date {
         display: block;
         margin: 3px 0 0 0;
-        color: #666; }
+        color: #fff;
+        font-size: 13px; }
+    .jazz.page-home .evoslider.default #video_player_container .more-videos {
+      color: #fff;
+      font-size: 13px;
+      margin-top: 15px; }
     .jazz.page-home .evoslider.default #video_player_container #featured-video-container {
       margin: 5px;
       float: left; }
