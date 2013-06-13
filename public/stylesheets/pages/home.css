@@ -1,5 +1,5 @@
 .jazz.page-home {
-  background: url(/images/home/background_2013.jpg) 0 -65px !important; }
+  background: url(/images/home/background_2013.jpg) no-repeat 0 -3px !important; }
   .jazz.page-home dd.section {
     padding-left: 10px;
     padding-top: 6px; }
@@ -17,10 +17,9 @@
       height: 25px; }
   .jazz.page-home .masthead-top {
     background-image: url(/images/titles/home_title.png);
-    background-position: 10px 1px; }
+    background-position: 2px 0px; }
   .jazz.page-home .masthead {
-    background: url(/images/home/masthead_bg.png) repeat-x;
-    margin-bottom: 0px; }
+    margin-bottom: 0; }
   .jazz.page-home #main-content {
     /*background: url(/images/titles/home_title_bottom.png) no-repeat top left;*/ }
   .jazz.page-home .col1-2 #footer-pipe-container {

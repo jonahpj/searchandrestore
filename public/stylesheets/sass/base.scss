@@ -34,7 +34,7 @@ body {
   font-family: Ariel, sans-serif;
   margin:0;
   padding:0;
-  background: url(/images/body_bg.png);
+  background: url(/images/background-2013.jpg) 0 -3px;
 }
 ul {
   list-style: none;
@@ -63,28 +63,29 @@ img {border:none;}
 }
 
 .masthead {
-  background: url(/images/masthead_bg/shows.png) repeat-x;
-  height: 148px;
+  background: url(/images/masthead_bg.png) repeat-x;
+  height: 162px;
   width: 100%;
   margin-bottom: 13px;
+  padding: 50px 0 0 0;
   .site-container {
     position: relative;
   }
 }
 .masthead-top {
-  height: 126px;
+  height: 129px;
   background-image: url(/images/titles/shows_title.png);
   background-repeat: no-repeat;
-  background-position: 54px 5px;
+  background-position: 54px 3px;
 }
 
-.jazz.masthead-bg-shows .masthead {background: url(/images/masthead_bg/shows.png);}
-.jazz.masthead-bg-artists .masthead {background: url(/images/masthead_bg/artists.png);}
-.jazz.masthead-bg-venues .masthead {background: url(/images/masthead_bg/venues.png);}
-.jazz.masthead-bg-videos .masthead {background: url(/images/masthead_bg/videos.png);}
-.jazz.masthead-bg-resources .masthead {background: url(/images/masthead_bg/resources.png);}
-.jazz.masthead-bg-about .masthead {background: url(/images/masthead_bg/about.png);}
-.jazz.masthead-bg-donate .masthead {background: url(/images/masthead_bg/donate.png);}
+.jazz.masthead-bg-shows .masthead {background: url(/images/masthead_bg.png);}
+.jazz.masthead-bg-artists .masthead {background: url(/images/masthead_bg.png);}
+.jazz.masthead-bg-venues .masthead {background: url(/images/masthead_bg.png);}
+.jazz.masthead-bg-videos .masthead {background: url(/images/masthead_bg.png);}
+.jazz.masthead-bg-resources .masthead {background: url(/images/masthead_bg.png);}
+.jazz.masthead-bg-about .masthead {background: url(/images/masthead_bg.png);}
+.jazz.masthead-bg-donate .masthead {background: url(/images/masthead_bg.png);}
 
 
 .site-container {
@@ -135,17 +136,19 @@ p {
       display: block;
       cursor: pointer;
       line-height: 16px;
-      padding: 3px 6px 2px 6px;
+      padding: 3px 8px 2px 8px;
       color: #fff;
       text-transform: uppercase;
-      font-weight: bold;
-      font-size: 14px;
+      font-weight: normal;
+      font-size: 16px;
       text-decoration: none;
     }
     &.selected,
     &:hover {
       a {
-        background-color: $ORANGE;
+        color: $ORANGE;
+		background-color: transparent;
+      
       }
     }
   }
@@ -159,47 +162,65 @@ p {
 body {
   &.page-home {
     .nav li#nav-home a {
-      background-color: $ORANGE;
+	color: $ORANGE;
+	font-weight: bold;
+	background-color: transparent;
     }
   }
   &.page-shows {
     .nav li#nav-shows a {
-      background-color: $ORANGE;
+      	color: $ORANGE;
+		font-weight: bold;
+		background-color: transparent;
     }
   }
   &.section-artists {
     .nav li#nav-artists a {
-      background-color: $ORANGE;
+      	color: $ORANGE;
+		font-weight: bold;
+		background-color: transparent;
     }
   }
   &.section-venues {
     .nav li#nav-venues a {
-      background-color: $ORANGE;
+     	color: $ORANGE;
+		font-weight: bold;
+		background-color: transparent;
     }
   }
   &.section-video {
     .nav li#nav-video a {
-      background-color: $ORANGE;
+      	color: $ORANGE;
+		font-weight: bold;
+		background-color: transparent;
     }
   }
   &.page-about {
     .nav li#nav-about a {
-      background-color: $ORANGE;
+      	color: $ORANGE;
+		font-weight: bold;
+		background-color: transparent;
     }
   }
   &.page-resources {
     .nav li#nav-resources a {
-      background-color: $ORANGE;
+      	color: $ORANGE;
+		font-weight: bold;
+		background-color: transparent;
     }
   }
   &.page-donate {
     .nav li#nav-donate a {
-      background-color: $ORANGE;
+     	color: $ORANGE;
+		font-weight: bold;
+		background-color: transparent;
     }
   }
   &.page-blog {
     .nav li#nav-blog a {
-      background-color: $ORANGE;
+     	color: $ORANGE;
+		font-weight: bold;
+		background-color: transparent;
     }
   }
 }

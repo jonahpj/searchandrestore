@@ -1,6 +1,6 @@
 .jazz {
   &.page-home {
-    background: url(/images/home/background_2013.jpg) 0 -65px !important;
+    background: url(/images/home/background_2013.jpg) no-repeat 0 -3px !important;
     dd.section {
       padding-left: 10px;
       padding-top: 6px;
@@ -22,12 +22,9 @@
     }
     .masthead-top {
        background-image: url(/images/titles/home_title.png);
-       background-position: 10px 1px;
+       background-position: 2px 0px;
     }
-    .masthead {
-      background: url(/images/home/masthead_bg.png) repeat-x;
-      margin-bottom: 0px;
-    }
+	.masthead {margin-bottom: 0}
     #main-content {
       /*background: url(/images/titles/home_title_bottom.png) no-repeat top left;*/
       #main-content-secondary {

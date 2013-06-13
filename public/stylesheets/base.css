@@ -300,7 +300,7 @@
     padding-left: 172px; }
 
 .jazz.page-home {
-  background: url(/images/home/background_2013.jpg) 0 -65px !important; }
+  background: url(/images/home/background_2013.jpg) no-repeat 0 -3px !important; }
   .jazz.page-home dd.section {
     padding-left: 10px;
     padding-top: 6px; }
@@ -318,10 +318,9 @@
       height: 25px; }
   .jazz.page-home .masthead-top {
     background-image: url(/images/titles/home_title.png);
-    background-position: 10px 1px; }
+    background-position: 2px 0px; }
   .jazz.page-home .masthead {
-    background: url(/images/home/masthead_bg.png) repeat-x;
-    margin-bottom: 0px; }
+    margin-bottom: 0; }
   .jazz.page-home #main-content {
     /*background: url(/images/titles/home_title_bottom.png) no-repeat top left;*/ }
   .jazz.page-home .col1-2 #footer-pipe-container {
@@ -574,8 +573,6 @@
 .jazz.section-artists .masthead-top {
   background-image: url(/images/titles/artists_title.png);
   background-position: 64px 5px; }
-.jazz.section-artists .masthead {
-  background: url(/images/masthead_bg/artists.png) repeat-x; }
 .jazz.section-artists.page-index p.byline {
   width: 130px;
   overflow: hidden;
@@ -623,8 +620,6 @@
 
 .jazz.page-about .masthead-top {
   background-image: url(/images/titles/about_title.png); }
-.jazz.page-about .masthead {
-  background: url(/images/masthead_bg/about.png) repeat-x; }
 .jazz.page-about #recent-press .byline {
   margin-bottom: 2px; }
   .jazz.page-about #recent-press .byline .date {
@@ -664,8 +659,6 @@
 
 .jazz.page-donate .masthead-top {
   background-image: url(/images/titles/donate_title.png); }
-.jazz.page-donate .masthead {
-  background: url(/images/masthead_bg/donate.png) repeat-x; }
 .jazz.page-donate #main-content {
   height: 543px;
   background: url(/images/rats.png) no-repeat top left; }
@@ -675,18 +668,12 @@
 
 .jazz.page-resources .masthead-top {
   background-image: url(/images/titles/resources_title.png); }
-.jazz.page-resources .masthead {
-  background: url(/images/masthead_bg/resources.png) repeat-x; }
 
 .jazz.section-video .masthead-top {
   background-image: url(/images/titles/video_title.png); }
-.jazz.section-video .masthead {
-  background: url(/images/masthead_bg/videos.png) repeat-x; }
 
 .jazz.section-venues .masthead-top {
   background-image: url(/images/titles/venues_title.png); }
-.jazz.section-venues .masthead {
-  background: url(/images/masthead_bg/venues.png) repeat-x; }
 .jazz.section-venues.page-index .searchy-inline select {
   width: 223px; }
 .jazz.section-venues.page-index .searchy-inline * {
@@ -969,7 +956,7 @@ body {
   font-family: Ariel, sans-serif;
   margin: 0;
   padding: 0;
-  background: url(/images/body_bg.png); }
+  background: url(/images/background-2013.jpg) 0 -3px; }
 
 ul {
   list-style: none;
@@ -1001,39 +988,40 @@ img {
   left: 0px; }
 
 .masthead {
-  background: url(/images/masthead_bg/shows.png) repeat-x;
-  height: 148px;
+  background: url(/images/masthead_bg.png) repeat-x;
+  height: 162px;
   width: 100%;
-  margin-bottom: 13px; }
+  margin-bottom: 13px;
+  padding: 50px 0 0 0; }
   .masthead .site-container {
     position: relative; }
 
 .masthead-top {
-  height: 126px;
+  height: 129px;
   background-image: url(/images/titles/shows_title.png);
   background-repeat: no-repeat;
-  background-position: 54px 5px; }
+  background-position: 54px 3px; }
 
 .jazz.masthead-bg-shows .masthead {
-  background: url(/images/masthead_bg/shows.png); }
+  background: url(/images/masthead_bg.png); }
 
 .jazz.masthead-bg-artists .masthead {
-  background: url(/images/masthead_bg/artists.png); }
+  background: url(/images/masthead_bg.png); }
 
 .jazz.masthead-bg-venues .masthead {
-  background: url(/images/masthead_bg/venues.png); }
+  background: url(/images/masthead_bg.png); }
 
 .jazz.masthead-bg-videos .masthead {
-  background: url(/images/masthead_bg/videos.png); }
+  background: url(/images/masthead_bg.png); }
 
 .jazz.masthead-bg-resources .masthead {
-  background: url(/images/masthead_bg/resources.png); }
+  background: url(/images/masthead_bg.png); }
 
 .jazz.masthead-bg-about .masthead {
-  background: url(/images/masthead_bg/about.png); }
+  background: url(/images/masthead_bg.png); }
 
 .jazz.masthead-bg-donate .masthead {
-  background: url(/images/masthead_bg/donate.png); }
+  background: url(/images/masthead_bg.png); }
 
 .site-container {
   width: 960px;
@@ -1082,14 +1070,15 @@ p {
       display: block;
       cursor: pointer;
       line-height: 16px;
-      padding: 3px 6px 2px 6px;
+      padding: 3px 8px 2px 8px;
       color: #fff;
       text-transform: uppercase;
-      font-weight: bold;
-      font-size: 14px;
+      font-weight: normal;
+      font-size: 16px;
       text-decoration: none; }
     .nav li.selected a, .nav li:hover a {
-      background-color: #ff9900; }
+      color: #ff9900;
+      background-color: transparent; }
 
 .banner {
   position: absolute;
@@ -1098,23 +1087,41 @@ p {
   left: 480px; }
 
 body.page-home .nav li#nav-home a {
-  background-color: #ff9900; }
+  color: #ff9900;
+  font-weight: bold;
+  background-color: transparent; }
 body.page-shows .nav li#nav-shows a {
-  background-color: #ff9900; }
+  color: #ff9900;
+  font-weight: bold;
+  background-color: transparent; }
 body.section-artists .nav li#nav-artists a {
-  background-color: #ff9900; }
+  color: #ff9900;
+  font-weight: bold;
+  background-color: transparent; }
 body.section-venues .nav li#nav-venues a {
-  background-color: #ff9900; }
+  color: #ff9900;
+  font-weight: bold;
+  background-color: transparent; }
 body.section-video .nav li#nav-video a {
-  background-color: #ff9900; }
+  color: #ff9900;
+  font-weight: bold;
+  background-color: transparent; }
 body.page-about .nav li#nav-about a {
-  background-color: #ff9900; }
+  color: #ff9900;
+  font-weight: bold;
+  background-color: transparent; }
 body.page-resources .nav li#nav-resources a {
-  background-color: #ff9900; }
+  color: #ff9900;
+  font-weight: bold;
+  background-color: transparent; }
 body.page-donate .nav li#nav-donate a {
-  background-color: #ff9900; }
+  color: #ff9900;
+  font-weight: bold;
+  background-color: transparent; }
 body.page-blog .nav li#nav-blog a {
-  background-color: #ff9900; }
+  color: #ff9900;
+  font-weight: bold;
+  background-color: transparent; }
 
 .clear {
   clear: both; }
