@@ -422,23 +422,23 @@
       margin: 0 0 0 7px; }
     .jazz.page-home #tonights_shows .show-listing {
       width: 265px;
-      height: 312px;
+      height: 328px;
       margin: 16px 0 8px 15px; }
       .jazz.page-home #tonights_shows .show-listing li.container {
         background-color: transparent;
         height: 112px;
         overflow: hidden; }
+        .jazz.page-home #tonights_shows .show-listing li.container .box {
+          padding: 5px;
+          white-space: normal; }
+        .jazz.page-home #tonights_shows .show-listing li.container .band {
+          white-space: normal;
+          margin-bottom: 3px; }
         .jazz.page-home #tonights_shows .show-listing li.container .show-data-wrapper {
           width: 100%;
           float: left;
           padding-bottom: 5px;
           text-transform: uppercase; }
-          .jazz.page-home #tonights_shows .show-listing li.container .show-data-wrapper .box {
-            padding: 5px;
-            white-space: normal; }
-          .jazz.page-home #tonights_shows .show-listing li.container .show-data-wrapper .band {
-            white-space: normal;
-            margin-bottom: 3px; }
         .jazz.page-home #tonights_shows .show-listing li.container .date {
           color: #fff;
           margin-top: 1px; }
@@ -584,7 +584,7 @@
       color: #fff;
       font-size: 14px;
       margin-top: 40px;
-      padding: 5px;
+      padding: 5px 8px;
       font-weight: normal; }
     .jazz.page-home .evoslider.default #video_player_container #featured-video-container {
       margin: 5px;
