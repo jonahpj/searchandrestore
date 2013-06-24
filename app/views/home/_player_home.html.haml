@@ -8,7 +8,7 @@
     %h1 
       FEATURED VIDEO
     #video_player_info
-      = link_to(show.group_name, show, :class => 'box dark')
+      = link_to(show.group_name, videos_path, :class => 'box dark')
       - if show.venue.present?
         .venue-link= show.venue.name
       .date
