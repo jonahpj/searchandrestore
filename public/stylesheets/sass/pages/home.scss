@@ -161,7 +161,10 @@
 				height: 112px;
 				overflow: hidden;
 				.show-meta {
-					p {float: left; margin: 0 5px 5px 0;}
+					p {
+					float: left; 
+					margin: 0 5px 5px 0;
+					}
 				}
 				.box {padding: 5px; white-space: normal;}
 				.band {white-space: normal; margin-bottom: 3px;}
