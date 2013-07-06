@@ -20,7 +20,9 @@
                   = raw post["audio_player"]
                   .tumblr-caption= raw post["audio_caption"]
                 -when 'regular'
-                  %h2= raw post["regular_title"]
+                  %h2 
+                    - regulartitle = raw post["regular_title"]
+                    = link_to regulartitle, "/blog/post?id=" + id
                   = raw post["regular_body"]
                 -when 'quote'               
                   %h2.quoted-text

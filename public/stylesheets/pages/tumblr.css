@@ -19,6 +19,10 @@
           font-style: italic;
           margin: 0;
           padding: 5px 0 0 0; }
+        .tumblr-container .tumblr-post .tumblr-wrapper h2 a {
+          color: #000; }
+          .tumblr-container .tumblr-post .tumblr-wrapper h2 a:hover {
+            color: #ff9900; }
       .tumblr-container .tumblr-post .tumblr-wrapper .tumblr-caption {
         font-size: 13px;
         padding: 15px; }
