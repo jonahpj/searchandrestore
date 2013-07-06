@@ -428,6 +428,9 @@
         background-color: transparent;
         height: 112px;
         overflow: hidden; }
+        .jazz.page-home #tonights_shows .show-listing li.container .show-meta p {
+          float: left;
+          margin: 0 5px 5px 0; }
         .jazz.page-home #tonights_shows .show-listing li.container .box {
           padding: 5px;
           white-space: normal; }
