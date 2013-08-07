@@ -3,12 +3,19 @@
 
 .tumblr-container {
 	float: left;
-	overflow: auto;
+	overflow: hidden;
+	.box {
+		padding: 7px 10px;
+		a {
+			color: #fff;
+			&:hover {color: #ff9900;}
+		}
+	}
 	.tumblr-post {
-		margin: 10px 0 20px 0;
+		margin: 5px 0 25px 0;
 		background-color: #fff;
 		.tumblr-wrapper {
-			width: 500px;
+			width: 610px;
 			padding: 10px;
 			h2 {
 				margin-bottom: 0; 
@@ -20,6 +27,7 @@
 					&:hover {color: #ff9900;}
 				}
 			}
+			p {line-height: 19px;}
 			.tumblr-caption {
 				font-size: 13px;
 				padding: 15px;

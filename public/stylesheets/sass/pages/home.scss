@@ -319,7 +319,7 @@
 	  width: 929px !important;
 	  .arrow_prev {display: none;}
 	  .arrow_next {display: none;}
-	  .controlNav {left: 876px; bottom: 4px;}
+	  .controlNav {left: 847px; bottom: 4px;}
 	  #video_player_container {
 	   	h1 {
 	        color: black;
@@ -372,6 +372,10 @@
           background: url(/images/home/welcome_slider.jpg);
           height: 361px !important;
         }
+		dd.sexmob-banner {
+	       background: url(/images/home/sexmob_slider.jpg);
+	       height: 361px !important;
+	       }
 		dd.left {display: none;}
 	  }
     }

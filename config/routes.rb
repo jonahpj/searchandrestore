@@ -10,7 +10,9 @@ Searchandrestore::Application.routes.draw do
   get 'donate' => 'donate#index', :as => :donate
   get 'blog' => 'tumblr#index', :as => :blog
   
-  match 'blog/post' => 'tumblr#show'
+  match 'blog/posts' => 'tumblr#show'
+  match 'blog/post' => 'tumblr#legacy'
+  
   
   
 

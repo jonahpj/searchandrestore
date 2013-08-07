@@ -555,7 +555,7 @@
     .jazz.page-home .evoslider.default .arrow_next {
       display: none; }
     .jazz.page-home .evoslider.default .controlNav {
-      left: 876px;
+      left: 847px;
       bottom: 4px; }
     .jazz.page-home .evoslider.default #video_player_container h1 {
       color: black;
@@ -598,6 +598,9 @@
       background-color: #fff; }
       .jazz.page-home .evoslider.default dl.slides_container dd.home-banner {
         background: url(/images/home/welcome_slider.jpg);
+        height: 361px !important; }
+      .jazz.page-home .evoslider.default dl.slides_container dd.sexmob-banner {
+        background: url(/images/home/sexmob_slider.jpg);
         height: 361px !important; }
       .jazz.page-home .evoslider.default dl.slides_container dd.left {
         display: none; }
@@ -726,12 +729,18 @@
 
 .tumblr-container {
   float: left;
-  overflow: auto; }
+  overflow: hidden; }
+  .tumblr-container .box {
+    padding: 7px 10px; }
+    .tumblr-container .box a {
+      color: #fff; }
+      .tumblr-container .box a:hover {
+        color: #ff9900; }
   .tumblr-container .tumblr-post {
-    margin: 10px 0 20px 0;
+    margin: 5px 0 25px 0;
     background-color: #fff; }
     .tumblr-container .tumblr-post .tumblr-wrapper {
-      width: 500px;
+      width: 610px;
       padding: 10px; }
       .tumblr-container .tumblr-post .tumblr-wrapper h2 {
         margin-bottom: 0;
@@ -746,6 +755,8 @@
           color: #000; }
           .tumblr-container .tumblr-post .tumblr-wrapper h2 a:hover {
             color: #ff9900; }
+      .tumblr-container .tumblr-post .tumblr-wrapper p {
+        line-height: 19px; }
       .tumblr-container .tumblr-post .tumblr-wrapper .tumblr-caption {
         font-size: 13px;
         padding: 15px; }

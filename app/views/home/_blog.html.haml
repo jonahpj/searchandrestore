@@ -19,7 +19,7 @@
 - if defined? post_text
   -# post_link = link_to(truncate(post_text, :length => truncate_length, :separator => ' '), blog_post['post_url'])
   - id= raw blog_post["id"]
-  - post_link = link_to(truncate(post_text, :length => truncate_length, :separator => ' '), "/blog/post?id=" + id)
+  - post_link = link_to(truncate(post_text, :length => truncate_length, :separator => ' '), "/blog/posts?a=id=" + id)
 - if defined? post_body
   - post_body_truncated = truncate(post_body, :length => truncate_length, :separator => ' ')
 

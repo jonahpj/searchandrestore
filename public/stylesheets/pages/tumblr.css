@@ -3,12 +3,18 @@
 
 .tumblr-container {
   float: left;
-  overflow: auto; }
+  overflow: hidden; }
+  .tumblr-container .box {
+    padding: 7px 10px; }
+    .tumblr-container .box a {
+      color: #fff; }
+      .tumblr-container .box a:hover {
+        color: #ff9900; }
   .tumblr-container .tumblr-post {
-    margin: 10px 0 20px 0;
+    margin: 5px 0 25px 0;
     background-color: #fff; }
     .tumblr-container .tumblr-post .tumblr-wrapper {
-      width: 500px;
+      width: 610px;
       padding: 10px; }
       .tumblr-container .tumblr-post .tumblr-wrapper h2 {
         margin-bottom: 0;
@@ -23,6 +29,8 @@
           color: #000; }
           .tumblr-container .tumblr-post .tumblr-wrapper h2 a:hover {
             color: #ff9900; }
+      .tumblr-container .tumblr-post .tumblr-wrapper p {
+        line-height: 19px; }
       .tumblr-container .tumblr-post .tumblr-wrapper .tumblr-caption {
         font-size: 13px;
         padding: 15px; }
