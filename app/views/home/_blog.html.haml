@@ -1,7 +1,7 @@
 
 - truncate_length = 47
 - posted_at = Time.at(blog_post['timestamp'].to_i).strftime('%-m/%-d/%Y')
-
+- id= raw blog_post["id"]
 - case blog_post['type']
   - when 'photo'
     - post_text = "Click for Photo"
@@ -18,8 +18,7 @@
     - post_body = strip_tags(blog_post['body'])
 - if defined? post_text
   -# post_link = link_to(truncate(post_text, :length => truncate_length, :separator => ' '), blog_post['post_url'])
-  - id= raw blog_post["id"]
-  - post_link = link_to(truncate(post_text, :length => truncate_length, :separator => ' '), "/blog/posts?a=id=" + id)
+  - post_link = link_to(truncate(post_text, :length => truncate_length, :separator => ' '), "/blog/posts?p=id&r=" + id)
 - if defined? post_body
   - post_body_truncated = truncate(post_body, :length => truncate_length, :separator => ' ')
 
@@ -30,7 +29,7 @@
     .post-meta
       %span.post-date= posted_at | 
     .post-body= post_body
-    = link_to('...read more', blog_path, :class => 'readmore')
+    = link_to('...read more', "/blog/posts?p=id&r=" + id, :class => 'readmore')
     
     
     

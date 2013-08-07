@@ -40,7 +40,9 @@ class TumblrController < ApplicationController
    def sortedblog
       uri = URI.parse('http://api.tumblr.com')
       api_key = 'vYYBosazRckPMQplWCdDEVryLs55FCmxHu3ZRr02C03ubfPI5H'
-      sort = params[:a]
+      parameter = params[:p]
+      request = params[:r]
+      sort = parameter + "=" + request
       res = Net::HTTP.start(uri.host, uri.port) do |http|
         http.get('/v2/blog/searchandrestore.tumblr.com/posts?api_key=' + api_key + '&limit=10' + '&' + sort)
       end

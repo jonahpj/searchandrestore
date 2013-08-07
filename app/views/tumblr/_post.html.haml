@@ -20,11 +20,11 @@
       - when 'text'
         %h2 
           - regulartitle = strip_tags(blog_post['title'])
-          = link_to regulartitle, "/blog/posts?a=id=" + id
+          = link_to regulartitle, "/blog/posts?p=id&r=" + id
         = raw blog_post['body']
   .tumblr-meta-wrapper
     %span.tumblr-post-date
-      = link_to "Permalink", "/blog/posts?a=id=" + id
+      = link_to "Permalink", "/blog/posts?p=id&r=" + id
       | Posted on
       = raw blog_post['date']
 
