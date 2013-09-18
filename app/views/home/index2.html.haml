@@ -17,10 +17,7 @@
           welcome
         %dd.home-banner
         %dt
-          sex mob
-        %dd.sexmob-banner
-        %dt
-          slide two
+          featured video
         %dd.video
           - if @featured_video.present?
             = render :partial => 'player_home', :locals => { :selected_video => @featured_video, :show => @featured_video.show }
