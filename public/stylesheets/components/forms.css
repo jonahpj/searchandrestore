@@ -95,3 +95,6 @@
   height: 15px; }
 .jazz .searchy-inline label {
   margin-right: 3px; }
+
+#mc-embedded-subscribe:hover {
+  cursor: pointer; }

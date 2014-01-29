@@ -256,7 +256,7 @@ body {
 
 
 #mailing-list {
-  .box {padding: 15px 20px; margin-top: -1px;}
+  .box {padding: 8px 20px; margin-top: 10px; display: inline;}
   .field {
     margin-bottom: 5px;
     label {
@@ -294,6 +294,7 @@ body {
       }
       &.subscribe {
         margin-left: 38px;
+		margin-top: 1px;
       }
     }
   }

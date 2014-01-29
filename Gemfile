@@ -22,6 +22,7 @@ gem 'rdoc'
 gem 'thin'
 gem 'heroku'
 gem "tumblr-api", "~> 0.1.4"
+gem "html_truncator", "~>0.2"
 
 # Use unicorn as the web server
 # gem 'unicorn'

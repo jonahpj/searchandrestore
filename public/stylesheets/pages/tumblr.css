@@ -10,8 +10,22 @@
       color: #fff; }
       .tumblr-container .box a:hover {
         color: #ff9900; }
+  .tumblr-container .next {
+    float: right; }
+  .tumblr-container .post-catagories {
+    padding: 5px;
+    margin-bottom: 10px;
+    float: left;
+    width: 100%;
+    background: url(/images/black_container_bg.png); }
+    .tumblr-container .post-catagories h3 {
+      color: #ff9900;
+      margin: 0 0 7px 2px; }
+    .tumblr-container .post-catagories .box {
+      margin: 0 1px 6px 0;
+      font-size: 12px; }
   .tumblr-container .tumblr-post {
-    margin: 5px 0 25px 0;
+    margin: 0 0 30px 0;
     background-color: #fff; }
     .tumblr-container .tumblr-post .tumblr-wrapper {
       width: 610px;
@@ -47,3 +61,28 @@
       font-size: 13px; }
       .tumblr-container .tumblr-post .tumblr-meta-wrapper a {
         font-weight: bold; }
+    .tumblr-container .tumblr-post .readmore {
+      font-weight: bold; }
+      .tumblr-container .tumblr-post .readmore:hover {
+        text-decoration: underline; }
+  .tumblr-container .pagination {
+    color: #fff;
+    font-size: 13px;
+    line-height: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: Ariel, sans-serif;
+    display: inline-block;
+    text-decoration: none; }
+    .tumblr-container .pagination a, .tumblr-container .pagination .previous_page, .tumblr-container .pagination .next_page, .tumblr-container .pagination .current, .tumblr-container .pagination .disabled {
+      padding: 5px 14px;
+      background-color: #000;
+      margin: 0 7px 0 0;
+      float: left;
+      color: #fff;
+      font-weight: bold; }
+    .tumblr-container .pagination a:hover {
+      color: orange; }
+    .tumblr-container .pagination .current {
+      font-style: normal;
+      color: orange; }

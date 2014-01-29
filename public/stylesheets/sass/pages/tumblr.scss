@@ -11,8 +11,21 @@
 			&:hover {color: #ff9900;}
 		}
 	}
+	.next {float:right;}
+	.post-catagories {
+		padding: 5px;
+		margin-bottom: 10px;
+		float: left;
+		width: 100%;
+		background: url(/images/black_container_bg.png);
+		h3 {color: #ff9900; margin: 0 0 7px 2px;}
+		.box {
+			margin: 0 1px 6px 0;
+			font-size: 12px;
+		}
+	}
 	.tumblr-post {
-		margin: 5px 0 25px 0;
+		margin: 0 0 30px 0;
 		background-color: #fff;
 		.tumblr-wrapper {
 			width: 610px;
@@ -42,6 +55,32 @@
 			font-size: 13px;
 			a {font-weight: bold;}
 		}
-
+		.readmore {
+			font-weight: bold;
+			&:hover {text-decoration: underline;}
+		}
+	}
+	.pagination {
+		color: #fff;
+		font-size: 13px;
+		line-height: 22px;
+		font-weight: bold;
+		text-transform: uppercase;
+		font-family: Ariel, sans-serif;
+		display: inline-block;
+		text-decoration: none;
+		a, .previous_page, .next_page, .current, .disabled  {
+			padding: 5px 14px;
+			background-color: #000;
+			margin: 0 7px 0 0;
+			float: left;
+			color: #fff;
+			font-weight: bold;
+		}
+		a:hover {color: orange;}
+		.current {
+			font-style: normal;
+			color: orange;
+		}
 	}
 }

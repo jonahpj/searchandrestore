@@ -15,7 +15,7 @@
     - if @blog_posts.present?
       - @blog_posts.each_with_index do |blog_post, i|
         = render :partial => 'tumblr/post', :locals => { :blog_post => blog_post, :index => i+1 }
-    
+      = will_paginate @blog_posts
 .col-3
   .section
     .container.skin-dark

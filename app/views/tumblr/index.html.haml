@@ -1,35 +1,37 @@
 - @page_class = 'layout-2 page-blog'
 
-.col-1-2
-  .tumblr-container
-    .box.dark
-      = link_to "Audio/Video", "/blog/posts?p=tag&r=AV"
-    .box.dark
-      = link_to "Interviews", "/blog/posts?p=tag&r=interviews"
-    .box.dark
-      = link_to "Outside NY", "/blog/posts?p=tag&r=notny"
-    .box.dark
-      = link_to "Album Releases", "/blog/posts?p=tag&r=albumrelease"
-    .box.dark
-      = link_to "Featured Video", "/blog/posts?p=tag&r=featuredvideo"
+.tumblr-container
+  .col-1-2
     - if @blog_posts.present?
       - @blog_posts.each_with_index do |blog_post, i|
         = render :partial => 'tumblr/post', :locals => { :blog_post => blog_post, :index => i+1 }
-     
-
-.col-3
-  .section
-    .container.skin-dark
-      .body
-        %h3 Recent Press:
-        %ul.header-meta-list
-          - @press_clippings.each do |pc|
-            %li
-              %h4= pc.source
-              %p.byline
-                %span.date= pc.date.strftime("%m/%d/%Y")
-                %span.author= pc.author
-              = link_to(pc.link.title, pc.link.url, :target => '_blank', :class => 'box')
-
-  = render :partial => 'shared/mailing_list'
-.clear
+      = render :partial => 'tumblr/pagination'
+    - else 
+      .tumblr-post
+        .tumblr-wrapper
+          - goback = "Sorry! Try a different one."
+          - thatsit = "That's All We've Got In This Catagory"
+          %h2 
+            = thatsit
+          = goback
+        .tumblr-meta-wrapper 
+      = render :partial => 'tumblr/pagination'
+    
+  
+            
+  .col-3
+    .post-catagories
+      %h3
+        Post Catagories
+      .box.dark
+        = link_to "Audio/Video", "/blog/?tag=AV"
+      .box.dark
+        = link_to "Interviews", "/blog/?tag=interviews"
+      .box.dark
+        = link_to "Outside NY", "/blog/?tag=notny"
+      .box.dark
+        = link_to "Album Releases", "/blog/?tag=albumrelease"
+      .box.dark
+        = link_to "Featured Video", "/blog/?tag=featuredvideo"
+    = render :partial => 'shared/mailing_list'
+    

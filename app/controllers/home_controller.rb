@@ -1,7 +1,6 @@
 class HomeController < ApplicationController
   # todo: move this???
   require 'net/http'
-  require 'tumblr'
   
 
   module Helpers

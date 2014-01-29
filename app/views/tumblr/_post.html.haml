@@ -20,11 +20,17 @@
       - when 'text'
         %h2 
           - regulartitle = strip_tags(blog_post['title'])
-          = link_to regulartitle, "/blog/posts?p=id&r=" + id
-        = raw blog_post['body']
+          = link_to regulartitle, "/blog/?id=" + id
+        - if params[:id].present?
+          = raw blog_post['body']        
+        - else
+          - postbody = raw blog_post['body']        
+          - truncated = HTML_Truncator.truncate(postbody, 100)      
+          = raw truncated 
+          = link_to('Click to Read More', "/blog/?id=" + id, :class => 'readmore')   
   .tumblr-meta-wrapper
     %span.tumblr-post-date
-      = link_to "Permalink", "/blog/posts?p=id&r=" + id
+      = link_to "Permalink", "/blog/?id=" + id
       | Posted on
       = raw blog_post['date']
 

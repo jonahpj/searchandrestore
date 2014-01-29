@@ -18,7 +18,7 @@
     - post_body = strip_tags(blog_post['body'])
 - if defined? post_text
   -# post_link = link_to(truncate(post_text, :length => truncate_length, :separator => ' '), blog_post['post_url'])
-  - post_link = link_to(truncate(post_text, :length => truncate_length, :separator => ' '), "/blog/posts?p=id&r=" + id)
+  - post_link = link_to(truncate(post_text, :length => truncate_length, :separator => ' '), "/blog/?id=" + id)
 - if defined? post_body
   - post_body_truncated = truncate(post_body, :length => truncate_length, :separator => ' ')
 
@@ -29,7 +29,7 @@
     .post-meta
       %span.post-date= posted_at | 
     .post-body= post_body
-    = link_to('...read more', "/blog/posts?p=id&r=" + id, :class => 'readmore')
+    = link_to('...read more', "/blog/?id=" + id, :class => 'readmore')
     
     
     

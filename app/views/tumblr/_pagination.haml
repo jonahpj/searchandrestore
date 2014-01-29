@@ -1,0 +1,36 @@
+- if params[:page]
+  - page = params[:page]
+- else
+  - page = 1
+- $page = page.to_i
+- $pageup = $page+1
+- pageup = $pageup.to_s
+- $pagedown = $page-1
+- pagedown = $pagedown.to_s
+
+- if params[:tag].present?
+  - tag = params[:tag]
+  - if $page == 1
+  - elsif $page == 2
+    .box.dark
+      = link_to " Previous", "/blog/?tag=" + tag
+  - else
+    .box.dark
+      = link_to "Previous", "/blog/?page=" + pagedown + "&tag=" + tag
+  - if @blog_posts.present?
+    .box.dark.next
+      = link_to "Next", "/blog/?page=" + pageup + "&tag=" + tag
+  - else
+- elsif params[:id].present?
+- else
+  - if $page == 1
+  - elsif $page == 2
+    .box.dark
+      = link_to "Previous", "/blog"
+  - else
+    .box.dark
+      = link_to "Previous", "/blog/?page=" + pagedown
+  - if @blog_posts.present?
+    .box.dark.next
+      = link_to "Next", "/blog/?page=" + pageup
+  - else
