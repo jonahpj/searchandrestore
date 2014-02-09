@@ -8,7 +8,7 @@
     = stylesheet_link_tag 'evoslider/evoslider'
     = stylesheet_link_tag 'evoslider/default/default'
     = csrf_meta_tag
-
+    
   - body_attributes = {:class => @page_class}
   - if @uses_gmap
     -  body_attributes.merge!({:onload => 'initializeMap();',:onunload => 'GUnload();'})
