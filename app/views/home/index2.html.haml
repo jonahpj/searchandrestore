@@ -17,6 +17,12 @@
           welcome
         %dd.home-banner
         %dt
+          blog
+        %dd.blog_banner
+          - if @blog_banner.present?
+            - @blog_banner.each_with_index do |blog_post, i|
+              = render :partial => 'home/blog_banner', :locals => { :blog_post => blog_post, :index => i+1 }
+        %dt
           featured video
         %dd.video
           - if @featured_video.present?

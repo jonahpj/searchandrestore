@@ -1,0 +1,25 @@
+- id= raw blog_post["id"]
+- case blog_post['type']
+  - when 'photo'
+    - img_link = raw blog_post["photo_url"][1]["__content__"]
+    = link_to image_tag(img_link), img_link
+    .tumblr-caption= raw blog_post["photo_caption"]
+  -when 'audio'
+    = raw blog_post["audio_player"]
+    .tumblr-caption= raw blog_post["audio_caption"]
+  - when 'quote'
+    %h2.quoted-text
+      &ldquo;
+      = raw blog_post['text']
+      &rdquo;
+  - when 'video'
+    - post_text = "Click to Watch"
+    - post_body = raw blog_post['caption']
+  - when 'text'
+    .post-title
+      - regulartitle = strip_tags(blog_post['title'])
+      = link_to regulartitle, "/blog/?id=" + id   
+    - postbody = raw blog_post['body']        
+    - truncated = HTML_Truncator.truncate(postbody, 110)      
+    = raw truncated 
+    = link_to('Click to Read More', "/blog/?id=" + id, :class => 'readmore')   

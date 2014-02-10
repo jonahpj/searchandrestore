@@ -319,7 +319,8 @@
 	  width: 929px !important;
 	  .arrow_prev {display: none;}
 	  .arrow_next {display: none;}
-	  .controlNav {left: 876px; bottom: 4px;}
+	  .controlNav  {left: 8px; bottom: 4px;}
+	  li.bullets {background: #DFDFDF;}
 	  #video_player_container {
 	   	h1 {
 	        color: black;
@@ -372,10 +373,32 @@
           background: url(/images/home/welcome_slider.jpg);
           height: 361px !important;
         }
-		dd.sexmob-banner {
-	       background: url(/images/home/sexmob_slider.jpg);
-	       height: 361px !important;
-	       }
+		dd.blog_banner {
+			padding: 10px;
+			a:hover {text-decoration: underline;}
+			p {
+				font-size: 15px;
+				margin: 0 10px 10px 0;
+				line-height: 21px;
+			}
+	       .post-title {
+				font-size: 27px;
+				font-weight: bold;
+				text-transform: uppercase;
+				line-height: 31px;
+				margin: 0 0 10px 0;
+				a {color: #000;}
+			}
+			.readmore {
+				font-size: 15px;
+				text-transform: uppercase;
+			}
+			img {
+				float: right;
+				height: 301px;
+				margin: 0 10px 0 10px;
+			}
+	    }
 		dd.left {display: none;}
 	  }
     }
